@@ -11,11 +11,23 @@ import UIKit
 
 /// DesignSystem main Configuration.
 public final class DesignSystemConfiguration: NSObject {
+    // MARK: - Proeprties
+    
+    public static var shared: DesignSystemConfiguration?
+    var flavorColors: FlavorColorsProtocol?
+    
+    // MARK: - Start
+    
+    public class func start(flavorColors: FlavorColorsProtocol) {
+        shared = DesignSystemConfiguration()
+        shared?.loadFonts()
+        shared?.loadColors(from: flavorColors)
+    }
     
     // MARK: - Load Fonts
     
     /// Load DesignSystem fonts
-    public class func loadFonts() {
+    func loadFonts() {
         let bundle = Bundle.init(for: DesignSystemConfiguration.self)
         
         /// List the fonts by name and extension, relative to the bundle.
@@ -33,5 +45,11 @@ public final class DesignSystemConfiguration: NSObject {
             .compactMap { CGDataProvider(url: $0 as CFURL) }
             .map(CGFont.init)
             .forEach { CTFontManagerRegisterGraphicsFont($0! , nil) }
+    }
+    
+    // MARK: - Load Colors
+    
+    func loadColors(from flavor: FlavorColorsProtocol) {
+        self.flavorColors = flavor
     }
 }

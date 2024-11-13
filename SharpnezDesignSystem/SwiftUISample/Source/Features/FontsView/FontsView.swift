@@ -11,35 +11,34 @@ import SwiftUI
 struct FontsView: View {
     var body: some View {
         ScrollView {
-            Text("This sample are available in UIKit an SwiftUI Frameworks, check the docs.")
             Spacer()
             VStack {
                 Text("Hello World")
-                    .font(UIFont.title1(.poppins, .bold).font)
+                    .font(.title1(.poppins, .bold))
                 Text("Hello World")
-                    .font(UIFont.title2(.poppins, .medium).font)
+                    .font(.title2(.poppins, .medium))
                 Text("Hello World")
-                    .font(UIFont.title3(.poppins, .regular).font)
+                    .font(.title3(.poppins, .regular))
                 Text("Hello World")
-                    .font(UIFont.subtitle(.poppins, .bold).font)
+                    .font(.subtitle(.poppins, .bold))
                 Text("Hello World")
-                    .font(UIFont.body(.poppins, .medium).font)
+                    .font(.body(.poppins, .medium))
                 Text("Hello World")
-                    .font(UIFont.caption(.poppins, .regular).font)
+                    .font(.caption(.poppins, .regular))
             }
             VStack {
                 Text("Hello World")
-                    .font(UIFont.title1(.montserrat, .bold).font)
+                    .font(.title1(.montserrat, .bold))
                 Text("Hello World")
-                    .font(UIFont.title2(.montserrat, .medium).font)
+                    .font(.title2(.montserrat, .medium))
                 Text("Hello World")
-                    .font(UIFont.title3(.montserrat, .regular).font)
+                    .font(.title3(.montserrat, .regular))
                 Text("Hello World")
-                    .font(UIFont.subtitle(.montserrat, .bold).font)
+                    .font(.subtitle(.montserrat, .bold))
                 Text("Hello World")
-                    .font(UIFont.body(.montserrat, .medium).font)
+                    .font(.body(.montserrat, .medium))
                 Text("Hello World")
-                    .font(UIFont.caption(.montserrat, .regular).font)
+                    .font(.caption(.montserrat, .regular))
             }
             Spacer()
         }

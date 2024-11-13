@@ -11,7 +11,7 @@
 		EDD253B12CE5138A008C2B23 /* SharpnezDesignSystem.docc in Sources */ = {isa = PBXBuildFile; fileRef = EDD253AE2CE5138A008C2B23 /* SharpnezDesignSystem.docc */; };
 		EDD253D62CE51453008C2B23 /* ViewStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD253D32CE51453008C2B23 /* ViewStatus.swift */; };
 		EDD253DA2CE51453008C2B23 /* DSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD253B32CE51453008C2B23 /* DSConstants.swift */; };
-		EDD253DB2CE51453008C2B23 /* UIColor+DS+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD253B82CE51453008C2B23 /* UIColor+DS+extensions.swift */; };
+		EDD253DB2CE51453008C2B23 /* Color+DS+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD253B82CE51453008C2B23 /* Color+DS+extensions.swift */; };
 		EDD253DD2CE51453008C2B23 /* CGFloat+DS+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD253B72CE51453008C2B23 /* CGFloat+DS+extensions.swift */; };
 		EDD253DF2CE51453008C2B23 /* DesignSystemConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD253B52CE51453008C2B23 /* DesignSystemConfiguration.swift */; };
 		EDD253E22CE51453008C2B23 /* SHLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD253BD2CE51453008C2B23 /* SHLabel.swift */; };
@@ -32,10 +32,12 @@
 		EDD2541F2CE51F78008C2B23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2541E2CE51F6F008C2B23 /* AppDelegate.swift */; };
 		EDD254222CE51FF9008C2B23 /* SampleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD254212CE51FF9008C2B23 /* SampleItem.swift */; };
 		EDD254252CE52024008C2B23 /* ViewStatusSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD254232CE52024008C2B23 /* ViewStatusSampleView.swift */; };
-		EDD254282CE52034008C2B23 /* ColorsFromHexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD254262CE52034008C2B23 /* ColorsFromHexView.swift */; };
+		EDD254282CE52034008C2B23 /* FlavorColorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD254262CE52034008C2B23 /* FlavorColorsView.swift */; };
 		EDD2542B2CE5203A008C2B23 /* FontsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD254292CE5203A008C2B23 /* FontsView.swift */; };
 		EDD2542E2CE5203F008C2B23 /* SHLabelSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2542C2CE5203F008C2B23 /* SHLabelSampleView.swift */; };
 		EDD254312CE52045008C2B23 /* SHButtonSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2542F2CE52045008C2B23 /* SHButtonSampleView.swift */; };
+		EDD254332CE5279A008C2B23 /* Flavor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD254322CE52781008C2B23 /* Flavor.swift */; };
+		EDD254392CE52B3C008C2B23 /* FlavorColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD254382CE52B35008C2B23 /* FlavorColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +71,7 @@
 		EDD253B32CE51453008C2B23 /* DSConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSConstants.swift; sourceTree = "<group>"; };
 		EDD253B52CE51453008C2B23 /* DesignSystemConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemConfiguration.swift; sourceTree = "<group>"; };
 		EDD253B72CE51453008C2B23 /* CGFloat+DS+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+DS+extensions.swift"; sourceTree = "<group>"; };
-		EDD253B82CE51453008C2B23 /* UIColor+DS+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+DS+extensions.swift"; sourceTree = "<group>"; };
+		EDD253B82CE51453008C2B23 /* Color+DS+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+DS+extensions.swift"; sourceTree = "<group>"; };
 		EDD253B92CE51453008C2B23 /* UIFont+DS+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+DS+extensions.swift"; sourceTree = "<group>"; };
 		EDD253BB2CE51453008C2B23 /* SHButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHButton.swift; sourceTree = "<group>"; };
 		EDD253BD2CE51453008C2B23 /* SHLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHLabel.swift; sourceTree = "<group>"; };
@@ -88,10 +90,12 @@
 		EDD2541E2CE51F6F008C2B23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDD254212CE51FF9008C2B23 /* SampleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleItem.swift; sourceTree = "<group>"; };
 		EDD254232CE52024008C2B23 /* ViewStatusSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStatusSampleView.swift; sourceTree = "<group>"; };
-		EDD254262CE52034008C2B23 /* ColorsFromHexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsFromHexView.swift; sourceTree = "<group>"; };
+		EDD254262CE52034008C2B23 /* FlavorColorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorColorsView.swift; sourceTree = "<group>"; };
 		EDD254292CE5203A008C2B23 /* FontsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsView.swift; sourceTree = "<group>"; };
 		EDD2542C2CE5203F008C2B23 /* SHLabelSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHLabelSampleView.swift; sourceTree = "<group>"; };
 		EDD2542F2CE52045008C2B23 /* SHButtonSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHButtonSampleView.swift; sourceTree = "<group>"; };
+		EDD254322CE52781008C2B23 /* Flavor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flavor.swift; sourceTree = "<group>"; };
+		EDD254382CE52B35008C2B23 /* FlavorColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,8 +174,8 @@
 		EDD253BA2CE51453008C2B23 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				EDD253B82CE51453008C2B23 /* Color+DS+extensions.swift */,
 				EDD253B72CE51453008C2B23 /* CGFloat+DS+extensions.swift */,
-				EDD253B82CE51453008C2B23 /* UIColor+DS+extensions.swift */,
 				EDD253B92CE51453008C2B23 /* UIFont+DS+extensions.swift */,
 			);
 			path = Extensions;
@@ -216,6 +220,7 @@
 				EDD253B42CE51453008C2B23 /* Constants */,
 				EDD253B62CE51453008C2B23 /* Core */,
 				EDD253BA2CE51453008C2B23 /* Extensions */,
+				EDD254372CE52B22008C2B23 /* FlavorColors */,
 				EDD253BF2CE51453008C2B23 /* SwiftUI */,
 				EDD253D42CE51453008C2B23 /* ViewStatus */,
 			);
@@ -281,6 +286,7 @@
 		EDD2541B2CE51ED8008C2B23 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EDD254322CE52781008C2B23 /* Flavor.swift */,
 				EDD2541E2CE51F6F008C2B23 /* AppDelegate.swift */,
 				EDD2540D2CE51612008C2B23 /* SwiftUISampleApp.swift */,
 			);
@@ -327,7 +333,7 @@
 		EDD254272CE52034008C2B23 /* ColorsFromHex */ = {
 			isa = PBXGroup;
 			children = (
-				EDD254262CE52034008C2B23 /* ColorsFromHexView.swift */,
+				EDD254262CE52034008C2B23 /* FlavorColorsView.swift */,
 			);
 			path = ColorsFromHex;
 			sourceTree = "<group>";
@@ -354,6 +360,14 @@
 				EDD2542F2CE52045008C2B23 /* SHButtonSampleView.swift */,
 			);
 			path = SHButton;
+			sourceTree = "<group>";
+		};
+		EDD254372CE52B22008C2B23 /* FlavorColors */ = {
+			isa = PBXGroup;
+			children = (
+				EDD254382CE52B35008C2B23 /* FlavorColors.swift */,
+			);
+			path = FlavorColors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -480,8 +494,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDD253D62CE51453008C2B23 /* ViewStatus.swift in Sources */,
+				EDD254392CE52B3C008C2B23 /* FlavorColors.swift in Sources */,
 				EDD253DA2CE51453008C2B23 /* DSConstants.swift in Sources */,
-				EDD253DB2CE51453008C2B23 /* UIColor+DS+extensions.swift in Sources */,
+				EDD253DB2CE51453008C2B23 /* Color+DS+extensions.swift in Sources */,
 				EDD253DD2CE51453008C2B23 /* CGFloat+DS+extensions.swift in Sources */,
 				EDD253DF2CE51453008C2B23 /* DesignSystemConfiguration.swift in Sources */,
 				EDD253E22CE51453008C2B23 /* SHLabel.swift in Sources */,
@@ -501,7 +516,8 @@
 				EDD2541F2CE51F78008C2B23 /* AppDelegate.swift in Sources */,
 				EDD2542B2CE5203A008C2B23 /* FontsView.swift in Sources */,
 				EDD2540F2CE51612008C2B23 /* HomeView.swift in Sources */,
-				EDD254282CE52034008C2B23 /* ColorsFromHexView.swift in Sources */,
+				EDD254282CE52034008C2B23 /* FlavorColorsView.swift in Sources */,
+				EDD254332CE5279A008C2B23 /* Flavor.swift in Sources */,
 				EDD254102CE51612008C2B23 /* SwiftUISampleApp.swift in Sources */,
 				EDD254312CE52045008C2B23 /* SHButtonSampleView.swift in Sources */,
 			);

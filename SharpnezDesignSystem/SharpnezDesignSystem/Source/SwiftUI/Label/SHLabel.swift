@@ -43,11 +43,6 @@ extension Label {
     public func configureWithSH(color: Color, font: Font) -> some View {
         modifier(SHLabelModifier(color: color, font: font))
     }
-    
-    /// Function for UIColor and UIFont parameters.
-    public func configureWithSH(color: UIColor, font: UIFont) -> some View {
-        modifier(SHLabelModifier(color: color.color, font: font.font))
-    }
 }
 
 extension Text {
@@ -57,10 +52,5 @@ extension Text {
     /// Function for Color and Font parameters.
     public func configureWithSH(color: Color, font: Font) -> some View {
         modifier(SHLabelModifier(color: color, font: font))
-    }
-    
-    /// Function for UIColor and UIFont parameters.
-    public func configureWithSH(color: UIColor, font: UIFont) -> some View {
-        modifier(SHLabelModifier(color: color.color, font: font.font))
     }
 }

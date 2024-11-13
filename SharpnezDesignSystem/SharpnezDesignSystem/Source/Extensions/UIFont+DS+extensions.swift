@@ -24,44 +24,44 @@ public enum DSFontWeight: String {
 
 // MARK: - UIFont Extension
 
-extension UIFont {
+extension Font {
     
     // MARK: - Fonts
     
     /// Title 1.
     /// Custom font with xxBig size
-    public static func title1(_ style: DSFontName, _ weight: DSFontWeight) -> UIFont {
-        return UIFont(name: "\(style.rawValue)-\(weight.rawValue)", size: .xxBig) ?? UIFont.systemFont(ofSize: .xxBig)
+    public static func title1(_ style: DSFontName, _ weight: DSFontWeight) -> Font {
+        return UIFont(name: "\(style.rawValue)-\(weight.rawValue)", size: .xxBig)?.font ?? UIFont.systemFont(ofSize: .xxBig).font
     }
     
     /// Title 2.
     /// Custom font with xBig size
-    public static func title2(_ style: DSFontName, _ weight: DSFontWeight) -> UIFont {
-        return UIFont(name: "\(style.rawValue)-\(weight.rawValue)", size: .xBig) ?? UIFont.systemFont(ofSize: .xBig)
+    public static func title2(_ style: DSFontName, _ weight: DSFontWeight) -> Font {
+        return UIFont(name: "\(style.rawValue)-\(weight.rawValue)", size: .xBig)?.font ?? UIFont.systemFont(ofSize: .xBig).font
     }
     
     /// Title 3.
     /// Custom font with big size
-    public static func title3(_ style: DSFontName, _ weight: DSFontWeight) -> UIFont {
-        return UIFont(name: "\(style.rawValue)-\(weight.rawValue)", size: .big) ?? UIFont.systemFont(ofSize: .big)
+    public static func title3(_ style: DSFontName, _ weight: DSFontWeight) -> Font {
+        return UIFont(name: "\(style.rawValue)-\(weight.rawValue)", size: .big)?.font ?? UIFont.systemFont(ofSize: .big).font
     }
     
     /// Sub Title.
     /// Custom font with medium size
-    public static func subtitle(_ style: DSFontName, _ weight: DSFontWeight) -> UIFont {
-        return UIFont(name: "\(style.rawValue)-\(weight.rawValue)", size: .medium) ?? UIFont.systemFont(ofSize: .medium)
+    public static func subtitle(_ style: DSFontName, _ weight: DSFontWeight) -> Font {
+        return UIFont(name: "\(style.rawValue)-\(weight.rawValue)", size: .medium)?.font ?? UIFont.systemFont(ofSize: .medium).font
     }
     
     /// Body.
     /// Custom font with small size
-    public static func body(_ style: DSFontName, _ weight: DSFontWeight) -> UIFont {
-        return UIFont(name: "\(style.rawValue)-\(weight.rawValue)", size: .small) ?? UIFont.systemFont(ofSize: .small)
+    public static func body(_ style: DSFontName, _ weight: DSFontWeight) -> Font {
+        return UIFont(name: "\(style.rawValue)-\(weight.rawValue)", size: .small)?.font ?? UIFont.systemFont(ofSize: .small).font
     }
     
     /// Caption.
     /// Custom font with smaller size
-    public static func caption(_ style: DSFontName, _ weight: DSFontWeight) -> UIFont {
-        return UIFont(name: "\(style.rawValue)-\(weight.rawValue)", size: .smaller) ?? UIFont.systemFont(ofSize: .smaller)
+    public static func caption(_ style: DSFontName, _ weight: DSFontWeight) -> Font {
+        return UIFont(name: "\(style.rawValue)-\(weight.rawValue)", size: .smaller)?.font ?? UIFont.systemFont(ofSize: .smaller).font
     }
 }
 

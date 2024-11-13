@@ -88,32 +88,17 @@ extension Button {
     // MARK: - Modifier Implementation
     
     /// Primary button style with Color anf Font.
-    public func primarySHStyle(backgroundColor: Color, foregroundColor: Color, font: Font) -> some View {
-        modifier(SHButtonModifier(style: .primary(backgroundColor, foregroundColor), font: font))
-    }
-    
-    /// Primary button style with UIColor and UIFont.
-    public func primarySHStyle(backgroundColor: UIColor, foregroundColor: UIColor, font: UIFont) -> some View {
-        modifier(SHButtonModifier(style: .primary(backgroundColor.color, foregroundColor.color), font: font.font))
+    public func primarySHStyle(font: Font) -> some View {
+        modifier(SHButtonModifier(style: .primary(.primarySH, .onPrimarySH), font: font))
     }
     
     /// Secondary button style with Color and Font.
-    public func secondarySHStyle(color: Color, font: Font) -> some View {
-        modifier(SHButtonModifier(style: .secondary(color), font: font))
-    }
-    
-    /// Secondary button style with UIColor and UIFont.
-    public func secondarySHStyle(color: UIColor, font: UIFont) -> some View {
-        modifier(SHButtonModifier(style: .secondary(color.color), font: font.font))
+    public func secondarySHStyle(font: Font) -> some View {
+        modifier(SHButtonModifier(style: .secondary(.secondarySH), font: font))
     }
     
     ///  Ghost button style with Color and Font.
-    public func ghostSHStyle(color: Color, font: Font) -> some View {
-        modifier(SHButtonModifier(style: .ghost(color), font: font))
-    }
-    
-    ///  Ghost button style with UIColor and UIFont.
-    public func ghostSHStyle(color: UIColor, font: UIFont) -> some View {
-        modifier(SHButtonModifier(style: .ghost(color.color), font: font.font))
+    public func ghostSHStyle(font: Font) -> some View {
+        modifier(SHButtonModifier(style: .ghost(.primarySH), font: font))
     }
 }

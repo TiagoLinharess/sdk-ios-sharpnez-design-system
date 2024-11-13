@@ -13,14 +13,8 @@ struct ViewStatusSampleView: View {
     @State var viewStatus: ViewStatus = .none
     
     var body: some View {
-        header
         status
         buttons
-    }
-    
-    @ViewBuilder var header: some View {
-        Text("This sample are available in UIKit an SwiftUI Frameworks, check the docs.")
-        Spacer()
     }
     
     @ViewBuilder var status: some View {
@@ -33,6 +27,8 @@ struct ViewStatusSampleView: View {
             Text("current status: none")
         case .error(let error):
             Text("current status: \(error)")
+        @unknown default:
+            fatalError()
         }
     }
     

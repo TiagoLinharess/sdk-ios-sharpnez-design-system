@@ -5,6 +5,7 @@
 //  Created by Tiago Linhares on 13/11/24.
 //
 
+import SharpnezDesignSystem
 import SwiftUI
 
 class AppDelegate: NSObject, UIApplicationDelegate {
@@ -14,6 +15,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             UIApplication.LaunchOptionsKey: Any
         ]? = nil
     ) -> Bool {
+        DesignSystemConfiguration.start(flavorColors: FlavorColors())
         return true
     }
 }

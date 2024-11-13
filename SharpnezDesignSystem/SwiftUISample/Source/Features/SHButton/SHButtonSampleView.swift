@@ -13,18 +13,18 @@ struct SHButtonSampleView: View {
         Button("Hello SHButton") {
             print("Hello SHButton")
         }
-        .primarySHStyle(backgroundColor: .blue100, foregroundColor: .lightContent, font: .title3(.montserrat, .medium))
+        .primarySHStyle(font: .title3(.poppins, .medium))
         Button {
             print("Hello SHButton")
         } label: {
             Label("Hello SHButton", systemImage: "pencil")
         }
-        .secondarySHStyle(color: .red100, font: .subtitle(.poppins, .medium))
+        .secondarySHStyle(font: .subtitle(.poppins, .medium))
         Button {
             print("Hello SHButton")
         } label: {
             Text("Hello SHButton")
         }
-        .ghostSHStyle(color: .green100, font: .body(.poppins, .regular))
+        .ghostSHStyle(font: .body(.poppins, .regular))
     }
 }
