@@ -1,0 +1,803 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EDD253B02CE5138A008C2B23 /* SharpnezDesignSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = EDD253AD2CE5138A008C2B23 /* SharpnezDesignSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EDD253B12CE5138A008C2B23 /* SharpnezDesignSystem.docc in Sources */ = {isa = PBXBuildFile; fileRef = EDD253AE2CE5138A008C2B23 /* SharpnezDesignSystem.docc */; };
+		EDD253D62CE51453008C2B23 /* ViewStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD253D32CE51453008C2B23 /* ViewStatus.swift */; };
+		EDD253DA2CE51453008C2B23 /* DSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD253B32CE51453008C2B23 /* DSConstants.swift */; };
+		EDD253DB2CE51453008C2B23 /* UIColor+DS+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD253B82CE51453008C2B23 /* UIColor+DS+extensions.swift */; };
+		EDD253DD2CE51453008C2B23 /* CGFloat+DS+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD253B72CE51453008C2B23 /* CGFloat+DS+extensions.swift */; };
+		EDD253DF2CE51453008C2B23 /* DesignSystemConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD253B52CE51453008C2B23 /* DesignSystemConfiguration.swift */; };
+		EDD253E22CE51453008C2B23 /* SHLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD253BD2CE51453008C2B23 /* SHLabel.swift */; };
+		EDD253E42CE51453008C2B23 /* SHButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD253BB2CE51453008C2B23 /* SHButton.swift */; };
+		EDD253E82CE51453008C2B23 /* UIFont+DS+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD253B92CE51453008C2B23 /* UIFont+DS+extensions.swift */; };
+		EDD253F12CE5145C008C2B23 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDD253EF2CE5145C008C2B23 /* Poppins-Regular.ttf */; };
+		EDD253F22CE5145C008C2B23 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDD253EA2CE5145C008C2B23 /* Montserrat-Bold.ttf */; };
+		EDD253F32CE5145C008C2B23 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDD253EB2CE5145C008C2B23 /* Montserrat-Medium.ttf */; };
+		EDD253F42CE5145C008C2B23 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDD253EC2CE5145C008C2B23 /* Montserrat-Regular.ttf */; };
+		EDD253F52CE5145C008C2B23 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDD253ED2CE5145C008C2B23 /* Poppins-Bold.ttf */; };
+		EDD253F62CE5145C008C2B23 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDD253EE2CE5145C008C2B23 /* Poppins-Medium.ttf */; };
+		EDD2540F2CE51612008C2B23 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2540C2CE51612008C2B23 /* HomeView.swift */; };
+		EDD254102CE51612008C2B23 /* SwiftUISampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2540D2CE51612008C2B23 /* SwiftUISampleApp.swift */; };
+		EDD254112CE51612008C2B23 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDD254092CE51612008C2B23 /* Preview Assets.xcassets */; };
+		EDD254122CE51612008C2B23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDD2540B2CE51612008C2B23 /* Assets.xcassets */; };
+		EDD254142CE51653008C2B23 /* SharpnezDesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD253A02CE5137E008C2B23 /* SharpnezDesignSystem.framework */; };
+		EDD254152CE51653008C2B23 /* SharpnezDesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDD253A02CE5137E008C2B23 /* SharpnezDesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EDD2541F2CE51F78008C2B23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2541E2CE51F6F008C2B23 /* AppDelegate.swift */; };
+		EDD254222CE51FF9008C2B23 /* SampleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD254212CE51FF9008C2B23 /* SampleItem.swift */; };
+		EDD254252CE52024008C2B23 /* ViewStatusSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD254232CE52024008C2B23 /* ViewStatusSampleView.swift */; };
+		EDD254282CE52034008C2B23 /* ColorsFromHexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD254262CE52034008C2B23 /* ColorsFromHexView.swift */; };
+		EDD2542B2CE5203A008C2B23 /* FontsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD254292CE5203A008C2B23 /* FontsView.swift */; };
+		EDD2542E2CE5203F008C2B23 /* SHLabelSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2542C2CE5203F008C2B23 /* SHLabelSampleView.swift */; };
+		EDD254312CE52045008C2B23 /* SHButtonSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2542F2CE52045008C2B23 /* SHButtonSampleView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EDD254162CE51653008C2B23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDD253972CE5137E008C2B23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDD2539F2CE5137E008C2B23;
+			remoteInfo = SharpnezDesignSystem;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EDD254182CE51653008C2B23 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EDD254152CE51653008C2B23 /* SharpnezDesignSystem.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EDD253A02CE5137E008C2B23 /* SharpnezDesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SharpnezDesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDD253AD2CE5138A008C2B23 /* SharpnezDesignSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharpnezDesignSystem.h; sourceTree = "<group>"; };
+		EDD253AE2CE5138A008C2B23 /* SharpnezDesignSystem.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SharpnezDesignSystem.docc; sourceTree = "<group>"; };
+		EDD253B32CE51453008C2B23 /* DSConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSConstants.swift; sourceTree = "<group>"; };
+		EDD253B52CE51453008C2B23 /* DesignSystemConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemConfiguration.swift; sourceTree = "<group>"; };
+		EDD253B72CE51453008C2B23 /* CGFloat+DS+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+DS+extensions.swift"; sourceTree = "<group>"; };
+		EDD253B82CE51453008C2B23 /* UIColor+DS+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+DS+extensions.swift"; sourceTree = "<group>"; };
+		EDD253B92CE51453008C2B23 /* UIFont+DS+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+DS+extensions.swift"; sourceTree = "<group>"; };
+		EDD253BB2CE51453008C2B23 /* SHButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHButton.swift; sourceTree = "<group>"; };
+		EDD253BD2CE51453008C2B23 /* SHLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHLabel.swift; sourceTree = "<group>"; };
+		EDD253D32CE51453008C2B23 /* ViewStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStatus.swift; sourceTree = "<group>"; };
+		EDD253EA2CE5145C008C2B23 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		EDD253EB2CE5145C008C2B23 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		EDD253EC2CE5145C008C2B23 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		EDD253ED2CE5145C008C2B23 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		EDD253EE2CE5145C008C2B23 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		EDD253EF2CE5145C008C2B23 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		EDD253FB2CE51604008C2B23 /* SwiftUISample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUISample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDD254092CE51612008C2B23 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EDD2540B2CE51612008C2B23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDD2540C2CE51612008C2B23 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		EDD2540D2CE51612008C2B23 /* SwiftUISampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUISampleApp.swift; sourceTree = "<group>"; };
+		EDD2541E2CE51F6F008C2B23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EDD254212CE51FF9008C2B23 /* SampleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleItem.swift; sourceTree = "<group>"; };
+		EDD254232CE52024008C2B23 /* ViewStatusSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStatusSampleView.swift; sourceTree = "<group>"; };
+		EDD254262CE52034008C2B23 /* ColorsFromHexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsFromHexView.swift; sourceTree = "<group>"; };
+		EDD254292CE5203A008C2B23 /* FontsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsView.swift; sourceTree = "<group>"; };
+		EDD2542C2CE5203F008C2B23 /* SHLabelSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHLabelSampleView.swift; sourceTree = "<group>"; };
+		EDD2542F2CE52045008C2B23 /* SHButtonSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHButtonSampleView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDD2539D2CE5137E008C2B23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDD253F82CE51604008C2B23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDD254142CE51653008C2B23 /* SharpnezDesignSystem.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EDD253962CE5137E008C2B23 = {
+			isa = PBXGroup;
+			children = (
+				EDD253AF2CE5138A008C2B23 /* SharpnezDesignSystem */,
+				EDD2540E2CE51612008C2B23 /* SwiftUISample */,
+				EDD254132CE51653008C2B23 /* Frameworks */,
+				EDD253A12CE5137E008C2B23 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EDD253A12CE5137E008C2B23 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDD253A02CE5137E008C2B23 /* SharpnezDesignSystem.framework */,
+				EDD253FB2CE51604008C2B23 /* SwiftUISample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDD253AF2CE5138A008C2B23 /* SharpnezDesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				EDD253B22CE513BC008C2B23 /* Resources */,
+				EDD253D52CE51453008C2B23 /* Source */,
+			);
+			path = SharpnezDesignSystem;
+			sourceTree = "<group>";
+		};
+		EDD253B22CE513BC008C2B23 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EDD253F02CE5145C008C2B23 /* Fonts */,
+				EDD253AD2CE5138A008C2B23 /* SharpnezDesignSystem.h */,
+				EDD253AE2CE5138A008C2B23 /* SharpnezDesignSystem.docc */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EDD253B42CE51453008C2B23 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				EDD253B32CE51453008C2B23 /* DSConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		EDD253B62CE51453008C2B23 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EDD253B52CE51453008C2B23 /* DesignSystemConfiguration.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EDD253BA2CE51453008C2B23 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EDD253B72CE51453008C2B23 /* CGFloat+DS+extensions.swift */,
+				EDD253B82CE51453008C2B23 /* UIColor+DS+extensions.swift */,
+				EDD253B92CE51453008C2B23 /* UIFont+DS+extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EDD253BC2CE51453008C2B23 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				EDD253BB2CE51453008C2B23 /* SHButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		EDD253BE2CE51453008C2B23 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				EDD253BD2CE51453008C2B23 /* SHLabel.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		EDD253BF2CE51453008C2B23 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				EDD253BC2CE51453008C2B23 /* Button */,
+				EDD253BE2CE51453008C2B23 /* Label */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		EDD253D42CE51453008C2B23 /* ViewStatus */ = {
+			isa = PBXGroup;
+			children = (
+				EDD253D32CE51453008C2B23 /* ViewStatus.swift */,
+			);
+			path = ViewStatus;
+			sourceTree = "<group>";
+		};
+		EDD253D52CE51453008C2B23 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				EDD253B42CE51453008C2B23 /* Constants */,
+				EDD253B62CE51453008C2B23 /* Core */,
+				EDD253BA2CE51453008C2B23 /* Extensions */,
+				EDD253BF2CE51453008C2B23 /* SwiftUI */,
+				EDD253D42CE51453008C2B23 /* ViewStatus */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		EDD253F02CE5145C008C2B23 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EDD253EA2CE5145C008C2B23 /* Montserrat-Bold.ttf */,
+				EDD253EB2CE5145C008C2B23 /* Montserrat-Medium.ttf */,
+				EDD253EC2CE5145C008C2B23 /* Montserrat-Regular.ttf */,
+				EDD253ED2CE5145C008C2B23 /* Poppins-Bold.ttf */,
+				EDD253EE2CE5145C008C2B23 /* Poppins-Medium.ttf */,
+				EDD253EF2CE5145C008C2B23 /* Poppins-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EDD2540A2CE51612008C2B23 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EDD254092CE51612008C2B23 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EDD2540E2CE51612008C2B23 /* SwiftUISample */ = {
+			isa = PBXGroup;
+			children = (
+				EDD254192CE51E19008C2B23 /* Resources */,
+				EDD2541A2CE51ED2008C2B23 /* Source */,
+			);
+			path = SwiftUISample;
+			sourceTree = "<group>";
+		};
+		EDD254132CE51653008C2B23 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EDD254192CE51E19008C2B23 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EDD2540B2CE51612008C2B23 /* Assets.xcassets */,
+				EDD2540A2CE51612008C2B23 /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EDD2541A2CE51ED2008C2B23 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				EDD2541B2CE51ED8008C2B23 /* Core */,
+				EDD2541C2CE51EEC008C2B23 /* Features */,
+				EDD254202CE51FE3008C2B23 /* Models */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		EDD2541B2CE51ED8008C2B23 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EDD2541E2CE51F6F008C2B23 /* AppDelegate.swift */,
+				EDD2540D2CE51612008C2B23 /* SwiftUISampleApp.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EDD2541C2CE51EEC008C2B23 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				EDD254302CE52045008C2B23 /* SHButton */,
+				EDD2542D2CE5203F008C2B23 /* SHLabel */,
+				EDD2542A2CE5203A008C2B23 /* FontsView */,
+				EDD254272CE52034008C2B23 /* ColorsFromHex */,
+				EDD254242CE52024008C2B23 /* ViewStatus */,
+				EDD2541D2CE51F0C008C2B23 /* Home */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		EDD2541D2CE51F0C008C2B23 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EDD2540C2CE51612008C2B23 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EDD254202CE51FE3008C2B23 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EDD254212CE51FF9008C2B23 /* SampleItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EDD254242CE52024008C2B23 /* ViewStatus */ = {
+			isa = PBXGroup;
+			children = (
+				EDD254232CE52024008C2B23 /* ViewStatusSampleView.swift */,
+			);
+			path = ViewStatus;
+			sourceTree = "<group>";
+		};
+		EDD254272CE52034008C2B23 /* ColorsFromHex */ = {
+			isa = PBXGroup;
+			children = (
+				EDD254262CE52034008C2B23 /* ColorsFromHexView.swift */,
+			);
+			path = ColorsFromHex;
+			sourceTree = "<group>";
+		};
+		EDD2542A2CE5203A008C2B23 /* FontsView */ = {
+			isa = PBXGroup;
+			children = (
+				EDD254292CE5203A008C2B23 /* FontsView.swift */,
+			);
+			path = FontsView;
+			sourceTree = "<group>";
+		};
+		EDD2542D2CE5203F008C2B23 /* SHLabel */ = {
+			isa = PBXGroup;
+			children = (
+				EDD2542C2CE5203F008C2B23 /* SHLabelSampleView.swift */,
+			);
+			path = SHLabel;
+			sourceTree = "<group>";
+		};
+		EDD254302CE52045008C2B23 /* SHButton */ = {
+			isa = PBXGroup;
+			children = (
+				EDD2542F2CE52045008C2B23 /* SHButtonSampleView.swift */,
+			);
+			path = SHButton;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		EDD2539B2CE5137E008C2B23 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDD253B02CE5138A008C2B23 /* SharpnezDesignSystem.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		EDD2539F2CE5137E008C2B23 /* SharpnezDesignSystem */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDD253A82CE5137E008C2B23 /* Build configuration list for PBXNativeTarget "SharpnezDesignSystem" */;
+			buildPhases = (
+				EDD2539B2CE5137E008C2B23 /* Headers */,
+				EDD2539C2CE5137E008C2B23 /* Sources */,
+				EDD2539D2CE5137E008C2B23 /* Frameworks */,
+				EDD2539E2CE5137E008C2B23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SharpnezDesignSystem;
+			packageProductDependencies = (
+			);
+			productName = SharpnezDesignSystem;
+			productReference = EDD253A02CE5137E008C2B23 /* SharpnezDesignSystem.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EDD253FA2CE51604008C2B23 /* SwiftUISample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDD254062CE51606008C2B23 /* Build configuration list for PBXNativeTarget "SwiftUISample" */;
+			buildPhases = (
+				EDD253F72CE51604008C2B23 /* Sources */,
+				EDD253F82CE51604008C2B23 /* Frameworks */,
+				EDD253F92CE51604008C2B23 /* Resources */,
+				EDD254182CE51653008C2B23 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDD254172CE51653008C2B23 /* PBXTargetDependency */,
+			);
+			name = SwiftUISample;
+			packageProductDependencies = (
+			);
+			productName = SwiftUISample;
+			productReference = EDD253FB2CE51604008C2B23 /* SwiftUISample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDD253972CE5137E008C2B23 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					EDD2539F2CE5137E008C2B23 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					EDD253FA2CE51604008C2B23 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = EDD2539A2CE5137E008C2B23 /* Build configuration list for PBXProject "SharpnezDesignSystem" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDD253962CE5137E008C2B23;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = EDD253A12CE5137E008C2B23 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDD2539F2CE5137E008C2B23 /* SharpnezDesignSystem */,
+				EDD253FA2CE51604008C2B23 /* SwiftUISample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDD2539E2CE5137E008C2B23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDD253F12CE5145C008C2B23 /* Poppins-Regular.ttf in Resources */,
+				EDD253F22CE5145C008C2B23 /* Montserrat-Bold.ttf in Resources */,
+				EDD253F32CE5145C008C2B23 /* Montserrat-Medium.ttf in Resources */,
+				EDD253F42CE5145C008C2B23 /* Montserrat-Regular.ttf in Resources */,
+				EDD253F52CE5145C008C2B23 /* Poppins-Bold.ttf in Resources */,
+				EDD253F62CE5145C008C2B23 /* Poppins-Medium.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDD253F92CE51604008C2B23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDD254112CE51612008C2B23 /* Preview Assets.xcassets in Resources */,
+				EDD254122CE51612008C2B23 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDD2539C2CE5137E008C2B23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDD253D62CE51453008C2B23 /* ViewStatus.swift in Sources */,
+				EDD253DA2CE51453008C2B23 /* DSConstants.swift in Sources */,
+				EDD253DB2CE51453008C2B23 /* UIColor+DS+extensions.swift in Sources */,
+				EDD253DD2CE51453008C2B23 /* CGFloat+DS+extensions.swift in Sources */,
+				EDD253DF2CE51453008C2B23 /* DesignSystemConfiguration.swift in Sources */,
+				EDD253E22CE51453008C2B23 /* SHLabel.swift in Sources */,
+				EDD253E42CE51453008C2B23 /* SHButton.swift in Sources */,
+				EDD253E82CE51453008C2B23 /* UIFont+DS+extensions.swift in Sources */,
+				EDD253B12CE5138A008C2B23 /* SharpnezDesignSystem.docc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDD253F72CE51604008C2B23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDD254252CE52024008C2B23 /* ViewStatusSampleView.swift in Sources */,
+				EDD254222CE51FF9008C2B23 /* SampleItem.swift in Sources */,
+				EDD2542E2CE5203F008C2B23 /* SHLabelSampleView.swift in Sources */,
+				EDD2541F2CE51F78008C2B23 /* AppDelegate.swift in Sources */,
+				EDD2542B2CE5203A008C2B23 /* FontsView.swift in Sources */,
+				EDD2540F2CE51612008C2B23 /* HomeView.swift in Sources */,
+				EDD254282CE52034008C2B23 /* ColorsFromHexView.swift in Sources */,
+				EDD254102CE51612008C2B23 /* SwiftUISampleApp.swift in Sources */,
+				EDD254312CE52045008C2B23 /* SHButtonSampleView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EDD254172CE51653008C2B23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDD2539F2CE5137E008C2B23 /* SharpnezDesignSystem */;
+			targetProxy = EDD254162CE51653008C2B23 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EDD253A92CE5137E008C2B23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9Y7M54NCKD;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiagolinharess.SharpnezDesignSystem;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EDD253AA2CE5137E008C2B23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9Y7M54NCKD;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiagolinharess.SharpnezDesignSystem;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EDD253AB2CE5137E008C2B23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EDD253AC2CE5137E008C2B23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EDD254072CE51606008C2B23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUISample/Resources/Preview Content\"";
+				DEVELOPMENT_TEAM = 9Y7M54NCKD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiagolinharess.SwiftUISample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EDD254082CE51606008C2B23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUISample/Resources/Preview Content\"";
+				DEVELOPMENT_TEAM = 9Y7M54NCKD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiagolinharess.SwiftUISample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDD2539A2CE5137E008C2B23 /* Build configuration list for PBXProject "SharpnezDesignSystem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDD253AB2CE5137E008C2B23 /* Debug */,
+				EDD253AC2CE5137E008C2B23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDD253A82CE5137E008C2B23 /* Build configuration list for PBXNativeTarget "SharpnezDesignSystem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDD253A92CE5137E008C2B23 /* Debug */,
+				EDD253AA2CE5137E008C2B23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDD254062CE51606008C2B23 /* Build configuration list for PBXNativeTarget "SwiftUISample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDD254072CE51606008C2B23 /* Debug */,
+				EDD254082CE51606008C2B23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EDD253972CE5137E008C2B23 /* Project object */;
+}
