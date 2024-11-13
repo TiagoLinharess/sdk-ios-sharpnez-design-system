@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'SharpnezDesignSystemSwiftUI'
-  spec.version      = '1.2.0'
+  spec.version      = '2.0.0'
   spec.license      = { :type => 'MIT' }
   spec.homepage     = 'https://github.com/TiagoLinharess/sdk-ios-sharpnez-design-system.git'
   spec.authors      = { 'Tiago Linhares' => 'tiagolinharessouza@gmail.com' }
