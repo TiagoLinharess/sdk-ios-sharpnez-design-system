@@ -67,6 +67,48 @@ public extension Color  {
         else { return .white }
         return Color(hex: color)
     }
+    
+    /// successSH
+    static var successSH: Color {
+        guard let color = DesignSystemConfiguration.shared?.flavorColors?.success
+        else { return .white }
+        return Color(hex: color)
+    }
+    
+    /// onSuccessSH
+    static var onSuccessSH: Color {
+        guard let color = DesignSystemConfiguration.shared?.flavorColors?.onSuccess
+        else { return .white }
+        return Color(hex: color)
+    }
+    
+    /// warningSH
+    static var warningSH: Color {
+        guard let color = DesignSystemConfiguration.shared?.flavorColors?.warning
+        else { return .white }
+        return Color(hex: color)
+    }
+    
+    /// onWarningSH
+    static var onWarningSH: Color {
+        guard let color = DesignSystemConfiguration.shared?.flavorColors?.onWarning
+        else { return .white }
+        return Color(hex: color)
+    }
+    
+    /// errorSH
+    static var errorSH: Color {
+        guard let color = DesignSystemConfiguration.shared?.flavorColors?.error
+        else { return .white }
+        return Color(hex: color)
+    }
+    
+    /// onErrorSH
+    static var onErrorSH: Color {
+        guard let color = DesignSystemConfiguration.shared?.flavorColors?.onError
+        else { return .white }
+        return Color(hex: color)
+    }
 }
 
 public extension Color {

@@ -17,4 +17,10 @@ final class FlavorColors: FlavorColorsProtocol {
     var onSurface: String = "#000000"
     var background: String = "#FFFFFF"
     var onBackground: String = "#000000"
+    var success: String = "#01970b"
+    var onSuccess: String = "#FFFFFF"
+    var warning: String = "#dbd942"
+    var onWarning: String = "#000000"
+    var error: String = "#cc0000"
+    var onError: String = "#FFFFFF"
 }
