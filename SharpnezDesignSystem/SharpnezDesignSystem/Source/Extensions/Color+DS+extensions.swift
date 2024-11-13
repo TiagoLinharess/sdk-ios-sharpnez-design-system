@@ -12,48 +12,56 @@ public extension Color  {
     
     // MARK: - Colors
     
+    /// primarySH
     static var primarySH: Color {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.primary
         else { return .white }
         return Color(hex: color)
     }
     
+    /// onPrimarySH
     static var onPrimarySH: Color {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.onPrimary
         else { return .white }
         return Color(hex: color)
     }
     
+    /// secondarySH
     static var secondarySH: Color {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.secondary
         else { return .white }
         return Color(hex: color)
     }
     
+    /// onSecondarySH
     static var onSecondarySH: Color {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.onSecondary
         else { return .white }
         return Color(hex: color)
     }
     
+    /// surfaceSH
     static var surfaceSH: Color {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.surface
         else { return .white }
         return Color(hex: color)
     }
     
+    /// onSurfaceSH
     static var onSurfaceSH: Color {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.onSurface
         else { return .white }
         return Color(hex: color)
     }
     
+    /// backgroundSH
     static var backgroundSH: Color {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.background
         else { return .white }
         return Color(hex: color)
     }
     
+    /// onBackgroundSH
     static var onBackgroundSH: Color {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.onBackground
         else { return .white }
