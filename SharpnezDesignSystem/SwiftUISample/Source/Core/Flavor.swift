@@ -9,12 +9,12 @@ import SharpnezDesignSystem
 
 // MARK: - Flavor Colors
 final class FlavorColors: FlavorColorsProtocol {
-    var primary: String = "#2596BE"
+    var primary: String = "#161c48"
     var onPrimary: String = "#FFFFFF"
-    var secondary: String = "#195B75"
+    var secondary: String = "#17457f"
     var onSecondary: String = "#FFFFFF"
-    var surface: String = "#D5D9DA"
-    var onSurface: String = "#000000"
+    var surface: String = "#00a1d7"
+    var onSurface: String = "#FFFFFF"
     var background: String = "#FFFFFF"
     var onBackground: String = "#000000"
     var success: String = "#01970b"

@@ -17,6 +17,8 @@ struct SampleItem: Identifiable {
         .init(view: FlavorColorsView(), name: "Flavor Colors"),
         .init(view: FontsView(), name: "Custom Fonts"),
         .init(view: SHLabelSampleView(), name: "SHLabel"),
-        .init(view: SHButtonSampleView(), name: "SHButton")
+        .init(view: SHButtonSampleView(), name: "SHButton"),
+        .init(view: SHShortcutSampleView(), name: "SHShortcut"),
+        .init(view: SHContainerSampleView(), name: "SHContainer")
     ]
 }

@@ -31,11 +31,11 @@ private struct SHButtonModifier: ViewModifier {
             .foregroundColor(style.titleColor)
             .padding(.small)
             .background(style.backgroundColor)
-            .cornerRadius(.extraSmall)
-            .overlay(
-                RoundedRectangle(cornerRadius: .extraSmall)
+            .clipShape(.capsule)
+            .overlay {
+                Capsule()
                     .stroke(style.borderColor, lineWidth: style.borderWidth)
-            )
+            }
     }
 }
 

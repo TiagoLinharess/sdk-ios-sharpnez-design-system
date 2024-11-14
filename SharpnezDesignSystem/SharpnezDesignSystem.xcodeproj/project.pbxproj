@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EDA01B8A2CE5964000740E56 /* SHShortcutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA01B892CE5963500740E56 /* SHShortcutButton.swift */; };
+		EDA01B8E2CE5991B00740E56 /* SHShortcutSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA01B8D2CE5991B00740E56 /* SHShortcutSampleView.swift */; };
+		EDA01B912CE619CB00740E56 /* SHContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA01B902CE619C500740E56 /* SHContainerView.swift */; };
+		EDA01B942CE61BA200740E56 /* SHContainerSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA01B932CE61B9100740E56 /* SHContainerSampleView.swift */; };
 		EDD253B02CE5138A008C2B23 /* SharpnezDesignSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = EDD253AD2CE5138A008C2B23 /* SharpnezDesignSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EDD253B12CE5138A008C2B23 /* SharpnezDesignSystem.docc in Sources */ = {isa = PBXBuildFile; fileRef = EDD253AE2CE5138A008C2B23 /* SharpnezDesignSystem.docc */; };
 		EDD253D62CE51453008C2B23 /* ViewStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD253D32CE51453008C2B23 /* ViewStatus.swift */; };
@@ -65,6 +69,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EDA01B892CE5963500740E56 /* SHShortcutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHShortcutButton.swift; sourceTree = "<group>"; };
+		EDA01B8D2CE5991B00740E56 /* SHShortcutSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHShortcutSampleView.swift; sourceTree = "<group>"; };
+		EDA01B902CE619C500740E56 /* SHContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHContainerView.swift; sourceTree = "<group>"; };
+		EDA01B932CE61B9100740E56 /* SHContainerSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHContainerSampleView.swift; sourceTree = "<group>"; };
 		EDD253A02CE5137E008C2B23 /* SharpnezDesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SharpnezDesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD253AD2CE5138A008C2B23 /* SharpnezDesignSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharpnezDesignSystem.h; sourceTree = "<group>"; };
 		EDD253AE2CE5138A008C2B23 /* SharpnezDesignSystem.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SharpnezDesignSystem.docc; sourceTree = "<group>"; };
@@ -117,6 +125,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EDA01B882CE5962500740E56 /* Shortcut */ = {
+			isa = PBXGroup;
+			children = (
+				EDA01B892CE5963500740E56 /* SHShortcutButton.swift */,
+			);
+			path = Shortcut;
+			sourceTree = "<group>";
+		};
+		EDA01B8C2CE5987600740E56 /* SHShortcut */ = {
+			isa = PBXGroup;
+			children = (
+				EDA01B8D2CE5991B00740E56 /* SHShortcutSampleView.swift */,
+			);
+			path = SHShortcut;
+			sourceTree = "<group>";
+		};
+		EDA01B8F2CE619B300740E56 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				EDA01B902CE619C500740E56 /* SHContainerView.swift */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		EDA01B922CE61B8700740E56 /* SHContainer */ = {
+			isa = PBXGroup;
+			children = (
+				EDA01B932CE61B9100740E56 /* SHContainerSampleView.swift */,
+			);
+			path = SHContainer;
+			sourceTree = "<group>";
+		};
 		EDD253962CE5137E008C2B23 = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +240,8 @@
 		EDD253BF2CE51453008C2B23 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				EDA01B8F2CE619B300740E56 /* Container */,
+				EDA01B882CE5962500740E56 /* Shortcut */,
 				EDD253BC2CE51453008C2B23 /* Button */,
 				EDD253BE2CE51453008C2B23 /* Label */,
 			);
@@ -296,6 +338,8 @@
 		EDD2541C2CE51EEC008C2B23 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				EDA01B922CE61B8700740E56 /* SHContainer */,
+				EDA01B8C2CE5987600740E56 /* SHShortcut */,
 				EDD254302CE52045008C2B23 /* SHButton */,
 				EDD2542D2CE5203F008C2B23 /* SHLabel */,
 				EDD2542A2CE5203A008C2B23 /* FontsView */,
@@ -493,6 +537,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDA01B912CE619CB00740E56 /* SHContainerView.swift in Sources */,
 				EDD253D62CE51453008C2B23 /* ViewStatus.swift in Sources */,
 				EDD254392CE52B3C008C2B23 /* FlavorColors.swift in Sources */,
 				EDD253DA2CE51453008C2B23 /* DSConstants.swift in Sources */,
@@ -501,6 +546,7 @@
 				EDD253DF2CE51453008C2B23 /* DesignSystemConfiguration.swift in Sources */,
 				EDD253E22CE51453008C2B23 /* SHLabel.swift in Sources */,
 				EDD253E42CE51453008C2B23 /* SHButton.swift in Sources */,
+				EDA01B8A2CE5964000740E56 /* SHShortcutButton.swift in Sources */,
 				EDD253E82CE51453008C2B23 /* UIFont+DS+extensions.swift in Sources */,
 				EDD253B12CE5138A008C2B23 /* SharpnezDesignSystem.docc in Sources */,
 			);
@@ -513,7 +559,9 @@
 				EDD254252CE52024008C2B23 /* ViewStatusSampleView.swift in Sources */,
 				EDD254222CE51FF9008C2B23 /* SampleItem.swift in Sources */,
 				EDD2542E2CE5203F008C2B23 /* SHLabelSampleView.swift in Sources */,
+				EDA01B8E2CE5991B00740E56 /* SHShortcutSampleView.swift in Sources */,
 				EDD2541F2CE51F78008C2B23 /* AppDelegate.swift in Sources */,
+				EDA01B942CE61BA200740E56 /* SHContainerSampleView.swift in Sources */,
 				EDD2542B2CE5203A008C2B23 /* FontsView.swift in Sources */,
 				EDD2540F2CE51612008C2B23 /* HomeView.swift in Sources */,
 				EDD254282CE52034008C2B23 /* FlavorColorsView.swift in Sources */,
