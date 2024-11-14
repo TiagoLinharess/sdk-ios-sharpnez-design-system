@@ -11,12 +11,18 @@ import SwiftUI
 public struct SHContainerView<Content: View>: View {
     // MARK: - Properties
     
-    let title: String
-    let font: DSFontName
-    @ViewBuilder let content: Content
+    /// Container title
+    private let title: String
+    
+    /// Title font
+    private let font: DSFontName
+    
+    /// Content View
+    @ViewBuilder private let content: Content
     
     // MARK: - Init
     
+    /// Init
     public init(title: String, font: DSFontName, @ViewBuilder content: () -> Content) {
         self.title = title
         self.font = font

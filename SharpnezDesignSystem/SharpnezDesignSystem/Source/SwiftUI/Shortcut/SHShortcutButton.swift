@@ -10,13 +10,21 @@ import SwiftUI
 public struct SHShortcutButton: View {
     // MARK: - Properties
     
-    let image: String
-    let label: String
-    let font: DSFontName
-    let action: () -> Void
+    /// Image text
+    private let image: String
+    
+    /// Button text
+    private let label: String
+    
+    /// Button Font
+    private let font: DSFontName
+    
+    /// Button Action
+    private let action: () -> Void
     
     // MARK: - Init
     
+    /// Init
     public init(image: String, label: String, font: DSFontName, action: @escaping () -> Void) {
         self.image = image
         self.label = label

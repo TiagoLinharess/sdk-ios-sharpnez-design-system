@@ -240,10 +240,10 @@
 		EDD253BF2CE51453008C2B23 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				EDA01B8F2CE619B300740E56 /* Container */,
-				EDA01B882CE5962500740E56 /* Shortcut */,
 				EDD253BC2CE51453008C2B23 /* Button */,
+				EDA01B8F2CE619B300740E56 /* Container */,
 				EDD253BE2CE51453008C2B23 /* Label */,
+				EDA01B882CE5962500740E56 /* Shortcut */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
