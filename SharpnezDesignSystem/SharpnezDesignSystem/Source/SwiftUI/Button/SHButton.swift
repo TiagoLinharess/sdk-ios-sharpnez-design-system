@@ -71,7 +71,7 @@ private enum SHButtonStyle {
             return .zero
         }
     }
-
+    
     /// Border color.
     var borderColor: Color {
         switch self {
@@ -88,17 +88,21 @@ extension Button {
     // MARK: - Modifier Implementation
     
     /// Primary button style with Color anf Font.
-    public func primarySHStyle(font: Font) -> some View {
-        modifier(SHButtonModifier(style: .primary(.primarySH, .onPrimarySH), font: font))
+    public func primarySHStyle(
+        font: Font,
+        color: Color = .primarySH,
+        onColor: Color = .onPrimarySH
+    ) -> some View {
+        modifier(SHButtonModifier(style: .primary(color, onColor), font: font))
     }
     
     /// Secondary button style with Color and Font.
-    public func secondarySHStyle(font: Font) -> some View {
-        modifier(SHButtonModifier(style: .secondary(.secondarySH), font: font))
+    public func secondarySHStyle(font: Font, color: Color = .secondarySH) -> some View {
+        modifier(SHButtonModifier(style: .secondary(color), font: font))
     }
     
     ///  Ghost button style with Color and Font.
-    public func ghostSHStyle(font: Font) -> some View {
-        modifier(SHButtonModifier(style: .ghost(.primarySH), font: font))
+    public func ghostSHStyle(font: Font, color: Color = .primarySH) -> some View {
+        modifier(SHButtonModifier(style: .ghost(color), font: font))
     }
 }
