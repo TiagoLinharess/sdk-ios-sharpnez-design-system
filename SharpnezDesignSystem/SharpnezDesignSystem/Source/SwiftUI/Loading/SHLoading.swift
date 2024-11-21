@@ -76,7 +76,7 @@ public enum SHLoadingStyle {
         case .nano: .two
         case .small: .two
         case .medium: .nano
-        case .large: .extraSmall
+        case .large: .nano
         }
     }
     

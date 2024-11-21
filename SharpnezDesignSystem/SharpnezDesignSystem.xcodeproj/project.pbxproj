@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		ED3102842CEF651E00DEC9C4 /* SHLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3102832CEF651200DEC9C4 /* SHLoading.swift */; };
 		ED3102872CEF65E500DEC9C4 /* SHLoadingSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3102852CEF65E500DEC9C4 /* SHLoadingSampleView.swift */; };
+		ED31028D2CEF752100DEC9C4 /* SHLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31028C2CEF751A00DEC9C4 /* SHLoadingView.swift */; };
 		EDA01B8A2CE5964000740E56 /* SHShortcutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA01B892CE5963500740E56 /* SHShortcutButton.swift */; };
 		EDA01B8E2CE5991B00740E56 /* SHShortcutSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA01B8D2CE5991B00740E56 /* SHShortcutSampleView.swift */; };
 		EDA01B912CE619CB00740E56 /* SHContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA01B902CE619C500740E56 /* SHContainerView.swift */; };
@@ -44,6 +45,7 @@
 		EDD254312CE52045008C2B23 /* SHButtonSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2542F2CE52045008C2B23 /* SHButtonSampleView.swift */; };
 		EDD254332CE5279A008C2B23 /* Flavor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD254322CE52781008C2B23 /* Flavor.swift */; };
 		EDD254392CE52B3C008C2B23 /* FlavorColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD254382CE52B35008C2B23 /* FlavorColors.swift */; };
+		EDDDE96C2CEF7D500054C7E2 /* SHLoadingViewSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDDE96B2CEF7D460054C7E2 /* SHLoadingViewSampleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,7 @@
 /* Begin PBXFileReference section */
 		ED3102832CEF651200DEC9C4 /* SHLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHLoading.swift; sourceTree = "<group>"; };
 		ED3102852CEF65E500DEC9C4 /* SHLoadingSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHLoadingSampleView.swift; sourceTree = "<group>"; };
+		ED31028C2CEF751A00DEC9C4 /* SHLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHLoadingView.swift; sourceTree = "<group>"; };
 		EDA01B892CE5963500740E56 /* SHShortcutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHShortcutButton.swift; sourceTree = "<group>"; };
 		EDA01B8D2CE5991B00740E56 /* SHShortcutSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHShortcutSampleView.swift; sourceTree = "<group>"; };
 		EDA01B902CE619C500740E56 /* SHContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHContainerView.swift; sourceTree = "<group>"; };
@@ -108,6 +111,7 @@
 		EDD2542F2CE52045008C2B23 /* SHButtonSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHButtonSampleView.swift; sourceTree = "<group>"; };
 		EDD254322CE52781008C2B23 /* Flavor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flavor.swift; sourceTree = "<group>"; };
 		EDD254382CE52B35008C2B23 /* FlavorColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorColors.swift; sourceTree = "<group>"; };
+		EDDDE96B2CEF7D460054C7E2 /* SHLoadingViewSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHLoadingViewSampleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,14 @@
 				ED3102852CEF65E500DEC9C4 /* SHLoadingSampleView.swift */,
 			);
 			path = SHLoading;
+			sourceTree = "<group>";
+		};
+		ED31028B2CEF750D00DEC9C4 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				ED31028C2CEF751A00DEC9C4 /* SHLoadingView.swift */,
+			);
+			path = LoadingView;
 			sourceTree = "<group>";
 		};
 		EDA01B882CE5962500740E56 /* Shortcut */ = {
@@ -264,6 +276,7 @@
 				EDA01B8F2CE619B300740E56 /* Container */,
 				EDD253BE2CE51453008C2B23 /* Label */,
 				ED3102822CEF64F600DEC9C4 /* Loading */,
+				ED31028B2CEF750D00DEC9C4 /* LoadingView */,
 				EDA01B882CE5962500740E56 /* Shortcut */,
 			);
 			path = SwiftUI;
@@ -364,6 +377,7 @@
 				EDD254302CE52045008C2B23 /* SHButton */,
 				EDD2542D2CE5203F008C2B23 /* SHLabel */,
 				ED3102862CEF65E500DEC9C4 /* SHLoading */,
+				EDDDE96A2CEF7D390054C7E2 /* SHLoadingView */,
 				EDD2542A2CE5203A008C2B23 /* FontsView */,
 				EDD254272CE52034008C2B23 /* ColorsFromHex */,
 				EDD254242CE52024008C2B23 /* ViewStatus */,
@@ -434,6 +448,14 @@
 				EDD254382CE52B35008C2B23 /* FlavorColors.swift */,
 			);
 			path = FlavorColors;
+			sourceTree = "<group>";
+		};
+		EDDDE96A2CEF7D390054C7E2 /* SHLoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				EDDDE96B2CEF7D460054C7E2 /* SHLoadingViewSampleView.swift */,
+			);
+			path = SHLoadingView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -571,6 +593,7 @@
 				EDD253E42CE51453008C2B23 /* SHButton.swift in Sources */,
 				EDA01B8A2CE5964000740E56 /* SHShortcutButton.swift in Sources */,
 				EDD253E82CE51453008C2B23 /* UIFont+DS+extensions.swift in Sources */,
+				ED31028D2CEF752100DEC9C4 /* SHLoadingView.swift in Sources */,
 				EDD253B12CE5138A008C2B23 /* SharpnezDesignSystem.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,6 +607,7 @@
 				EDD2542E2CE5203F008C2B23 /* SHLabelSampleView.swift in Sources */,
 				EDA01B8E2CE5991B00740E56 /* SHShortcutSampleView.swift in Sources */,
 				EDD2541F2CE51F78008C2B23 /* AppDelegate.swift in Sources */,
+				EDDDE96C2CEF7D500054C7E2 /* SHLoadingViewSampleView.swift in Sources */,
 				ED3102872CEF65E500DEC9C4 /* SHLoadingSampleView.swift in Sources */,
 				EDA01B942CE61BA200740E56 /* SHContainerSampleView.swift in Sources */,
 				EDD2542B2CE5203A008C2B23 /* FontsView.swift in Sources */,
