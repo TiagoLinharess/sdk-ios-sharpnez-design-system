@@ -7,39 +7,116 @@
 
 import SwiftUI
 
-private struct SHButtonModifier: ViewModifier {
-    
+public struct SHButton: View {
     // MARK: - Properties
     
-    /// Button style.
+    /// Button opacity
+    private var opacity: Double {
+        isDisabled ? 0.5 : 1
+    }
+    
+    /// Button title
+    private let title: String
+    
+    /// Button image
+    private let image: Image?
+    
+    /// Button style
     private let style: SHButtonStyle
     
+    /// Button font
     private let font: Font
+    
+    /// Button Action
+    private let action: () -> Void
+    
+    /// Button loading state
+    @Binding private var isLoading: Bool
+    
+    /// Button disabled state
+    @Binding private var isDisabled: Bool
     
     // MARK: - Init
     
-    /// Modifier init.
-    init(style: SHButtonStyle, font: Font) {
+    /// Modifier init
+    public init(
+        title: String,
+        image: Image? = nil,
+        style: SHButtonStyle,
+        font: Font,
+        isLoading: Binding<Bool> = Binding.constant(false),
+        isDisabled: Binding<Bool> = Binding.constant(false),
+        action: @escaping () -> Void
+    ) {
+        self.title = title
+        self.image = image
         self.style = style
         self.font = font
+        self.action = action
+        self._isLoading = isLoading
+        self._isDisabled = isDisabled
     }
     
-    /// Modifier body.
-    func body(content: Content) -> some View {
-        content
-            .font(font)
-            .foregroundColor(style.titleColor)
-            .padding(.small)
-            .background(style.backgroundColor)
-            .clipShape(.capsule)
-            .overlay {
-                Capsule()
-                    .stroke(style.borderColor, lineWidth: style.borderWidth)
+    // MARK: - Body
+    
+    public var body: some View {
+        VStack(alignment: .center, spacing: .zero) {
+            if isLoading {
+                loading
+            } else {
+                button
             }
+        }
+        .font(font)
+        .foregroundColor(style.titleColor.opacity(opacity))
+        .padding(.small)
+        .background(style.backgroundColor.opacity(opacity))
+        .clipShape(.capsule)
+        .overlay {
+            Capsule()
+                .stroke(style.borderColor.opacity(opacity), lineWidth: style.borderWidth)
+        }
+        .disabled(isDisabled)
+    }
+    
+    // MARK: - Loading
+    
+    private var loading: some View {
+        Text("Loading")
+            .frame(maxWidth: .infinity)
+    }
+    
+    // MARK: - Button
+    
+    private var button: some View {
+        Button {
+            action()
+        } label: {
+            buttonLabel
+                .frame(maxWidth: .infinity)
+        }
+    }
+    
+    // MARK: - Button Label
+    
+    private var buttonLabel: some View {
+        HStack(spacing: .extraSmall) {
+            if let image {
+                Label {
+                    Text(title)
+                } icon: {
+                    image
+                }
+            } else {
+                Text(title)
+            }
+        }
     }
 }
 
-private enum SHButtonStyle {
+// MARK: - Button Style
+
+public enum SHButtonStyle {
     case primary(Color, Color), secondary(Color), ghost(Color)
     
     /// Background color.
@@ -80,29 +157,5 @@ private enum SHButtonStyle {
         default:
             return .clear
         }
-    }
-}
-
-extension Button {
-    
-    // MARK: - Modifier Implementation
-    
-    /// Primary button style with Color anf Font.
-    public func primarySHStyle(
-        font: Font,
-        color: Color = .primarySH,
-        onColor: Color = .onPrimarySH
-    ) -> some View {
-        modifier(SHButtonModifier(style: .primary(color, onColor), font: font))
-    }
-    
-    /// Secondary button style with Color and Font.
-    public func secondarySHStyle(font: Font, color: Color = .secondarySH) -> some View {
-        modifier(SHButtonModifier(style: .secondary(color), font: font))
-    }
-    
-    ///  Ghost button style with Color and Font.
-    public func ghostSHStyle(font: Font, color: Color = .primarySH) -> some View {
-        modifier(SHButtonModifier(style: .ghost(color), font: font))
     }
 }

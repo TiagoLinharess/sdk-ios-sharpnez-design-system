@@ -8,7 +8,6 @@
 import SwiftUI
 
 private struct SHLabelModifier: ViewModifier {
-    
     // MARK: - Properties
     
     /// Label color.
@@ -36,7 +35,6 @@ private struct SHLabelModifier: ViewModifier {
 }
 
 extension Label {
-    
     // MARK: - Label Modifier Implementation
     
     /// Function for Color and Font parameters.
@@ -46,7 +44,6 @@ extension Label {
 }
 
 extension Text {
-    
     // MARK: - Text Modifier Implementation
     
     /// Function for Color and Font parameters.
