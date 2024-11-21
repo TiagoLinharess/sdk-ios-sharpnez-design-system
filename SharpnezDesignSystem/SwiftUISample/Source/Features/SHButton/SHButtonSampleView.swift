@@ -9,22 +9,58 @@ import SharpnezDesignSystem
 import SwiftUI
 
 struct SHButtonSampleView: View {
+    @State var isLoading: Bool = false
+    @State var isDisabled: Bool = false
+    
     var body: some View {
-        Button("Hello SHButton") {
-            print("Hello SHButton")
+        SHButton(
+            title: "isLoading",
+            style: .ghost(.primarySH),
+            font: .body(.montserrat, .medium),
+            action: actionLoading
+        )
+        SHButton(
+            title: "isDisabled",
+            style: .ghost(.primarySH),
+            font: .body(.montserrat, .medium),
+            action: actionDisabled
+        )
+        Spacer()
+        SHButton(
+            title: "Hello SHButton",
+            image: Image(systemName: "house"),
+            style: .primary(.primarySH, .onPrimarySH),
+            font: .body(.montserrat, .medium),
+            isLoading: $isLoading,
+            isDisabled: $isDisabled
+        ) {
+            print("Button 1 tapped")
         }
-        .primarySHStyle(font: .title3(.poppins, .medium))
-        Button {
-            print("Hello SHButton")
-        } label: {
-            Label("Hello SHButton", systemImage: "pencil")
+        SHButton(
+            title: "Hello SHButton",
+            style: .secondary(.primarySH),
+            font: .body(.montserrat, .medium),
+            isLoading: $isLoading,
+            isDisabled: $isDisabled
+        ) {
+            print("Button 2 tapped")
         }
-        .secondarySHStyle(font: .subtitle(.poppins, .medium))
-        Button {
-            print("Hello SHButton")
-        } label: {
-            Text("Hello SHButton")
+        SHButton(
+            title: "Hello SHButton",
+            style: .ghost(.primarySH),
+            font: .body(.montserrat, .medium),
+            isLoading: $isLoading,
+            isDisabled: $isDisabled
+        ) {
+            print("Button 3 tapped")
         }
-        .ghostSHStyle(font: .body(.poppins, .regular))
+    }
+    
+    private func actionLoading() {
+        isLoading.toggle()
+    }
+    
+    private func actionDisabled() {
+        isDisabled.toggle()
     }
 }

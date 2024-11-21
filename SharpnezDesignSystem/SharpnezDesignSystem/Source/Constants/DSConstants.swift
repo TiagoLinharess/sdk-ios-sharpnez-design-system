@@ -38,6 +38,24 @@ enum DSConstants {
         static let fontsExtension: String = "ttf"
     }
     
+    // MARK: - Icons
+    
+    /// Icons constants
+    enum Icons {
+        
+        /// checkmark.circle.fill
+        static let checkmarkCircleFill: String = "checkmark.circle.fill"
+        
+        /// exclamationmark.triangle.fill
+        static let exclamationmarkTriangleFill: String = "exclamationmark.triangle.fill"
+        
+        /// exclamationmark.octagon.fill
+        static let exclamationmarkOctagonFill: String = "exclamationmark.octagon.fill"
+        
+        /// info.circle.fill
+        static let infoCircleFill: String = "info.circle.fill"
+    }
+    
     // MARK: - UIKit
     
     /// UIKit Constants.

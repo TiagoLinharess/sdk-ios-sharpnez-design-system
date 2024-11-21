@@ -13,12 +13,15 @@ struct SampleItem: Identifiable {
     let name: String
     
     static var samples: [SampleItem] = [
-        .init(view: ViewStatusSampleView(), name: "View Status Sample"),
-        .init(view: FlavorColorsView(), name: "Flavor Colors"),
         .init(view: FontsView(), name: "Custom Fonts"),
-        .init(view: SHLabelSampleView(), name: "SHLabel"),
+        .init(view: FlavorColorsView(), name: "Flavor Colors"),
+        .init(view: ViewStatusSampleView(), name: "View Status Sample"),
         .init(view: SHButtonSampleView(), name: "SHButton"),
-        .init(view: SHShortcutSampleView(), name: "SHShortcut"),
-        .init(view: SHContainerSampleView(), name: "SHContainer")
+        .init(view: SHContainerSampleView(), name: "SHContainer"),
+        .init(view: SHFeedbackViewSampleView(), name: "SHFeedbackView"),
+        .init(view: SHLabelSampleView(), name: "SHLabel"),
+        .init(view: SHLoadingSampleView(), name: "SHLoading"),
+        .init(view: SHLoadingViewSampleView(), name: "SHLoadingView"),
+        .init(view: SHShortcutSampleView(), name: "SHShortcut")
     ]
 }
