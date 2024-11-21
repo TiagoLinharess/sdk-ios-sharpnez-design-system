@@ -82,7 +82,7 @@ public struct SHButton: View {
     // MARK: - Loading
     
     private var loading: some View {
-        Text("Loading")
+        SHLoading(style: .nano, color: style.titleColor.opacity(opacity))
             .frame(maxWidth: .infinity)
     }
     

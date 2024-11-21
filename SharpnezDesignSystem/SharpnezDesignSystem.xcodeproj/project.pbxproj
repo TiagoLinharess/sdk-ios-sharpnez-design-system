@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED3102842CEF651E00DEC9C4 /* SHLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3102832CEF651200DEC9C4 /* SHLoading.swift */; };
+		ED3102872CEF65E500DEC9C4 /* SHLoadingSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3102852CEF65E500DEC9C4 /* SHLoadingSampleView.swift */; };
 		EDA01B8A2CE5964000740E56 /* SHShortcutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA01B892CE5963500740E56 /* SHShortcutButton.swift */; };
 		EDA01B8E2CE5991B00740E56 /* SHShortcutSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA01B8D2CE5991B00740E56 /* SHShortcutSampleView.swift */; };
 		EDA01B912CE619CB00740E56 /* SHContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA01B902CE619C500740E56 /* SHContainerView.swift */; };
@@ -69,6 +71,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ED3102832CEF651200DEC9C4 /* SHLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHLoading.swift; sourceTree = "<group>"; };
+		ED3102852CEF65E500DEC9C4 /* SHLoadingSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHLoadingSampleView.swift; sourceTree = "<group>"; };
 		EDA01B892CE5963500740E56 /* SHShortcutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHShortcutButton.swift; sourceTree = "<group>"; };
 		EDA01B8D2CE5991B00740E56 /* SHShortcutSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHShortcutSampleView.swift; sourceTree = "<group>"; };
 		EDA01B902CE619C500740E56 /* SHContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHContainerView.swift; sourceTree = "<group>"; };
@@ -125,6 +129,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED3102822CEF64F600DEC9C4 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				ED3102832CEF651200DEC9C4 /* SHLoading.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		ED3102862CEF65E500DEC9C4 /* SHLoading */ = {
+			isa = PBXGroup;
+			children = (
+				ED3102852CEF65E500DEC9C4 /* SHLoadingSampleView.swift */,
+			);
+			path = SHLoading;
+			sourceTree = "<group>";
+		};
 		EDA01B882CE5962500740E56 /* Shortcut */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +263,7 @@
 				EDD253BC2CE51453008C2B23 /* Button */,
 				EDA01B8F2CE619B300740E56 /* Container */,
 				EDD253BE2CE51453008C2B23 /* Label */,
+				ED3102822CEF64F600DEC9C4 /* Loading */,
 				EDA01B882CE5962500740E56 /* Shortcut */,
 			);
 			path = SwiftUI;
@@ -342,6 +363,7 @@
 				EDA01B8C2CE5987600740E56 /* SHShortcut */,
 				EDD254302CE52045008C2B23 /* SHButton */,
 				EDD2542D2CE5203F008C2B23 /* SHLabel */,
+				ED3102862CEF65E500DEC9C4 /* SHLoading */,
 				EDD2542A2CE5203A008C2B23 /* FontsView */,
 				EDD254272CE52034008C2B23 /* ColorsFromHex */,
 				EDD254242CE52024008C2B23 /* ViewStatus */,
@@ -539,6 +561,7 @@
 			files = (
 				EDA01B912CE619CB00740E56 /* SHContainerView.swift in Sources */,
 				EDD253D62CE51453008C2B23 /* ViewStatus.swift in Sources */,
+				ED3102842CEF651E00DEC9C4 /* SHLoading.swift in Sources */,
 				EDD254392CE52B3C008C2B23 /* FlavorColors.swift in Sources */,
 				EDD253DA2CE51453008C2B23 /* DSConstants.swift in Sources */,
 				EDD253DB2CE51453008C2B23 /* Color+DS+extensions.swift in Sources */,
@@ -561,6 +584,7 @@
 				EDD2542E2CE5203F008C2B23 /* SHLabelSampleView.swift in Sources */,
 				EDA01B8E2CE5991B00740E56 /* SHShortcutSampleView.swift in Sources */,
 				EDD2541F2CE51F78008C2B23 /* AppDelegate.swift in Sources */,
+				ED3102872CEF65E500DEC9C4 /* SHLoadingSampleView.swift in Sources */,
 				EDA01B942CE61BA200740E56 /* SHContainerSampleView.swift in Sources */,
 				EDD2542B2CE5203A008C2B23 /* FontsView.swift in Sources */,
 				EDD2540F2CE51612008C2B23 /* HomeView.swift in Sources */,
