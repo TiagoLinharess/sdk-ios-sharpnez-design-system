@@ -31,6 +31,7 @@ private struct SHLabelModifier: ViewModifier {
         content
             .foregroundColor(color)
             .font(font)
+            .truncationMode(.tail)
     }
 }
 

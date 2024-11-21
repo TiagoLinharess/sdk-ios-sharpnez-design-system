@@ -85,11 +85,11 @@ public struct SHLoadingView: View {
                 Text(text)
                     .configureWithSH(color: onColor, font: font)
                     .onAppear(perform: handleText)
+                    .lineLimit(2)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(color)
-        .navigationBarHidden(true)
     }
     
     // MARK: - Private Methods
