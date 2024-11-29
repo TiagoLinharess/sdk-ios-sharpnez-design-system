@@ -38,7 +38,7 @@ public struct SHButton: View {
     
     // MARK: - Init
     
-    /// Modifier init
+    /// Init
     public init(
         title: String,
         image: Image? = nil,
