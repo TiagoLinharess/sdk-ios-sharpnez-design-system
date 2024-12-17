@@ -50,6 +50,8 @@
 		EDDDE9742CEFA4400054C7E2 /* SHFeedbackViewSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDDE9732CEFA4400054C7E2 /* SHFeedbackViewSampleView.swift */; };
 		EDDDE9772CF9242E0054C7E2 /* SHTextfieldSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDDE9762CF9241F0054C7E2 /* SHTextfieldSampleView.swift */; };
 		EDDDE97A2CF924AD0054C7E2 /* SHTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDDE9792CF924A00054C7E2 /* SHTextField.swift */; };
+		EDDDE9802CFA6E7F0054C7E2 /* SHPasswordFieldSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDDE97F2CFA6E680054C7E2 /* SHPasswordFieldSampleView.swift */; };
+		EDDDE9832CFA6F440054C7E2 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDDE9822CFA6F320054C7E2 /* PasswordField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +122,8 @@
 		EDDDE9732CEFA4400054C7E2 /* SHFeedbackViewSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHFeedbackViewSampleView.swift; sourceTree = "<group>"; };
 		EDDDE9762CF9241F0054C7E2 /* SHTextfieldSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHTextfieldSampleView.swift; sourceTree = "<group>"; };
 		EDDDE9792CF924A00054C7E2 /* SHTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHTextField.swift; sourceTree = "<group>"; };
+		EDDDE97F2CFA6E680054C7E2 /* SHPasswordFieldSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHPasswordFieldSampleView.swift; sourceTree = "<group>"; };
+		EDDDE9822CFA6F320054C7E2 /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -383,6 +387,7 @@
 				EDD2542D2CE5203F008C2B23 /* SHLabel */,
 				ED3102862CEF65E500DEC9C4 /* SHLoading */,
 				EDDDE96A2CEF7D390054C7E2 /* SHLoadingView */,
+				EDDDE97E2CFA6D870054C7E2 /* SHPasswordField */,
 				EDDDE9752CF924050054C7E2 /* SHTextfield */,
 				EDD2542A2CE5203A008C2B23 /* FontsView */,
 				EDD254272CE52034008C2B23 /* ColorsFromHex */,
@@ -479,6 +484,7 @@
 				EDA01B8F2CE619B300740E56 /* Container */,
 				EDD253BE2CE51453008C2B23 /* Label */,
 				ED3102822CEF64F600DEC9C4 /* Loading */,
+				EDDDE9812CFA6F100054C7E2 /* PasswordField */,
 				EDA01B882CE5962500740E56 /* Shortcut */,
 				EDDDE9782CF924960054C7E2 /* Textfield */,
 			);
@@ -516,6 +522,22 @@
 				EDDDE9792CF924A00054C7E2 /* SHTextField.swift */,
 			);
 			path = Textfield;
+			sourceTree = "<group>";
+		};
+		EDDDE97E2CFA6D870054C7E2 /* SHPasswordField */ = {
+			isa = PBXGroup;
+			children = (
+				EDDDE97F2CFA6E680054C7E2 /* SHPasswordFieldSampleView.swift */,
+			);
+			path = SHPasswordField;
+			sourceTree = "<group>";
+		};
+		EDDDE9812CFA6F100054C7E2 /* PasswordField */ = {
+			isa = PBXGroup;
+			children = (
+				EDDDE9822CFA6F320054C7E2 /* PasswordField.swift */,
+			);
+			path = PasswordField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -650,6 +672,7 @@
 				EDD253DB2CE51453008C2B23 /* Color+DS+extensions.swift in Sources */,
 				EDD253DD2CE51453008C2B23 /* CGFloat+DS+extensions.swift in Sources */,
 				EDD253DF2CE51453008C2B23 /* DesignSystemConfiguration.swift in Sources */,
+				EDDDE9832CFA6F440054C7E2 /* PasswordField.swift in Sources */,
 				EDD253E22CE51453008C2B23 /* SHLabel.swift in Sources */,
 				EDD253E42CE51453008C2B23 /* SHButton.swift in Sources */,
 				EDA01B8A2CE5964000740E56 /* SHShortcutButton.swift in Sources */,
@@ -674,6 +697,7 @@
 				EDDDE9772CF9242E0054C7E2 /* SHTextfieldSampleView.swift in Sources */,
 				EDA01B942CE61BA200740E56 /* SHContainerSampleView.swift in Sources */,
 				EDD2542B2CE5203A008C2B23 /* FontsView.swift in Sources */,
+				EDDDE9802CFA6E7F0054C7E2 /* SHPasswordFieldSampleView.swift in Sources */,
 				EDD2540F2CE51612008C2B23 /* HomeView.swift in Sources */,
 				EDD254282CE52034008C2B23 /* FlavorColorsView.swift in Sources */,
 				EDD254332CE5279A008C2B23 /* Flavor.swift in Sources */,
