@@ -54,6 +54,12 @@ enum DSConstants {
         
         /// info.circle.fill
         static let infoCircleFill: String = "info.circle.fill"
+        
+        /// eye
+        static let eyeOpen: String = "eye"
+        
+        /// eye.slash
+        static let eyeClosed: String = "eye.slash"
     }
     
     // MARK: - UIKit

@@ -51,7 +51,7 @@
 		EDDDE9772CF9242E0054C7E2 /* SHTextfieldSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDDE9762CF9241F0054C7E2 /* SHTextfieldSampleView.swift */; };
 		EDDDE97A2CF924AD0054C7E2 /* SHTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDDE9792CF924A00054C7E2 /* SHTextField.swift */; };
 		EDDDE9802CFA6E7F0054C7E2 /* SHPasswordFieldSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDDE97F2CFA6E680054C7E2 /* SHPasswordFieldSampleView.swift */; };
-		EDDDE9832CFA6F440054C7E2 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDDE9822CFA6F320054C7E2 /* PasswordField.swift */; };
+		EDDDE9832CFA6F440054C7E2 /* SHPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDDE9822CFA6F320054C7E2 /* SHPasswordField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,7 +123,7 @@
 		EDDDE9762CF9241F0054C7E2 /* SHTextfieldSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHTextfieldSampleView.swift; sourceTree = "<group>"; };
 		EDDDE9792CF924A00054C7E2 /* SHTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHTextField.swift; sourceTree = "<group>"; };
 		EDDDE97F2CFA6E680054C7E2 /* SHPasswordFieldSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHPasswordFieldSampleView.swift; sourceTree = "<group>"; };
-		EDDDE9822CFA6F320054C7E2 /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
+		EDDDE9822CFA6F320054C7E2 /* SHPasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHPasswordField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -535,7 +535,7 @@
 		EDDDE9812CFA6F100054C7E2 /* PasswordField */ = {
 			isa = PBXGroup;
 			children = (
-				EDDDE9822CFA6F320054C7E2 /* PasswordField.swift */,
+				EDDDE9822CFA6F320054C7E2 /* SHPasswordField.swift */,
 			);
 			path = PasswordField;
 			sourceTree = "<group>";
@@ -672,7 +672,7 @@
 				EDD253DB2CE51453008C2B23 /* Color+DS+extensions.swift in Sources */,
 				EDD253DD2CE51453008C2B23 /* CGFloat+DS+extensions.swift in Sources */,
 				EDD253DF2CE51453008C2B23 /* DesignSystemConfiguration.swift in Sources */,
-				EDDDE9832CFA6F440054C7E2 /* PasswordField.swift in Sources */,
+				EDDDE9832CFA6F440054C7E2 /* SHPasswordField.swift in Sources */,
 				EDD253E22CE51453008C2B23 /* SHLabel.swift in Sources */,
 				EDD253E42CE51453008C2B23 /* SHButton.swift in Sources */,
 				EDA01B8A2CE5964000740E56 /* SHShortcutButton.swift in Sources */,
