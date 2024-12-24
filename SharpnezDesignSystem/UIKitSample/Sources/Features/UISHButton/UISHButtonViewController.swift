@@ -30,7 +30,7 @@ extension UISHButtonViewController: ViewCode {
     
     func setupView() {
         view.backgroundColor = .backgroundSH
-        title = "Custom Fonts"
+        title = "UISHButton"
     }
 
     func setupHierarchy() {

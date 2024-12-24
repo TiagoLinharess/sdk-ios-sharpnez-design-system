@@ -106,4 +106,7 @@ extension CGFloat {
     
     /// A computed property representing the width of the device's screen.
     public static var deviceWidth: Self { UIScreen.main.bounds.width }
+    
+    /// A computed property representing the half width of the device's screen.
+    public static var deviceHalfWidth: Self { UIScreen.main.bounds.width / 2 }
 }

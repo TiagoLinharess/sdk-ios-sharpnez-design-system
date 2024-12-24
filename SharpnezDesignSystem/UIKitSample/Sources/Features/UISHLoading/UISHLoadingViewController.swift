@@ -1,5 +1,5 @@
 //
-//  UISHLabelViewController.swift
+//  UISHLoadingViewController.swift
 //  SharpnezDesignSystem
 //
 //  Created by Tiago Linhares on 24/12/24.
@@ -8,7 +8,7 @@
 import SharpnezDesignSystem
 import SnapKit
 
-final class UISHLabelViewController: UIViewController {
+final class UISHLoadingViewController: UIViewController {
     
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
@@ -22,15 +22,15 @@ final class UISHLabelViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        setupColors()
+        setupComponent()
     }
 }
 
-extension UISHLabelViewController: ViewCode {
+extension UISHLoadingViewController: ViewCode {
     
     func setupView() {
         view.backgroundColor = .backgroundSH
-        title = "UISHLabel"
+        title = "UISHLoading"
     }
 
     func setupHierarchy() {
@@ -46,16 +46,18 @@ extension UISHLabelViewController: ViewCode {
     }
 }
 
-extension UISHLabelViewController {
+extension UISHLoadingViewController {
     
-    private func setupColors() {
-        let labels: [UISHLabel] = [
-            .init(text: "label1", textColor: .primarySH, font: .title1(.poppins, .bold)),
-            .init(text: "label2", textColor: .secondarySH, font: .title2(.poppins, .medium)),
-            .init(text: "label3", textColor: .surfaceSH, font: .title3(.poppins, .regular)),
-            .init(text: "label4", textColor: .onBackgroundSH, font: .subtitle(.poppins, .regular)),
+    private func setupComponent() {
+        let components: [UISHLoading] = [
+            .init(color: .primarySH, size: .deviceHalfWidth),
+            .init(color: .primarySH, size: .superGiant),
+            .init(color: .primarySH, size: .superLarge),
+            .init(color: .primarySH, size: .large),
+            .init(color: .primarySH, size: .medium),
+            .init(color: .primarySH, size: .small)
         ]
         
-        stackView.addArrangedSubviews(labels)
+        stackView.addArrangedSubviews(components)
     }
 }
