@@ -8,7 +8,7 @@
 import SwiftUI
 
 private struct SHLabelModifier: ViewModifier {
-    // MARK: - Properties
+    // MARK: Properties
     
     /// Label color.
     private let color: Color
@@ -16,7 +16,7 @@ private struct SHLabelModifier: ViewModifier {
     /// Label font.
     private let font: Font
     
-    // MARK: - Init
+    // MARK: Init
     
     /// Init with Color and Font parameters.
     init(color: Color, font: Font) {
@@ -24,7 +24,7 @@ private struct SHLabelModifier: ViewModifier {
         self.color = color
     }
     
-    // MARK: - Body
+    // MARK: Body
     
     /// Modifier body.
     func body(content: Content) -> some View {
@@ -36,7 +36,7 @@ private struct SHLabelModifier: ViewModifier {
 }
 
 extension Label {
-    // MARK: - Label Modifier Implementation
+    // MARK: Label Modifier Implementation
     
     /// Function for Color and Font parameters.
     public func configureWithSH(color: Color, font: Font) -> some View {
@@ -45,7 +45,7 @@ extension Label {
 }
 
 extension Text {
-    // MARK: - Text Modifier Implementation
+    // MARK: Text Modifier Implementation
     
     /// Function for Color and Font parameters.
     public func configureWithSH(color: Color, font: Font) -> some View {

@@ -7,11 +7,11 @@
 
 import Foundation
 
-// MARK: - Constants
+// MARK: Constants
 
 enum DSConstants {
     
-    // MARK: - Fonts
+    // MARK: Fonts
     
     /// Fonts Constants.
     enum Fonts {
@@ -38,7 +38,7 @@ enum DSConstants {
         static let fontsExtension: String = "ttf"
     }
     
-    // MARK: - Icons
+    // MARK: Icons
     
     /// Icons constants
     enum Icons {
@@ -62,7 +62,7 @@ enum DSConstants {
         static let eyeClosed: String = "eye.slash"
     }
     
-    // MARK: - UIKit
+    // MARK: UIKit
     
     /// UIKit Constants.
     enum UIKit {

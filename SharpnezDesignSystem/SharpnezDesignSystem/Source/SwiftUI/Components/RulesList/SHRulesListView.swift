@@ -20,13 +20,13 @@ public struct SHRulesListViewModel: Identifiable {
 }
 
 public struct SHRulesListView: View {
-    // MARK: - Properties -
+    // MARK: Properties -
     
     private let items: [SHRulesListViewModel]
     private let font: Font
     private let defaultColor: Color
     
-    // MARK: - Init -
+    // MARK: Init -
     
     public init(items: [SHRulesListViewModel], font: Font, defaultColor: Color) {
         self.items = items
@@ -34,7 +34,7 @@ public struct SHRulesListView: View {
         self.defaultColor = defaultColor
     }
     
-    // MARK: - Body -
+    // MARK: Body -
     
     public var body: some View {
         ForEach(items) { item in
@@ -49,7 +49,7 @@ public struct SHRulesListView: View {
         }
     }
     
-    // MARK: - Private Methods -
+    // MARK: Private Methods -
     
     private func isCompleteColor(isComplete: Bool?) -> Color {
         guard let isComplete else { return defaultColor }

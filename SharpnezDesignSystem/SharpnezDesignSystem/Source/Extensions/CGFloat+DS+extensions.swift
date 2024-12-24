@@ -10,7 +10,7 @@ import UIKit
 
 extension CGFloat {
     
-    // MARK: - Sizes
+    // MARK: Sizes
     
     /// one
     /// 01.00

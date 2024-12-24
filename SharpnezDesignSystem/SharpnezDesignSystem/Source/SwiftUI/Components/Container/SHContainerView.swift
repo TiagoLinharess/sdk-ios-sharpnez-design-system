@@ -9,7 +9,7 @@
 import SwiftUI
 
 public struct SHContainerView<Content: View>: View {
-    // MARK: - Properties
+    // MARK: Properties
     
     /// Container title
     private let title: String
@@ -20,7 +20,7 @@ public struct SHContainerView<Content: View>: View {
     /// Content View
     @ViewBuilder private let content: Content
     
-    // MARK: - Init
+    // MARK: Init
     
     /// Init
     public init(title: String, font: DSFontName, @ViewBuilder content: () -> Content) {
@@ -29,7 +29,7 @@ public struct SHContainerView<Content: View>: View {
         self.content = content()
     }
     
-    // MARK: - Body
+    // MARK: Body
     
     public var body: some View {
         VStack(spacing: .zero) {

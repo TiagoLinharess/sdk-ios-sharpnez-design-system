@@ -8,7 +8,7 @@
 import SwiftUI
 
 public struct SHButton: View {
-    // MARK: - Properties
+    // MARK: Properties
     
     /// Button opacity
     private var opacity: Double {
@@ -36,7 +36,7 @@ public struct SHButton: View {
     /// Button disabled state
     private var isDisabled: Bool
     
-    // MARK: - Init
+    // MARK: Init
     
     /// Init
     public init(
@@ -57,7 +57,7 @@ public struct SHButton: View {
         self.isDisabled = isDisabled
     }
     
-    // MARK: - Body
+    // MARK: Body
     
     public var body: some View {
         VStack(alignment: .center, spacing: .zero) {
@@ -79,14 +79,14 @@ public struct SHButton: View {
         .disabled(isDisabled)
     }
     
-    // MARK: - Loading
+    // MARK: Loading
     
     private var loading: some View {
         SHLoading(style: .nano, color: style.titleColor.opacity(opacity))
             .frame(maxWidth: .infinity)
     }
     
-    // MARK: - Button
+    // MARK: Button
     
     private var button: some View {
         Button {
@@ -97,7 +97,7 @@ public struct SHButton: View {
         }
     }
     
-    // MARK: - Button Label
+    // MARK: Button Label
     
     private var buttonLabel: some View {
         HStack(spacing: .extraSmall) {
@@ -114,7 +114,7 @@ public struct SHButton: View {
     }
 }
 
-// MARK: - Button Style
+// MARK: Button Style
 
 public enum SHButtonStyle {
     case primary(Color, Color), secondary(Color), ghost(Color)

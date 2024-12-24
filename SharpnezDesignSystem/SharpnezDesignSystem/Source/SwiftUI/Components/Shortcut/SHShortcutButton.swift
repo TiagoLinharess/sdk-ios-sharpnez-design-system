@@ -8,7 +8,7 @@
 import SwiftUI
 
 public struct SHShortcutButton: View {
-    // MARK: - Properties
+    // MARK: Properties
     
     /// Image text
     private let image: String
@@ -22,7 +22,7 @@ public struct SHShortcutButton: View {
     /// Button Action
     private let action: () -> Void
     
-    // MARK: - Init
+    // MARK: Init
     
     /// Init
     public init(image: String, label: String, font: DSFontName, action: @escaping () -> Void) {
@@ -32,7 +32,7 @@ public struct SHShortcutButton: View {
         self.action = action
     }
     
-    // MARK: - Body
+    // MARK: Body
     
     public var body: some View {
         HStack(spacing: .zero) {

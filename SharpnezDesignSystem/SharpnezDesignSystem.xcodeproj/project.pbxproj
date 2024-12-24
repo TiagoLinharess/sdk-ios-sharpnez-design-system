@@ -52,6 +52,8 @@
 		EDDDE97A2CF924AD0054C7E2 /* SHTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDDE9792CF924A00054C7E2 /* SHTextField.swift */; };
 		EDDDE9802CFA6E7F0054C7E2 /* SHPasswordFieldSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDDE97F2CFA6E680054C7E2 /* SHPasswordFieldSampleView.swift */; };
 		EDDDE9832CFA6F440054C7E2 /* SHPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDDE9822CFA6F320054C7E2 /* SHPasswordField.swift */; };
+		F11009562D1A5326005DFC3F /* Font+DS+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11009552D1A5326005DFC3F /* Font+DS+extensions.swift */; };
+		F11009582D1A5398005DFC3F /* UIColor+DS+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11009572D1A538D005DFC3F /* UIColor+DS+extensions.swift */; };
 		F1FBD4E52D19F1E700DA11C4 /* SHRulesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FBD4E42D19F1E700DA11C4 /* SHRulesListView.swift */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +127,8 @@
 		EDDDE9792CF924A00054C7E2 /* SHTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHTextField.swift; sourceTree = "<group>"; };
 		EDDDE97F2CFA6E680054C7E2 /* SHPasswordFieldSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHPasswordFieldSampleView.swift; sourceTree = "<group>"; };
 		EDDDE9822CFA6F320054C7E2 /* SHPasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHPasswordField.swift; sourceTree = "<group>"; };
+		F11009552D1A5326005DFC3F /* Font+DS+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+DS+extensions.swift"; sourceTree = "<group>"; };
+		F11009572D1A538D005DFC3F /* UIColor+DS+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+DS+extensions.swift"; sourceTree = "<group>"; };
 		F1FBD4E42D19F1E700DA11C4 /* SHRulesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRulesListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -260,9 +264,11 @@
 		EDD253BA2CE51453008C2B23 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F11009572D1A538D005DFC3F /* UIColor+DS+extensions.swift */,
 				EDD253B82CE51453008C2B23 /* Color+DS+extensions.swift */,
 				EDD253B72CE51453008C2B23 /* CGFloat+DS+extensions.swift */,
 				EDD253B92CE51453008C2B23 /* UIFont+DS+extensions.swift */,
+				F11009552D1A5326005DFC3F /* Font+DS+extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -307,6 +313,7 @@
 				EDD253B62CE51453008C2B23 /* Core */,
 				EDD253BA2CE51453008C2B23 /* Extensions */,
 				EDD254372CE52B22008C2B23 /* FlavorColors */,
+				F11009542D1A5174005DFC3F /* UIKit */,
 				EDD253BF2CE51453008C2B23 /* SwiftUI */,
 				EDD253D42CE51453008C2B23 /* ViewStatus */,
 			);
@@ -543,6 +550,13 @@
 			path = PasswordField;
 			sourceTree = "<group>";
 		};
+		F11009542D1A5174005DFC3F /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		F1FBD4E32D19F19600DA11C4 /* RulesList */ = {
 			isa = PBXGroup;
 			children = (
@@ -682,6 +696,8 @@
 				EDD253DA2CE51453008C2B23 /* DSConstants.swift in Sources */,
 				EDD253DB2CE51453008C2B23 /* Color+DS+extensions.swift in Sources */,
 				EDD253DD2CE51453008C2B23 /* CGFloat+DS+extensions.swift in Sources */,
+				F11009582D1A5398005DFC3F /* UIColor+DS+extensions.swift in Sources */,
+				F11009562D1A5326005DFC3F /* Font+DS+extensions.swift in Sources */,
 				EDD253DF2CE51453008C2B23 /* DesignSystemConfiguration.swift in Sources */,
 				EDDDE9832CFA6F440054C7E2 /* SHPasswordField.swift in Sources */,
 				EDD253E22CE51453008C2B23 /* SHLabel.swift in Sources */,
