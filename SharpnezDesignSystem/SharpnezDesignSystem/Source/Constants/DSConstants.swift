@@ -60,6 +60,9 @@ enum DSConstants {
         
         /// eye.slash
         static let eyeClosed: String = "eye.slash"
+        
+        /// chevron.left
+        static let chevronLeft: String = "chevron.left"
     }
     
     // MARK: UIKit

@@ -74,6 +74,9 @@
 		F1B815732D1AE80300128643 /* FontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815722D1AE7FA00128643 /* FontsViewController.swift */; };
 		F1B815792D1AEB4B00128643 /* UISHLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815782D1AEB4500128643 /* UISHLabel.swift */; };
 		F1B8157E2D1AF0B000128643 /* UISHLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8157D2D1AF0A300128643 /* UISHLabelViewController.swift */; };
+		F1B815812D1AF83000128643 /* UISHViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815802D1AF82400128643 /* UISHViewController.swift */; };
+		F1B815842D1AFCB800128643 /* UISHSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815832D1AFCB100128643 /* UISHSampleViewController.swift */; };
+		F1B815862D1B020800128643 /* UIViewController+DS+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815852D1B01FE00128643 /* UIViewController+DS+extensions.swift */; };
 		F1FBD4E52D19F1E700DA11C4 /* SHRulesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FBD4E42D19F1E700DA11C4 /* SHRulesListView.swift */; };
 /* End PBXBuildFile section */
 
@@ -192,6 +195,9 @@
 		F1B815722D1AE7FA00128643 /* FontsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsViewController.swift; sourceTree = "<group>"; };
 		F1B815782D1AEB4500128643 /* UISHLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHLabel.swift; sourceTree = "<group>"; };
 		F1B8157D2D1AF0A300128643 /* UISHLabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHLabelViewController.swift; sourceTree = "<group>"; };
+		F1B815802D1AF82400128643 /* UISHViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHViewController.swift; sourceTree = "<group>"; };
+		F1B815832D1AFCB100128643 /* UISHSampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHSampleViewController.swift; sourceTree = "<group>"; };
+		F1B815852D1B01FE00128643 /* UIViewController+DS+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+DS+extensions.swift"; sourceTree = "<group>"; };
 		F1FBD4E42D19F1E700DA11C4 /* SHRulesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRulesListView.swift; sourceTree = "<group>"; };
 		F287E6077F2DAC1A92E789F2 /* Pods-SwiftUISample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUISample.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUISample/Pods-SwiftUISample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -647,6 +653,7 @@
 		F11009542D1A5174005DFC3F /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				F1B8157F2D1AF80700128643 /* Controller */,
 				F1B815742D1AEB2000128643 /* Components */,
 				F11009932D1AD991005DFC3F /* Extensions */,
 				F11009982D1ADCCB005DFC3F /* ViewCode */,
@@ -695,6 +702,7 @@
 		F11009862D1AD2A8005DFC3F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				F1B815822D1AFCA200128643 /* UISHViewController */,
 				F1B8157C2D1AF09600128643 /* UISHLabel */,
 				F1B815712D1AE7EA00128643 /* Fonts */,
 				F1B8156C2D1AE17C00128643 /* FlavorColors */,
@@ -714,6 +722,7 @@
 		F11009932D1AD991005DFC3F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F1B815852D1B01FE00128643 /* UIViewController+DS+extensions.swift */,
 				F1B8156F2D1AE2FA00128643 /* UIStackView+DS+extensions.swift */,
 				F110099B2D1ADE0D005DFC3F /* UIView+DS+extensions.swift */,
 				F11009962D1ADA0C005DFC3F /* UITableViewCell+DS+extensions.swift */,
@@ -770,6 +779,22 @@
 			path = UISHLabel;
 			sourceTree = "<group>";
 		};
+		F1B8157F2D1AF80700128643 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F1B815802D1AF82400128643 /* UISHViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F1B815822D1AFCA200128643 /* UISHViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F1B815832D1AFCB100128643 /* UISHSampleViewController.swift */,
+			);
+			path = UISHViewController;
+			sourceTree = "<group>";
+		};
 		F1FBD4E32D19F19600DA11C4 /* RulesList */ = {
 			isa = PBXGroup;
 			children = (
@@ -820,6 +845,7 @@
 				EDD253F82CE51604008C2B23 /* Frameworks */,
 				EDD253F92CE51604008C2B23 /* Resources */,
 				EDD254182CE51653008C2B23 /* Embed Frameworks */,
+				73B1078748F0C717B8B69113 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -950,6 +976,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		73B1078748F0C717B8B69113 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftUISample/Pods-SwiftUISample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftUISample/Pods-SwiftUISample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftUISample/Pods-SwiftUISample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8FC85941467CCF48421B929B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1035,6 +1078,7 @@
 				EDD253E22CE51453008C2B23 /* SHLabel.swift in Sources */,
 				F1B815792D1AEB4B00128643 /* UISHLabel.swift in Sources */,
 				EDD253E42CE51453008C2B23 /* SHButton.swift in Sources */,
+				F1B815862D1B020800128643 /* UIViewController+DS+extensions.swift in Sources */,
 				F1B815702D1AE30600128643 /* UIStackView+DS+extensions.swift in Sources */,
 				EDA01B8A2CE5964000740E56 /* SHShortcutButton.swift in Sources */,
 				F11009972D1ADA1D005DFC3F /* UITableViewCell+DS+extensions.swift in Sources */,
@@ -1044,6 +1088,7 @@
 				EDD253E82CE51453008C2B23 /* UIFont+DS+extensions.swift in Sources */,
 				ED31028D2CEF752100DEC9C4 /* SHLoadingView.swift in Sources */,
 				EDD253B12CE5138A008C2B23 /* SharpnezDesignSystem.docc in Sources */,
+				F1B815812D1AF83000128643 /* UISHViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1079,6 +1124,7 @@
 				F110097C2D1A55A0005DFC3F /* AppDelegate.swift in Sources */,
 				F1B815732D1AE80300128643 /* FontsViewController.swift in Sources */,
 				F11009882D1AD380005DFC3F /* Flavor.swift in Sources */,
+				F1B815842D1AFCB800128643 /* UISHSampleViewController.swift in Sources */,
 				F110097D2D1A55A0005DFC3F /* SceneDelegate.swift in Sources */,
 				F1B8156E2D1AE1B000128643 /* FlavorColorsViewController.swift in Sources */,
 				F110097E2D1A55A0005DFC3F /* ViewController.swift in Sources */,

@@ -17,6 +17,7 @@ public final class UISHLabel: UILabel {
         self.textColor = textColor
         self.font = font
         self.text = text
+        self.numberOfLines = .zero
     }
 
     @available(*, unavailable)
