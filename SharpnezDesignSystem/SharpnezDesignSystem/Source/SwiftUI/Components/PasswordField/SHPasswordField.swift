@@ -40,6 +40,9 @@ public struct SHPasswordField: View {
     
     /// TextField title font
     private let titleFont: Font
+    
+    /// TextField rules
+    private let rules: [SHRulesListViewModel]
 
     /// The show / hide state of the text.
     @State private var isSecured: Bool = true
@@ -61,13 +64,15 @@ public struct SHPasswordField: View {
         color: Color,
         font: Font,
         titleFont: Font,
-        text: Binding<String>
+        text: Binding<String>,
+        rules: [SHRulesListViewModel] = []
     ) {
         self.title = title
         self.color = color
         self.font = font
         self.titleFont = titleFont
         self._text = text
+        self.rules = rules
     }
 
     // MARK: - Body
@@ -84,12 +89,6 @@ public struct SHPasswordField: View {
                     .autocorrectionDisabled()
                     .font(font)
                     .foregroundStyle(color)
-                    .padding(.smaller)
-                    .clipShape(.capsule)
-                    .overlay {
-                        Capsule()
-                            .stroke(color, lineWidth: .two)
-                    }
 
                 Button(action: {
                     performToggle()
@@ -103,6 +102,20 @@ public struct SHPasswordField: View {
                     .padding(.trailing, .extraSmall)
                     .font(font)
                 })
+            }
+            .padding(.smaller)
+            .clipShape(.capsule)
+            .overlay {
+                Capsule()
+                    .stroke(color, lineWidth: .two)
+            }
+            if !rules.isEmpty {
+                SHRulesListView(
+                    items: rules,
+                    font: .caption(.montserrat, .regular),
+                    defaultColor: color
+                )
+                .padding(.leading, .extraSmall)
             }
         }
     }

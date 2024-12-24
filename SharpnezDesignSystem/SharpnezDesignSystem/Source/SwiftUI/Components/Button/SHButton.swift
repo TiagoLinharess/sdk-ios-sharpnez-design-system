@@ -31,10 +31,10 @@ public struct SHButton: View {
     private let action: () -> Void
     
     /// Button loading state
-    @Binding private var isLoading: Bool
+    private var isLoading: Bool
     
     /// Button disabled state
-    @Binding private var isDisabled: Bool
+    private var isDisabled: Bool
     
     // MARK: - Init
     
@@ -44,8 +44,8 @@ public struct SHButton: View {
         image: Image? = nil,
         style: SHButtonStyle,
         font: Font,
-        isLoading: Binding<Bool> = Binding.constant(false),
-        isDisabled: Binding<Bool> = Binding.constant(false),
+        isLoading: Bool = false,
+        isDisabled: Bool = false,
         action: @escaping () -> Void
     ) {
         self.title = title
@@ -53,8 +53,8 @@ public struct SHButton: View {
         self.style = style
         self.font = font
         self.action = action
-        self._isLoading = isLoading
-        self._isDisabled = isDisabled
+        self.isLoading = isLoading
+        self.isDisabled = isDisabled
     }
     
     // MARK: - Body

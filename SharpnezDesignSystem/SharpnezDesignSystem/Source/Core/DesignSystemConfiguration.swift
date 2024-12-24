@@ -18,6 +18,7 @@ public final class DesignSystemConfiguration: NSObject {
     
     // MARK: - Start
     
+    /// Start Singleton Method
     public class func start(flavorColors: FlavorColorsProtocol) {
         shared = DesignSystemConfiguration()
         shared?.loadFonts()

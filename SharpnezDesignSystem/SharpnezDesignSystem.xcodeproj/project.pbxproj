@@ -52,6 +52,7 @@
 		EDDDE97A2CF924AD0054C7E2 /* SHTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDDE9792CF924A00054C7E2 /* SHTextField.swift */; };
 		EDDDE9802CFA6E7F0054C7E2 /* SHPasswordFieldSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDDE97F2CFA6E680054C7E2 /* SHPasswordFieldSampleView.swift */; };
 		EDDDE9832CFA6F440054C7E2 /* SHPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDDE9822CFA6F320054C7E2 /* SHPasswordField.swift */; };
+		F1FBD4E52D19F1E700DA11C4 /* SHRulesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FBD4E42D19F1E700DA11C4 /* SHRulesListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 		EDDDE9792CF924A00054C7E2 /* SHTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHTextField.swift; sourceTree = "<group>"; };
 		EDDDE97F2CFA6E680054C7E2 /* SHPasswordFieldSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHPasswordFieldSampleView.swift; sourceTree = "<group>"; };
 		EDDDE9822CFA6F320054C7E2 /* SHPasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHPasswordField.swift; sourceTree = "<group>"; };
+		F1FBD4E42D19F1E700DA11C4 /* SHRulesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRulesListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -480,6 +482,7 @@
 		EDDDE96E2CEF9FF90054C7E2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F1FBD4E32D19F19600DA11C4 /* RulesList */,
 				EDD253BC2CE51453008C2B23 /* Button */,
 				EDA01B8F2CE619B300740E56 /* Container */,
 				EDD253BE2CE51453008C2B23 /* Label */,
@@ -538,6 +541,14 @@
 				EDDDE9822CFA6F320054C7E2 /* SHPasswordField.swift */,
 			);
 			path = PasswordField;
+			sourceTree = "<group>";
+		};
+		F1FBD4E32D19F19600DA11C4 /* RulesList */ = {
+			isa = PBXGroup;
+			children = (
+				F1FBD4E42D19F1E700DA11C4 /* SHRulesListView.swift */,
+			);
+			path = RulesList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -676,6 +687,7 @@
 				EDD253E22CE51453008C2B23 /* SHLabel.swift in Sources */,
 				EDD253E42CE51453008C2B23 /* SHButton.swift in Sources */,
 				EDA01B8A2CE5964000740E56 /* SHShortcutButton.swift in Sources */,
+				F1FBD4E52D19F1E700DA11C4 /* SHRulesListView.swift in Sources */,
 				EDDDE9712CEFA02F0054C7E2 /* SHFeedbackView.swift in Sources */,
 				EDD253E82CE51453008C2B23 /* UIFont+DS+extensions.swift in Sources */,
 				ED31028D2CEF752100DEC9C4 /* SHLoadingView.swift in Sources */,
