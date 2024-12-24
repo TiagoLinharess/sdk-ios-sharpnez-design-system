@@ -1,142 +1,139 @@
 //
-//  Color+DS+extensions.swift
-//  DesignSystem
+//  UIColor+DS+extensions.swift
+//  SharpnezDesignSystem
 //
-//  Created by Tiago Linhares on 06/07/23.
+//  Created by Tiago Linhares on 23/12/24.
 //
 
-import SwiftUI
+import UIKit
 
-public extension Color {
+public extension UIColor {
     
     // MARK: Colors
     
     /// primarySH
-    static var primarySH: Color {
+    static var primarySH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.primary
         else { return .white }
-        return Color(hex: color)
+        return UIColor(hex: color)
     }
     
     /// onPrimarySH
-    static var onPrimarySH: Color {
+    static var onPrimarySH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.onPrimary
         else { return .white }
-        return Color(hex: color)
+        return UIColor(hex: color)
     }
     
     /// secondarySH
-    static var secondarySH: Color {
+    static var secondarySH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.secondary
         else { return .white }
-        return Color(hex: color)
+        return UIColor(hex: color)
     }
     
     /// onSecondarySH
-    static var onSecondarySH: Color {
+    static var onSecondarySH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.onSecondary
         else { return .white }
-        return Color(hex: color)
+        return UIColor(hex: color)
     }
     
     /// surfaceSH
-    static var surfaceSH: Color {
+    static var surfaceSH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.surface
         else { return .white }
-        return Color(hex: color)
+        return UIColor(hex: color)
     }
     
     /// onSurfaceSH
-    static var onSurfaceSH: Color {
+    static var onSurfaceSH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.onSurface
         else { return .white }
-        return Color(hex: color)
+        return UIColor(hex: color)
     }
     
     /// backgroundSH
-    static var backgroundSH: Color {
+    static var backgroundSH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.background
         else { return .white }
-        return Color(hex: color)
+        return UIColor(hex: color)
     }
     
     /// onBackgroundSH
-    static var onBackgroundSH: Color {
+    static var onBackgroundSH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.onBackground
         else { return .white }
-        return Color(hex: color)
+        return UIColor(hex: color)
     }
     
     /// successSH
-    static var successSH: Color {
+    static var successSH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.success
         else { return .white }
-        return Color(hex: color)
+        return UIColor(hex: color)
     }
     
     /// onSuccessSH
-    static var onSuccessSH: Color {
+    static var onSuccessSH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.onSuccess
         else { return .white }
-        return Color(hex: color)
+        return UIColor(hex: color)
     }
     
     /// warningSH
-    static var warningSH: Color {
+    static var warningSH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.warning
         else { return .white }
-        return Color(hex: color)
+        return UIColor(hex: color)
     }
     
     /// onWarningSH
-    static var onWarningSH: Color {
+    static var onWarningSH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.onWarning
         else { return .white }
-        return Color(hex: color)
+        return UIColor(hex: color)
     }
     
     /// errorSH
-    static var errorSH: Color {
+    static var errorSH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.error
         else { return .white }
-        return Color(hex: color)
+        return UIColor(hex: color)
     }
     
     /// onErrorSH
-    static var onErrorSH: Color {
+    static var onErrorSH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.onError
         else { return .white }
-        return Color(hex: color)
+        return UIColor(hex: color)
     }
 }
 
-public extension Color {
+public extension UIColor {
     
-    // MARK: Hex String to Color
+    // MARK: Hex String to UIColor
     
     /// Transforms hex string colors in to UIColor object.
-    init(hex: String) {
-        let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
-        var int: UInt64 = 0
-        Scanner(string: hex).scanHexInt64(&int)
-        let a, r, g, b: UInt64
-        switch hex.count {
-        case 3: // RGB (12-bit)
-            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
-        case 6: // RGB (24-bit)
-            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
-        case 8: // ARGB (32-bit)
-            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
-        default:
-            (a, r, g, b) = (1, 1, 1, 0)
+    convenience init(hex: String) {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
         }
-
+        
+        if ((cString.count) != 6) {
+            self.init(red: 0, green: 0, blue: 0, alpha: 0)
+        }
+        
+        var rgbValue:UInt64 = 0
+        Scanner(string: cString).scanHexInt64(&rgbValue)
+        
         self.init(
-            .sRGB,
-            red: Double(r) / 255,
-            green: Double(g) / 255,
-            blue:  Double(b) / 255,
-            opacity: Double(a) / 255
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
         )
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 public struct SHLoading: View {
-    // MARK: - Properties
+    // MARK: Properties
     
     /// Circle animation states
     @State private var isCircleRotating = true
@@ -21,14 +21,14 @@ public struct SHLoading: View {
     /// Circle color
     private let color: Color
     
-    // MARK: - Init
+    // MARK: Init
     
     public init (style: SHLoadingStyle, color: Color) {
         self.style = style
         self.color = color
     }
     
-    // MARK: - Body
+    // MARK: Body
     
     public var body: some View {
         ZStack {
@@ -63,7 +63,7 @@ public struct SHLoading: View {
     }
 }
 
-// MARK: - Style
+// MARK: Style
 
 public enum SHLoadingStyle {
     case nano

@@ -8,7 +8,7 @@
 import SwiftUI
 
 public struct SHPasswordField: View {
-    // MARK: - Enum
+    // MARK: Enum
 
     /// Options for opacity of the fields.
     enum Opacity: Double {
@@ -27,7 +27,7 @@ public struct SHPasswordField: View {
         }
     }
     
-    // MARK: - Properties
+    // MARK: Properties
     
     /// TextField title
     private let title: String
@@ -56,7 +56,7 @@ public struct SHPasswordField: View {
     /// TextField text
     @Binding var text: String
     
-    // MARK: - Init
+    // MARK: Init
     
     /// Init
     public init(
@@ -75,7 +75,7 @@ public struct SHPasswordField: View {
         self.rules = rules
     }
 
-    // MARK: - Body
+    // MARK: Body
     
     public var body: some View {
         VStack(alignment: .leading, spacing: .extraSmall) {
@@ -131,7 +131,7 @@ public struct SHPasswordField: View {
         }
     }
     
-    // MARK: - Private Methods
+    // MARK: Private Methods
     
     /// Perform the show / hide toggle by changing the properties.
     private func performToggle() {

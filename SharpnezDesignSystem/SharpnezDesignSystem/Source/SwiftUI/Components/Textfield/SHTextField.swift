@@ -8,7 +8,7 @@
 import SwiftUI
 
 public struct SHTextField: View {
-    // MARK: - Properties
+    // MARK: Properties
     
     /// TextField title
     private let title: String
@@ -34,7 +34,7 @@ public struct SHTextField: View {
     /// TextField text
     @Binding private var text: String
     
-    // MARK: - Init
+    // MARK: Init
     
     /// Init
     public init(
@@ -57,7 +57,7 @@ public struct SHTextField: View {
         self._text = text
     }
     
-    // MARK: - Body
+    // MARK: Body
     
     
     public var body: some View {

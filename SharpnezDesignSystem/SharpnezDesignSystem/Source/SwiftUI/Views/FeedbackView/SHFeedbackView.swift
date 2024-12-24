@@ -8,7 +8,7 @@
 import SwiftUI
 
 public struct SHFeedbackView: View {
-    // MARK: - Properties
+    // MARK: Properties
     
     /// Secondary action logic
     private var hasSecondaryAction: Bool {
@@ -36,7 +36,7 @@ public struct SHFeedbackView: View {
     /// Feedback secondary action
     private let secondaryAction: (() -> Void)?
     
-    // MARK: - Init
+    // MARK: Init
     
     /// Init without secondary action
     public init(
@@ -74,7 +74,7 @@ public struct SHFeedbackView: View {
         self.secondaryAction = secondaryAction
     }
     
-    // MARK: - Body
+    // MARK: Body
     
     public var body: some View {
         VStack(alignment: .leading, spacing: .small) {
@@ -108,7 +108,7 @@ public struct SHFeedbackView: View {
     }
 }
 
-// MARK: - FeedbackType
+// MARK: FeedbackType
 
 public enum SHFeedbackType {
     case success

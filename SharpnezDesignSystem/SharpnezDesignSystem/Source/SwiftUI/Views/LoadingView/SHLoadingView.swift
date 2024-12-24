@@ -8,7 +8,7 @@
 import SwiftUI
 
 public struct SHLoadingView: View {
-    // MARK: - Properties
+    // MARK: Properties
     
     /// Has text logic
     private var hasText: Bool {
@@ -33,7 +33,7 @@ public struct SHLoadingView: View {
     /// Text state
     @State private var text: String = String()
     
-    // MARK: - Init
+    // MARK: Init
     
     /// Init without text
     public init(
@@ -76,7 +76,7 @@ public struct SHLoadingView: View {
         self.font = font
     }
     
-    // MARK: - Body
+    // MARK: Body
     
     public var body: some View {
         VStack(spacing: .small) {
@@ -92,7 +92,7 @@ public struct SHLoadingView: View {
         .background(color)
     }
     
-    // MARK: - Private Methods
+    // MARK: Private Methods
     
     private func handleText() {
         Task {

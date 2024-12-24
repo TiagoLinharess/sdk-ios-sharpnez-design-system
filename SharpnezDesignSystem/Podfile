@@ -1,0 +1,30 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+def snap_kit_pod
+  pod 'SnapKit', '~> 5.7.1'
+end
+
+target 'SharpnezDesignSystem' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for SharpnezDesignSystem
+
+end
+
+target 'SwiftUISample' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for SwiftUISample
+
+end
+
+target 'UIKitSample' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  snap_kit_pod
+
+end

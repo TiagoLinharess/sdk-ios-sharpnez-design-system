@@ -7,16 +7,16 @@
 
 import UIKit
 
-// MARK: - DesignSystemConfiguration
+// MARK: DesignSystemConfiguration
 
 /// DesignSystem main Configuration.
 public final class DesignSystemConfiguration: NSObject {
-    // MARK: - Proeprties
+    // MARK: Proeprties
     
     public static var shared: DesignSystemConfiguration?
     var flavorColors: FlavorColorsProtocol?
     
-    // MARK: - Start
+    // MARK: Start
     
     /// Start Singleton Method
     public class func start(flavorColors: FlavorColorsProtocol) {
@@ -25,7 +25,7 @@ public final class DesignSystemConfiguration: NSObject {
         shared?.loadColors(from: flavorColors)
     }
     
-    // MARK: - Load Fonts
+    // MARK: Load Fonts
     
     /// Load DesignSystem fonts
     func loadFonts() {
@@ -48,7 +48,7 @@ public final class DesignSystemConfiguration: NSObject {
             .forEach { CTFontManagerRegisterGraphicsFont($0! , nil) }
     }
     
-    // MARK: - Load Colors
+    // MARK: Load Colors
     
     func loadColors(from flavor: FlavorColorsProtocol) {
         self.flavorColors = flavor
