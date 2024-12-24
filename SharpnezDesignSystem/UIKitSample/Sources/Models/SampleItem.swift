@@ -18,7 +18,7 @@ struct SampleItem: Identifiable {
         .init(controller: UIViewController(), name: "UISHButton"),
         .init(controller: UIViewController(), name: "UISHContainer"),
         .init(controller: UIViewController(), name: "UISHFeedbackView"),
-        .init(controller: UIViewController(), name: "UISHLabel"),
+        .init(controller: UISHLabelViewController(), name: "UISHLabel"),
         .init(controller: UIViewController(), name: "UISHLoading"),
         .init(controller: UIViewController(), name: "UISHLoadingView"),
         .init(controller: UIViewController(), name: "UISHShortcut"),

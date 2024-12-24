@@ -72,6 +72,8 @@
 		F1B8156E2D1AE1B000128643 /* FlavorColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8156D2D1AE18800128643 /* FlavorColorsViewController.swift */; };
 		F1B815702D1AE30600128643 /* UIStackView+DS+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8156F2D1AE2FA00128643 /* UIStackView+DS+extensions.swift */; };
 		F1B815732D1AE80300128643 /* FontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815722D1AE7FA00128643 /* FontsViewController.swift */; };
+		F1B815792D1AEB4B00128643 /* UISHLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815782D1AEB4500128643 /* UISHLabel.swift */; };
+		F1B8157E2D1AF0B000128643 /* UISHLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8157D2D1AF0A300128643 /* UISHLabelViewController.swift */; };
 		F1FBD4E52D19F1E700DA11C4 /* SHRulesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FBD4E42D19F1E700DA11C4 /* SHRulesListView.swift */; };
 /* End PBXBuildFile section */
 
@@ -188,6 +190,8 @@
 		F1B8156D2D1AE18800128643 /* FlavorColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorColorsViewController.swift; sourceTree = "<group>"; };
 		F1B8156F2D1AE2FA00128643 /* UIStackView+DS+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+DS+extensions.swift"; sourceTree = "<group>"; };
 		F1B815722D1AE7FA00128643 /* FontsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsViewController.swift; sourceTree = "<group>"; };
+		F1B815782D1AEB4500128643 /* UISHLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHLabel.swift; sourceTree = "<group>"; };
+		F1B8157D2D1AF0A300128643 /* UISHLabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHLabelViewController.swift; sourceTree = "<group>"; };
 		F1FBD4E42D19F1E700DA11C4 /* SHRulesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRulesListView.swift; sourceTree = "<group>"; };
 		F287E6077F2DAC1A92E789F2 /* Pods-SwiftUISample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUISample.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUISample/Pods-SwiftUISample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -643,8 +647,9 @@
 		F11009542D1A5174005DFC3F /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				F11009982D1ADCCB005DFC3F /* ViewCode */,
+				F1B815742D1AEB2000128643 /* Components */,
 				F11009932D1AD991005DFC3F /* Extensions */,
+				F11009982D1ADCCB005DFC3F /* ViewCode */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -690,6 +695,7 @@
 		F11009862D1AD2A8005DFC3F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				F1B8157C2D1AF09600128643 /* UISHLabel */,
 				F1B815712D1AE7EA00128643 /* Fonts */,
 				F1B8156C2D1AE17C00128643 /* FlavorColors */,
 				F110097A2D1A55A0005DFC3F /* ViewController.swift */,
@@ -738,6 +744,30 @@
 				F1B815722D1AE7FA00128643 /* FontsViewController.swift */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F1B815742D1AEB2000128643 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F1B815772D1AEB3B00128643 /* Label */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F1B815772D1AEB3B00128643 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				F1B815782D1AEB4500128643 /* UISHLabel.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		F1B8157C2D1AF09600128643 /* UISHLabel */ = {
+			isa = PBXGroup;
+			children = (
+				F1B8157D2D1AF0A300128643 /* UISHLabelViewController.swift */,
+			);
+			path = UISHLabel;
 			sourceTree = "<group>";
 		};
 		F1FBD4E32D19F19600DA11C4 /* RulesList */ = {
@@ -1003,6 +1033,7 @@
 				EDD253DF2CE51453008C2B23 /* DesignSystemConfiguration.swift in Sources */,
 				EDDDE9832CFA6F440054C7E2 /* SHPasswordField.swift in Sources */,
 				EDD253E22CE51453008C2B23 /* SHLabel.swift in Sources */,
+				F1B815792D1AEB4B00128643 /* UISHLabel.swift in Sources */,
 				EDD253E42CE51453008C2B23 /* SHButton.swift in Sources */,
 				F1B815702D1AE30600128643 /* UIStackView+DS+extensions.swift in Sources */,
 				EDA01B8A2CE5964000740E56 /* SHShortcutButton.swift in Sources */,
@@ -1044,6 +1075,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1B8157E2D1AF0B000128643 /* UISHLabelViewController.swift in Sources */,
 				F110097C2D1A55A0005DFC3F /* AppDelegate.swift in Sources */,
 				F1B815732D1AE80300128643 /* FontsViewController.swift in Sources */,
 				F11009882D1AD380005DFC3F /* Flavor.swift in Sources */,
