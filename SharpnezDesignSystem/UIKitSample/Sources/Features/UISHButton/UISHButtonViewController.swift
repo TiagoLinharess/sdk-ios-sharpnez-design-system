@@ -10,6 +10,18 @@ import SnapKit
 
 final class UISHButtonViewController: UIViewController {
     
+    private lazy var button: UISHButton = {
+        let button = UISHButton(
+            style: .primary(.secondarySH, .onSecondarySH),
+            title: "Button",
+            font: .body(.poppins, .medium),
+            image: UIImage(systemName: "house")
+        ) {
+            print("action")
+        }
+        return button
+    }()
+    
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -34,14 +46,18 @@ extension UISHButtonViewController: ViewCode {
     }
 
     func setupHierarchy() {
-        view.addSubview(stackView)
+        view.addSubviews(button, stackView)
     }
 
     func setupConstraints() {
         stackView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             $0.horizontalEdges.equalTo(view.safeAreaLayoutGuide)
-            $0.bottom.lessThanOrEqualTo(view.safeAreaLayoutGuide.snp.bottom)
+        }
+        
+        button.snp.makeConstraints {
+            $0.top.greaterThanOrEqualTo(stackView.snp.bottom).offset(CGFloat.small)
+            $0.horizontalEdges.bottom.equalTo(view.safeAreaLayoutGuide).inset(CGFloat.small)
         }
     }
 }
@@ -53,8 +69,7 @@ extension UISHButtonViewController {
             .init(
                 style: .primary(.primarySH, .onPrimarySH),
                 title: "Button",
-                font: .body(.poppins, .medium),
-                image: UIImage(systemName: "house")
+                font: .body(.poppins, .medium)
             ) {
                 print("action")
             },
@@ -74,10 +89,10 @@ extension UISHButtonViewController {
             },
             .init(
                 style: .ghost(.primarySH),
-                title: "Button",
+                title: "Change Loading State",
                 font: .body(.montserrat, .medium)
             ) {
-                print("action")
+                self.button.isLoading.toggle()
             },
         ]
         

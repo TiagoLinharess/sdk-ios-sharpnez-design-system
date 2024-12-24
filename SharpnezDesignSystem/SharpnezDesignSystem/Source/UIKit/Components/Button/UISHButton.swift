@@ -84,6 +84,11 @@ public final class UISHButton: UIButton {
         didSet { configure() }
     }
     
+    /// Button is loading
+    public var isLoading: Bool = false {
+        didSet { configureIsLoading() }
+    }
+    
     /// Button image
     public var action: () -> Void {
         didSet { configureAction() }
@@ -147,12 +152,25 @@ private extension UISHButton {
         self.alpha = isDisabled ? 0.5 : 1
     }
     
+    func configureIsLoading() {
+        if isLoading {
+            setupLoadingView()
+            return
+        }
+        
+        configure()
+    }
+    
     func configureAction() {
         addTarget(self, action: #selector(tapAction), for: .touchUpInside)
     }
     
+    func setupLoadingView() {
+        configuration?.showsActivityIndicator = true
+    }
+    
     @objc func tapAction() {
-        guard !isDisabled else { return }
+        guard !isDisabled, !isLoading else { return }
         action()
     }
 }
