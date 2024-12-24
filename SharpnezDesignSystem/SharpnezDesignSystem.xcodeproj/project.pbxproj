@@ -77,6 +77,8 @@
 		F1B815812D1AF83000128643 /* UISHViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815802D1AF82400128643 /* UISHViewController.swift */; };
 		F1B815842D1AFCB800128643 /* UISHSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815832D1AFCB100128643 /* UISHSampleViewController.swift */; };
 		F1B815862D1B020800128643 /* UIViewController+DS+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815852D1B01FE00128643 /* UIViewController+DS+extensions.swift */; };
+		F1B815892D1B0F6E00128643 /* UISHButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815882D1B0F6A00128643 /* UISHButton.swift */; };
+		F1B8158C2D1B158E00128643 /* UISHButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8158B2D1B158600128643 /* UISHButtonViewController.swift */; };
 		F1FBD4E52D19F1E700DA11C4 /* SHRulesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FBD4E42D19F1E700DA11C4 /* SHRulesListView.swift */; };
 /* End PBXBuildFile section */
 
@@ -198,6 +200,8 @@
 		F1B815802D1AF82400128643 /* UISHViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHViewController.swift; sourceTree = "<group>"; };
 		F1B815832D1AFCB100128643 /* UISHSampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHSampleViewController.swift; sourceTree = "<group>"; };
 		F1B815852D1B01FE00128643 /* UIViewController+DS+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+DS+extensions.swift"; sourceTree = "<group>"; };
+		F1B815882D1B0F6A00128643 /* UISHButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHButton.swift; sourceTree = "<group>"; };
+		F1B8158B2D1B158600128643 /* UISHButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHButtonViewController.swift; sourceTree = "<group>"; };
 		F1FBD4E42D19F1E700DA11C4 /* SHRulesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRulesListView.swift; sourceTree = "<group>"; };
 		F287E6077F2DAC1A92E789F2 /* Pods-SwiftUISample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUISample.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUISample/Pods-SwiftUISample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -702,10 +706,11 @@
 		F11009862D1AD2A8005DFC3F /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				F1B815822D1AFCA200128643 /* UISHViewController */,
-				F1B8157C2D1AF09600128643 /* UISHLabel */,
-				F1B815712D1AE7EA00128643 /* Fonts */,
 				F1B8156C2D1AE17C00128643 /* FlavorColors */,
+				F1B815712D1AE7EA00128643 /* Fonts */,
+				F1B8158A2D1B156700128643 /* UISHButton */,
+				F1B8157C2D1AF09600128643 /* UISHLabel */,
+				F1B815822D1AFCA200128643 /* UISHViewController */,
 				F110097A2D1A55A0005DFC3F /* ViewController.swift */,
 			);
 			path = Features;
@@ -758,6 +763,7 @@
 		F1B815742D1AEB2000128643 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F1B815872D1B0F6100128643 /* Button */,
 				F1B815772D1AEB3B00128643 /* Label */,
 			);
 			path = Components;
@@ -793,6 +799,22 @@
 				F1B815832D1AFCB100128643 /* UISHSampleViewController.swift */,
 			);
 			path = UISHViewController;
+			sourceTree = "<group>";
+		};
+		F1B815872D1B0F6100128643 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				F1B815882D1B0F6A00128643 /* UISHButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		F1B8158A2D1B156700128643 /* UISHButton */ = {
+			isa = PBXGroup;
+			children = (
+				F1B8158B2D1B158600128643 /* UISHButtonViewController.swift */,
+			);
+			path = UISHButton;
 			sourceTree = "<group>";
 		};
 		F1FBD4E32D19F19600DA11C4 /* RulesList */ = {
@@ -1071,6 +1093,7 @@
 				EDD253DB2CE51453008C2B23 /* Color+DS+extensions.swift in Sources */,
 				EDD253DD2CE51453008C2B23 /* CGFloat+DS+extensions.swift in Sources */,
 				F11009582D1A5398005DFC3F /* UIColor+DS+extensions.swift in Sources */,
+				F1B815892D1B0F6E00128643 /* UISHButton.swift in Sources */,
 				F11009952D1AD9C8005DFC3F /* UITableView+DS+extensions.swift in Sources */,
 				F11009562D1A5326005DFC3F /* Font+DS+extensions.swift in Sources */,
 				EDD253DF2CE51453008C2B23 /* DesignSystemConfiguration.swift in Sources */,
@@ -1129,6 +1152,7 @@
 				F1B8156E2D1AE1B000128643 /* FlavorColorsViewController.swift in Sources */,
 				F110097E2D1A55A0005DFC3F /* ViewController.swift in Sources */,
 				F11009922D1AD7E2005DFC3F /* SampleItem.swift in Sources */,
+				F1B8158C2D1B158E00128643 /* UISHButtonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
