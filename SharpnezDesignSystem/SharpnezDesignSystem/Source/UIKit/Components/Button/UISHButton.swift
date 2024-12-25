@@ -90,7 +90,7 @@ public final class UISHButton: UIButton {
     }
     
     /// Button image
-    public var action: () -> Void {
+    public var action: (() -> Void)? {
         didSet { configureAction() }
     }
     
@@ -101,7 +101,7 @@ public final class UISHButton: UIButton {
         title: String,
         font: UIFont,
         image: UIImage? = nil,
-        action: @escaping () -> Void
+        action: (() -> Void)? = nil
     ) {
         self.style = style
         self.title = title
@@ -111,6 +111,7 @@ public final class UISHButton: UIButton {
         super.init(frame: .zero)
         configure()
         configureAction()
+        configureHeight()
     }
 
     @available(*, unavailable)
@@ -150,24 +151,19 @@ private extension UISHButton {
     }
     
     func configureIsLoading() {
-        if isLoading {
-            setupLoadingView()
-            return
-        }
-        
-        configure()
+        configuration?.showsActivityIndicator = isLoading
+    }
+    
+    func configureHeight() {
+        snp.makeConstraints { $0.height.equalTo(CGFloat.xxLarge) }
     }
     
     func configureAction() {
         addTarget(self, action: #selector(tapAction), for: .touchUpInside)
     }
     
-    func setupLoadingView() {
-        configuration?.showsActivityIndicator = true
-    }
-    
     @objc func tapAction() {
         guard !isDisabled, !isLoading else { return }
-        action()
+        action?()
     }
 }

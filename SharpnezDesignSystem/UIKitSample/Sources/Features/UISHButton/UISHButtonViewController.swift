@@ -14,7 +14,8 @@ final class UISHButtonViewController: UIViewController {
         let button = UISHButton(
             style: .primary(.secondarySH, .onSecondarySH),
             title: "Button",
-            font: .body(.poppins, .medium)
+            font: .body(.poppins, .medium),
+            image: UIImage(systemName: "house")
         ) {
             print("action")
         }
