@@ -14,7 +14,7 @@ final class UISHButtonViewController: UIViewController {
         let button = UISHButton(
             style: .primary(.secondarySH, .onSecondarySH),
             title: "Button",
-            font: .body(.poppins, .medium),
+            font: .montserrat,
             image: UIImage(systemName: "house")
         ) {
             print("action")
@@ -69,28 +69,28 @@ extension UISHButtonViewController {
             .init(
                 style: .primary(.primarySH, .onPrimarySH),
                 title: "Button",
-                font: .body(.poppins, .medium)
+                font: .poppins
             ) {
                 print("action")
             },
             .init(
                 style: .primary(.primarySH, .onPrimarySH),
                 title: "Button",
-                font: .body(.montserrat, .medium)
+                font: .montserrat
             ) {
                 print("action")
             },
             .init(
                 style: .secondary(.primarySH),
                 title: "Button",
-                font: .body(.montserrat, .medium)
+                font: .montserrat
             ) {
                 print("action")
             },
             .init(
                 style: .ghost(.primarySH),
                 title: "Change Loading State",
-                font: .body(.montserrat, .medium)
+                font: .poppins
             ) {
                 self.button.isLoading.toggle()
             },

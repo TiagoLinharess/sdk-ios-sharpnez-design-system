@@ -70,7 +70,7 @@ public final class UISHButton: UIButton {
     }
     
     /// Button font
-    public var font: UIFont {
+    public var font: DSFontName {
         didSet { configure() }
     }
     
@@ -99,7 +99,7 @@ public final class UISHButton: UIButton {
     public init(
         style: ButtonStyle,
         title: String,
-        font: UIFont,
+        font: DSFontName,
         image: UIImage? = nil,
         action: (() -> Void)? = nil
     ) {
@@ -143,7 +143,9 @@ private extension UISHButton {
         configuration.image = image
         configuration.attributedTitle = AttributedString(
             title,
-            attributes: AttributeContainer([NSAttributedString.Key.font: font])
+            attributes: AttributeContainer(
+                [NSAttributedString.Key.font: UIFont.body(font, .medium)]
+            )
         )
         
         self.configuration = configuration
