@@ -5,7 +5,6 @@
 //  Created by Tiago Linhares on 24/12/24.
 //
 
-import NVActivityIndicatorView
 import SnapKit
 
 public final class UISHLoading: UIView {
@@ -17,20 +16,29 @@ public final class UISHLoading: UIView {
         didSet { configure() }
     }
     
-    /// Loading size
-    public var size: CGFloat {
+    /// Loading style
+    public var style: UIActivityIndicatorView.Style {
         didSet { configure() }
     }
     
+    // MARK: UI Elements
+    
+    private lazy var loadingView: UIActivityIndicatorView = {
+        let view = UIActivityIndicatorView(style: style)
+        view.color = color
+        view.startAnimating()
+        return view
+    }()
+    
     // MARK: Init
     
-    public init(color: UIColor, size: CGFloat) {
+    public init(color: UIColor, style: UIActivityIndicatorView.Style) {
         self.color = color
-        self.size = size
+        self.style = style
         super.init(frame: .zero)
-        configure()
+        setup()
     }
-
+    
     @available(*, unavailable)
     required init?(coder: NSCoder) { nil }
 }
@@ -39,17 +47,13 @@ private extension UISHLoading {
     
     // MARK: Private methods
     
+    func setup() {
+        addSubview(loadingView)
+        loadingView.snp.makeConstraints { $0.edges.equalToSuperview() }
+    }
+    
     func configure() {
-        subviews.forEach { $0.removeFromSuperview() }
-        
-        let activityIndicator = NVActivityIndicatorView(
-            frame: CGRect(x: .zero, y: .zero, width: size, height: size),
-            type: .circleStrokeSpin,
-            color: color
-        )
-        
-        addSubview(activityIndicator)
-        activityIndicator.startAnimating()
-        activityIndicator.snp.makeConstraints { $0.edges.equalToSuperview() }
+        loadingView.color = color
+        loadingView.style = style
     }
 }

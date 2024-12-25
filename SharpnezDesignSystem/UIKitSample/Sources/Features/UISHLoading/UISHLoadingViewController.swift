@@ -50,12 +50,8 @@ extension UISHLoadingViewController {
     
     private func setupComponent() {
         let components: [UISHLoading] = [
-            .init(color: .primarySH, size: .deviceHalfWidth),
-            .init(color: .primarySH, size: .superGiant),
-            .init(color: .primarySH, size: .superLarge),
-            .init(color: .primarySH, size: .large),
-            .init(color: .primarySH, size: .medium),
-            .init(color: .primarySH, size: .small)
+            .init(color: .primarySH, style: .large),
+            .init(color: .primarySH, style: .medium)
         ]
         
         stackView.addArrangedSubviews(components)

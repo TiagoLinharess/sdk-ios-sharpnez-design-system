@@ -137,16 +137,13 @@ private extension UISHButton {
         configuration.background.strokeWidth = style.borderWidth
         configuration.background.strokeColor = style.borderColor
         configuration.baseBackgroundColor = style.backgroundColor
+        configuration.imagePlacement = .leading
+        configuration.imagePadding = .extraSmall
+        configuration.image = image
         configuration.attributedTitle = AttributedString(
             title,
             attributes: AttributeContainer([NSAttributedString.Key.font: font])
         )
-        
-        if let image {
-            configuration.imagePlacement = .leading
-            configuration.image = image
-            configuration.imagePadding = .extraSmall
-        }
         
         self.configuration = configuration
         self.alpha = isDisabled ? 0.5 : 1

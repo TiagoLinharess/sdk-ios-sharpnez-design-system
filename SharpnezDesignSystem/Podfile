@@ -5,16 +5,11 @@ def snap_kit_pod
   pod 'SnapKit', '~> 5.7.1'
 end
 
-def loading_animation_pod
-  pod 'NVActivityIndicatorView', '~> 5.2.0'
-end
-
 target 'SharpnezDesignSystem' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
   snap_kit_pod
-  loading_animation_pod
   
 end
 
