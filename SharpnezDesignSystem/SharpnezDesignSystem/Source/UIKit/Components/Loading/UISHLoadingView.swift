@@ -1,5 +1,5 @@
 //
-//  UISHLoading.swift
+//  UISHLoadingView.swift
 //  SharpnezDesignSystem
 //
 //  Created by Tiago Linhares on 24/12/24.
@@ -7,7 +7,7 @@
 
 import SnapKit
 
-public final class UISHLoading: UIView {
+public final class UISHLoadingView: UIView {
     
     // MARK: Properties
     
@@ -43,7 +43,7 @@ public final class UISHLoading: UIView {
     required init?(coder: NSCoder) { nil }
 }
 
-private extension UISHLoading {
+private extension UISHLoadingView {
     
     // MARK: Private methods
     

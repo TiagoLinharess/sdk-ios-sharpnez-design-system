@@ -1,5 +1,5 @@
 //
-//  UISHLoadingViewController.swift
+//  UISHLoadingSampleViewController.swift
 //  SharpnezDesignSystem
 //
 //  Created by Tiago Linhares on 24/12/24.
@@ -8,7 +8,7 @@
 import SharpnezDesignSystem
 import SnapKit
 
-final class UISHLoadingViewController: UIViewController {
+final class UISHLoadingSampleViewController: UIViewController {
     
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
@@ -26,11 +26,11 @@ final class UISHLoadingViewController: UIViewController {
     }
 }
 
-extension UISHLoadingViewController: ViewCode {
+extension UISHLoadingSampleViewController: ViewCode {
     
     func setupView() {
         view.backgroundColor = .backgroundSH
-        title = "UISHLoading"
+        title = "UISHLoadingView"
     }
 
     func setupHierarchy() {
@@ -46,10 +46,10 @@ extension UISHLoadingViewController: ViewCode {
     }
 }
 
-extension UISHLoadingViewController {
+extension UISHLoadingSampleViewController {
     
     private func setupComponent() {
-        let components: [UISHLoading] = [
+        let components: [UISHLoadingView] = [
             .init(color: .primarySH, style: .large),
             .init(color: .primarySH, style: .medium)
         ]
