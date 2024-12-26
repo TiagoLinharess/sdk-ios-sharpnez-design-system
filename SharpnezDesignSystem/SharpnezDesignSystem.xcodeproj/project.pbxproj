@@ -83,6 +83,8 @@
 		F1B815922D1B30AA00128643 /* UISHLoadingSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815912D1B30A100128643 /* UISHLoadingSampleViewController.swift */; };
 		F1B815962D1CC3B100128643 /* UISHLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815952D1CC39800128643 /* UISHLoadingViewController.swift */; };
 		F1B815992D1D781B00128643 /* UISHLoadingSampleMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815982D1D780A00128643 /* UISHLoadingSampleMenuViewController.swift */; };
+		F1B8159C2D1D922200128643 /* UISHFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8159B2D1D91CB00128643 /* UISHFeedbackViewController.swift */; };
+		F1B8159F2D1D9BAD00128643 /* UISHFeedbackSampleMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8159E2D1D9B9C00128643 /* UISHFeedbackSampleMenuViewController.swift */; };
 		F1FBD4E52D19F1E700DA11C4 /* SHRulesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FBD4E42D19F1E700DA11C4 /* SHRulesListView.swift */; };
 /* End PBXBuildFile section */
 
@@ -210,6 +212,8 @@
 		F1B815912D1B30A100128643 /* UISHLoadingSampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHLoadingSampleViewController.swift; sourceTree = "<group>"; };
 		F1B815952D1CC39800128643 /* UISHLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHLoadingViewController.swift; sourceTree = "<group>"; };
 		F1B815982D1D780A00128643 /* UISHLoadingSampleMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHLoadingSampleMenuViewController.swift; sourceTree = "<group>"; };
+		F1B8159B2D1D91CB00128643 /* UISHFeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHFeedbackViewController.swift; sourceTree = "<group>"; };
+		F1B8159E2D1D9B9C00128643 /* UISHFeedbackSampleMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHFeedbackSampleMenuViewController.swift; sourceTree = "<group>"; };
 		F1FBD4E42D19F1E700DA11C4 /* SHRulesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRulesListView.swift; sourceTree = "<group>"; };
 		F287E6077F2DAC1A92E789F2 /* Pods-SwiftUISample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUISample.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUISample/Pods-SwiftUISample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -714,6 +718,7 @@
 		F11009862D1AD2A8005DFC3F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				F1B8159D2D1D9B6000128643 /* UISHFeedback */,
 				F1B8156C2D1AE17C00128643 /* FlavorColors */,
 				F1B815712D1AE7EA00128643 /* Fonts */,
 				F1B8158A2D1B156700128643 /* UISHButton */,
@@ -798,6 +803,7 @@
 		F1B8157F2D1AF80700128643 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F1B8159A2D1D915800128643 /* FeedbackController */,
 				F1B815942D1CC37500128643 /* LoadingController */,
 				F1B815932D1CC35100128643 /* ViewController */,
 			);
@@ -859,6 +865,22 @@
 				F1B815952D1CC39800128643 /* UISHLoadingViewController.swift */,
 			);
 			path = LoadingController;
+			sourceTree = "<group>";
+		};
+		F1B8159A2D1D915800128643 /* FeedbackController */ = {
+			isa = PBXGroup;
+			children = (
+				F1B8159B2D1D91CB00128643 /* UISHFeedbackViewController.swift */,
+			);
+			path = FeedbackController;
+			sourceTree = "<group>";
+		};
+		F1B8159D2D1D9B6000128643 /* UISHFeedback */ = {
+			isa = PBXGroup;
+			children = (
+				F1B8159E2D1D9B9C00128643 /* UISHFeedbackSampleMenuViewController.swift */,
+			);
+			path = UISHFeedback;
 			sourceTree = "<group>";
 		};
 		F1FBD4E32D19F19600DA11C4 /* RulesList */ = {
@@ -1143,6 +1165,7 @@
 				F11009952D1AD9C8005DFC3F /* UITableView+DS+extensions.swift in Sources */,
 				F11009562D1A5326005DFC3F /* Font+DS+extensions.swift in Sources */,
 				EDD253DF2CE51453008C2B23 /* DesignSystemConfiguration.swift in Sources */,
+				F1B8159C2D1D922200128643 /* UISHFeedbackViewController.swift in Sources */,
 				EDDDE9832CFA6F440054C7E2 /* SHPasswordField.swift in Sources */,
 				EDD253E22CE51453008C2B23 /* SHLabel.swift in Sources */,
 				F1B815792D1AEB4B00128643 /* UISHLabel.swift in Sources */,
@@ -1192,6 +1215,7 @@
 				F1B8157E2D1AF0B000128643 /* UISHLabelViewController.swift in Sources */,
 				F110097C2D1A55A0005DFC3F /* AppDelegate.swift in Sources */,
 				F1B815732D1AE80300128643 /* FontsViewController.swift in Sources */,
+				F1B8159F2D1D9BAD00128643 /* UISHFeedbackSampleMenuViewController.swift in Sources */,
 				F11009882D1AD380005DFC3F /* Flavor.swift in Sources */,
 				F1B815842D1AFCB800128643 /* UISHSampleViewController.swift in Sources */,
 				F1B815992D1D781B00128643 /* UISHLoadingSampleMenuViewController.swift in Sources */,
