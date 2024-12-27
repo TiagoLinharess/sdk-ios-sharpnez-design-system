@@ -164,7 +164,8 @@ private extension UISHButton {
         addTarget(self, action: #selector(tapAction), for: .touchUpInside)
     }
     
-    @objc func tapAction() {
+    @objc
+    func tapAction() {
         guard !isDisabled, !isLoading else { return }
         action?()
     }
