@@ -17,7 +17,7 @@ public struct UISHListItemViewModel {
     }
 }
 
-final class UISHListItem: UIView {
+public final class UISHListItem: UIView {
     
     // MARK: Properties
     
@@ -46,7 +46,7 @@ final class UISHListItem: UIView {
     
     // MARK: Init
     
-    init(
+    public init(
         items: [UISHListItemViewModel],
         font: DSFontName,
         defaultColor: UIColor

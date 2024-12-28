@@ -72,6 +72,7 @@
 		F13816C42D1EE5AE00A91018 /* UISHTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13816C32D1EE5A500A91018 /* UISHTextField.swift */; };
 		F13816C72D1EE94200A91018 /* UISHTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13816C62D1EE93900A91018 /* UISHTextFieldViewController.swift */; };
 		F13816CA2D1F198B00A91018 /* UISHListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13816C92D1F193800A91018 /* UISHListItem.swift */; };
+		F13816CD2D20A90F00A91018 /* UISHListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13816CC2D20A90300A91018 /* UISHListItemViewController.swift */; };
 		F1B8156E2D1AE1B000128643 /* FlavorColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8156D2D1AE18800128643 /* FlavorColorsViewController.swift */; };
 		F1B815702D1AE30600128643 /* UIStackView+DS+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8156F2D1AE2FA00128643 /* UIStackView+DS+extensions.swift */; };
 		F1B815732D1AE80300128643 /* FontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815722D1AE7FA00128643 /* FontsViewController.swift */; };
@@ -206,6 +207,7 @@
 		F13816C32D1EE5A500A91018 /* UISHTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHTextField.swift; sourceTree = "<group>"; };
 		F13816C62D1EE93900A91018 /* UISHTextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHTextFieldViewController.swift; sourceTree = "<group>"; };
 		F13816C92D1F193800A91018 /* UISHListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHListItem.swift; sourceTree = "<group>"; };
+		F13816CC2D20A90300A91018 /* UISHListItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHListItemViewController.swift; sourceTree = "<group>"; };
 		F1B8156D2D1AE18800128643 /* FlavorColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorColorsViewController.swift; sourceTree = "<group>"; };
 		F1B8156F2D1AE2FA00128643 /* UIStackView+DS+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+DS+extensions.swift"; sourceTree = "<group>"; };
 		F1B815722D1AE7FA00128643 /* FontsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsViewController.swift; sourceTree = "<group>"; };
@@ -733,6 +735,7 @@
 				F1B8158A2D1B156700128643 /* UISHButton */,
 				F1B8159D2D1D9B6000128643 /* UISHFeedback */,
 				F1B8157C2D1AF09600128643 /* UISHLabel */,
+				F13816CB2D20A85400A91018 /* UISHListItem */,
 				F1B815902D1B308900128643 /* UISHLoading */,
 				F1B815A22D1DB1BB00128643 /* UISHShortcutButton */,
 				F13816C52D1EE91E00A91018 /* UISHTextField */,
@@ -800,6 +803,14 @@
 				F13816C92D1F193800A91018 /* UISHListItem.swift */,
 			);
 			path = ListItem;
+			sourceTree = "<group>";
+		};
+		F13816CB2D20A85400A91018 /* UISHListItem */ = {
+			isa = PBXGroup;
+			children = (
+				F13816CC2D20A90300A91018 /* UISHListItemViewController.swift */,
+			);
+			path = UISHListItem;
 			sourceTree = "<group>";
 		};
 		F1B8156C2D1AE17C00128643 /* FlavorColors */ = {
@@ -1282,6 +1293,7 @@
 				F110097D2D1A55A0005DFC3F /* SceneDelegate.swift in Sources */,
 				F1B815922D1B30AA00128643 /* UISHLoadingSampleViewController.swift in Sources */,
 				F1B8156E2D1AE1B000128643 /* FlavorColorsViewController.swift in Sources */,
+				F13816CD2D20A90F00A91018 /* UISHListItemViewController.swift in Sources */,
 				F110097E2D1A55A0005DFC3F /* ViewController.swift in Sources */,
 				F11009922D1AD7E2005DFC3F /* SampleItem.swift in Sources */,
 				F1B8158C2D1B158E00128643 /* UISHButtonViewController.swift in Sources */,
