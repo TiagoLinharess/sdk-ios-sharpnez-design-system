@@ -5,6 +5,7 @@
 //  Created by Tiago Linhares on 23/12/24.
 //
 
+import IQKeyboardManagerSwift
 import SharpnezDesignSystem
 import UIKit
 
@@ -22,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         DesignSystemConfiguration.start(flavorColors: FlavorColors())
+        IQKeyboardManager.shared.isEnabled = true
+        IQKeyboardManager.shared.resignOnTouchOutside = true
         return true
     }
 

@@ -1,5 +1,5 @@
 //
-//  UISHShortcut.swift
+//  UISHShortcutButton.swift
 //  SharpnezDesignSystem
 //
 //  Created by Tiago Linhares on 26/12/24.

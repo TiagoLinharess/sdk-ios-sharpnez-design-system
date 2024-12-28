@@ -65,6 +65,18 @@ enum DSConstants {
         static let chevronLeft: String = "chevron.left"
     }
     
+    // MARK: Commons
+    
+    /// Commons Contants.
+    enum Commons {
+        
+        /// •
+        static let dot: String = "•"
+        
+        /// Space
+        static let space: String = " "
+    }
+    
     // MARK: UIKit
     
     /// UIKit Constants.

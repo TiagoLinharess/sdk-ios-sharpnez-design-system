@@ -5,6 +5,10 @@ def snap_kit_pod
   pod 'SnapKit', '~> 5.7.1'
 end
 
+def keyboard_manager_pod
+  pod 'IQKeyboardManagerSwift', '8.0.0'
+end
+
 target 'SharpnezDesignSystem' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
@@ -26,6 +30,7 @@ target 'UIKitSample' do
   use_frameworks!
 
   snap_kit_pod
+  keyboard_manager_pod
 
 end
 
