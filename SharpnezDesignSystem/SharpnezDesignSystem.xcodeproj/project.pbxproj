@@ -73,6 +73,9 @@
 		F13816C72D1EE94200A91018 /* UISHTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13816C62D1EE93900A91018 /* UISHTextFieldViewController.swift */; };
 		F13816CA2D1F198B00A91018 /* UISHListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13816C92D1F193800A91018 /* UISHListItem.swift */; };
 		F13816CD2D20A90F00A91018 /* UISHListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13816CC2D20A90300A91018 /* UISHListItemViewController.swift */; };
+		F13816D02D20AC6600A91018 /* UISHPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13816CE2D20AC6600A91018 /* UISHPasswordField.swift */; };
+		F13816D32D20DC5700A91018 /* UISHPasswordFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13816D22D20DC4700A91018 /* UISHPasswordFieldViewController.swift */; };
+		F13816D52D20EC3D00A91018 /* PrivateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13816D42D20EC3700A91018 /* PrivateTextField.swift */; };
 		F1B8156E2D1AE1B000128643 /* FlavorColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8156D2D1AE18800128643 /* FlavorColorsViewController.swift */; };
 		F1B815702D1AE30600128643 /* UIStackView+DS+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8156F2D1AE2FA00128643 /* UIStackView+DS+extensions.swift */; };
 		F1B815732D1AE80300128643 /* FontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815722D1AE7FA00128643 /* FontsViewController.swift */; };
@@ -208,6 +211,9 @@
 		F13816C62D1EE93900A91018 /* UISHTextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHTextFieldViewController.swift; sourceTree = "<group>"; };
 		F13816C92D1F193800A91018 /* UISHListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHListItem.swift; sourceTree = "<group>"; };
 		F13816CC2D20A90300A91018 /* UISHListItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHListItemViewController.swift; sourceTree = "<group>"; };
+		F13816CE2D20AC6600A91018 /* UISHPasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHPasswordField.swift; sourceTree = "<group>"; };
+		F13816D22D20DC4700A91018 /* UISHPasswordFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHPasswordFieldViewController.swift; sourceTree = "<group>"; };
+		F13816D42D20EC3700A91018 /* PrivateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateTextField.swift; sourceTree = "<group>"; };
 		F1B8156D2D1AE18800128643 /* FlavorColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorColorsViewController.swift; sourceTree = "<group>"; };
 		F1B8156F2D1AE2FA00128643 /* UIStackView+DS+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+DS+extensions.swift"; sourceTree = "<group>"; };
 		F1B815722D1AE7FA00128643 /* FontsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsViewController.swift; sourceTree = "<group>"; };
@@ -737,6 +743,7 @@
 				F1B8157C2D1AF09600128643 /* UISHLabel */,
 				F13816CB2D20A85400A91018 /* UISHListItem */,
 				F1B815902D1B308900128643 /* UISHLoading */,
+				F13816D12D20DBEA00A91018 /* UISHPasswordField */,
 				F1B815A22D1DB1BB00128643 /* UISHShortcutButton */,
 				F13816C52D1EE91E00A91018 /* UISHTextField */,
 				F1B815822D1AFCA200128643 /* UISHViewController */,
@@ -776,6 +783,7 @@
 		F13816C12D1ED5CA00A91018 /* TextField */ = {
 			isa = PBXGroup;
 			children = (
+				F13816D42D20EC3700A91018 /* PrivateTextField.swift */,
 				F13816C32D1EE5A500A91018 /* UISHTextField.swift */,
 			);
 			path = TextField;
@@ -813,6 +821,22 @@
 			path = UISHListItem;
 			sourceTree = "<group>";
 		};
+		F13816CF2D20AC6600A91018 /* PasswordField */ = {
+			isa = PBXGroup;
+			children = (
+				F13816CE2D20AC6600A91018 /* UISHPasswordField.swift */,
+			);
+			path = PasswordField;
+			sourceTree = "<group>";
+		};
+		F13816D12D20DBEA00A91018 /* UISHPasswordField */ = {
+			isa = PBXGroup;
+			children = (
+				F13816D22D20DC4700A91018 /* UISHPasswordFieldViewController.swift */,
+			);
+			path = UISHPasswordField;
+			sourceTree = "<group>";
+		};
 		F1B8156C2D1AE17C00128643 /* FlavorColors */ = {
 			isa = PBXGroup;
 			children = (
@@ -836,6 +860,7 @@
 				F1B8158D2D1B2BDB00128643 /* Loading */,
 				F1B815772D1AEB3B00128643 /* Label */,
 				F13816C82D1F192C00A91018 /* ListItem */,
+				F13816CF2D20AC6600A91018 /* PasswordField */,
 				F13816C22D1EE4C300A91018 /* Shortcut */,
 				F13816C12D1ED5CA00A91018 /* TextField */,
 			);
@@ -1223,6 +1248,7 @@
 				EDD254392CE52B3C008C2B23 /* FlavorColors.swift in Sources */,
 				F1B815A12D1DAAC100128643 /* UISHShortcutButton.swift in Sources */,
 				EDD253DA2CE51453008C2B23 /* DSConstants.swift in Sources */,
+				F13816D02D20AC6600A91018 /* UISHPasswordField.swift in Sources */,
 				F110099A2D1ADCEC005DFC3F /* ViewCode.swift in Sources */,
 				EDD253DB2CE51453008C2B23 /* Color+DS+extensions.swift in Sources */,
 				F1B815962D1CC3B100128643 /* UISHLoadingViewController.swift in Sources */,
@@ -1244,6 +1270,7 @@
 				F11009972D1ADA1D005DFC3F /* UITableViewCell+DS+extensions.swift in Sources */,
 				F1FBD4E52D19F1E700DA11C4 /* SHRulesListView.swift in Sources */,
 				F110099C2D1ADE18005DFC3F /* UIView+DS+extensions.swift in Sources */,
+				F13816D52D20EC3D00A91018 /* PrivateTextField.swift in Sources */,
 				EDDDE9712CEFA02F0054C7E2 /* SHFeedbackView.swift in Sources */,
 				EDD253E82CE51453008C2B23 /* UIFont+DS+extensions.swift in Sources */,
 				ED31028D2CEF752100DEC9C4 /* SHLoadingView.swift in Sources */,
@@ -1295,6 +1322,7 @@
 				F1B8156E2D1AE1B000128643 /* FlavorColorsViewController.swift in Sources */,
 				F13816CD2D20A90F00A91018 /* UISHListItemViewController.swift in Sources */,
 				F110097E2D1A55A0005DFC3F /* ViewController.swift in Sources */,
+				F13816D32D20DC5700A91018 /* UISHPasswordFieldViewController.swift in Sources */,
 				F11009922D1AD7E2005DFC3F /* SampleItem.swift in Sources */,
 				F1B8158C2D1B158E00128643 /* UISHButtonViewController.swift in Sources */,
 			);

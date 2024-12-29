@@ -24,6 +24,6 @@ struct SampleItem: Identifiable {
         .init(controller: UISHLoadingSampleMenuViewController(), name: "UISHLoadingViewController"),
         .init(controller: UISHShortcutButtonViewController(), name: "UISHShortcut"),
         .init(controller: UISHTextFieldViewController(), name: "UISHTextField"),
-        .init(controller: UIViewController(), name: "UISHPasswordField")
+        .init(controller: UISHPasswordFieldViewController(), name: "UISHPasswordField")
     ]
 }
