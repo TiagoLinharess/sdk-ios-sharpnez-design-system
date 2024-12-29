@@ -54,7 +54,7 @@ public final class UISHTextField: UIView {
         return label
     }()
     
-    public lazy var textField: PrivateTextField = {
+    public lazy var textField: UITextField = {
         let field = PrivateTextField()
         let view = UIView(frame: CGRect(x: .zero, y: .zero, width: .smaller, height: .two))
         field.leftView = view

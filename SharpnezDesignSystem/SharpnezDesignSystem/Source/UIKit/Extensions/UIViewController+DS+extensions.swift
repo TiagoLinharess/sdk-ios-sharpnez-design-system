@@ -32,8 +32,8 @@ private extension UIViewController {
     func headerView(title: String) {
         let label = UISHLabel(
             text: title,
-            textColor: .onPrimarySH,
-            font: .title3(.poppins, .regular)
+            textColor: .onBackgroundSH,
+            font: .body(.poppins, .medium)
         )
         
         navigationItem.titleView = label
@@ -41,12 +41,14 @@ private extension UIViewController {
     
     func navigationBarAppearance() {
         let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = .primarySH
+        appearance.backgroundColor = .backgroundSH
+        appearance.shadowImage = UIImage()
+        appearance.shadowColor = .clear
         
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.compactAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
-        navigationController?.navigationBar.tintColor = .primarySH
+        navigationController?.navigationBar.tintColor = .backgroundSH
         
         let navButton = UIBarButtonItem(
             image: UIImage(systemName: DSConstants.Icons.chevronLeft),
@@ -54,7 +56,7 @@ private extension UIViewController {
             target: self,
             action: #selector(backAction)
         )
-        navButton.tintColor = .onPrimarySH
+        navButton.tintColor = .onBackgroundSH
         
         navigationItem.leftBarButtonItem = navButton
     }

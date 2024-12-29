@@ -7,11 +7,11 @@
 
 import UIKit
 
-public final class PrivateTextField: UITextField {
+final class PrivateTextField: UITextField {
     
     // MARK: Properties
 
-    public override var isSecureTextEntry: Bool {
+    override var isSecureTextEntry: Bool {
         didSet {
             if isFirstResponder {
                 _ = becomeFirstResponder()
@@ -21,7 +21,7 @@ public final class PrivateTextField: UITextField {
     
     // MARK: Public methods
 
-    public override func becomeFirstResponder() -> Bool {
+    override func becomeFirstResponder() -> Bool {
         let success = super.becomeFirstResponder()
         if isSecureTextEntry, let text = self.text {
             deleteBackward()

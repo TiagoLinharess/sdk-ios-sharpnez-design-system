@@ -53,7 +53,7 @@ open class UISHViewController<ViewModel: AnyObject>: UIViewController, UIScrollV
     }
     
     private func setupView() {
-        view.backgroundColor = .primarySH
+        view.backgroundColor = .backgroundSH
     }
 
     private func setupHierarchy() {
@@ -62,9 +62,8 @@ open class UISHViewController<ViewModel: AnyObject>: UIViewController, UIScrollV
 
     private func setupConstraints() {
         scrollView.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(CGFloat.extraSmall)
-            $0.horizontalEdges.equalToSuperview()
-            $0.bottom.equalToSuperview()
+            $0.top.equalTo(view.safeAreaLayoutGuide)
+            $0.horizontalEdges.bottom.equalToSuperview()
         }
     }
     

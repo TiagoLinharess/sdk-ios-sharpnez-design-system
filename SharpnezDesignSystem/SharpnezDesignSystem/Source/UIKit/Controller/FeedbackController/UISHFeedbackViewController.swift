@@ -31,7 +31,7 @@ public enum UISHFeedbackType {
         case .success: .successSH
         case .warning: .warningSH
         case .error: .errorSH
-        case .info: .onPrimarySH
+        case .info: .primarySH
         }
     }
 }
@@ -59,13 +59,14 @@ public final class UISHFeedbackViewController<ViewModel: UISHFeedbackViewModelPr
         let imageView = UIImageView()
         imageView.image = viewModel.type.icon
         imageView.tintColor = viewModel.type.color
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
     private lazy var titleLabel: UISHLabel = {
         let label =  UISHLabel(
             text: viewModel.title,
-            textColor: .onPrimarySH,
+            textColor: .onBackgroundSH,
             font: .title2(.poppins, .medium)
         )
         label.textAlignment = .center
@@ -75,7 +76,7 @@ public final class UISHFeedbackViewController<ViewModel: UISHFeedbackViewModelPr
     private lazy var descriptionLabel: UISHLabel = {
         let label = UISHLabel(
             text: viewModel.description,
-            textColor: .onPrimarySH,
+            textColor: .onBackgroundSH,
             font: .subtitle(.montserrat, .regular)
         )
         label.textAlignment = .center
@@ -92,7 +93,7 @@ public final class UISHFeedbackViewController<ViewModel: UISHFeedbackViewModelPr
     
     private lazy var primaryButton: UISHButton = {
         return UISHButton(
-            style: .primary(.onPrimarySH, .primarySH),
+            style: .primary(.primarySH, .onPrimarySH),
             title: viewModel.primaryActionTitle,
             font: .montserrat,
             action: viewModel.primaryAction
@@ -101,7 +102,7 @@ public final class UISHFeedbackViewController<ViewModel: UISHFeedbackViewModelPr
     
     private lazy var secondaryButton: UISHButton = {
         return UISHButton(
-            style: .secondary(.onPrimarySH),
+            style: .secondary(.primarySH),
             title: viewModel.secondaryActionTitle ?? String(),
             font: .montserrat,
             action: viewModel.secondaryAction
@@ -147,7 +148,7 @@ private extension UISHFeedbackViewController {
     }
     
     func setupView() {
-        view.backgroundColor = .primarySH
+        view.backgroundColor = .backgroundSH
         secondaryButton.isHidden = viewModel.secondaryActionTitle == nil
     }
     
