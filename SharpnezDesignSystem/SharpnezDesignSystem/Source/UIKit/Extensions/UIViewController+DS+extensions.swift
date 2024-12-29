@@ -11,10 +11,10 @@ public extension UIViewController {
     
     // MARK: Public Methods
     
-    /// Set DS Header
-    func setHeader(title: String) {
-        headerView(title: title)
-        navigationBarAppearance()
+    /// Set default DS header
+    func setDefaultHeader(title: String) {
+        defaultHeaderView(title: title)
+        defaultNavigationBarAppearance()
         navigationController?.interactivePopGestureRecognizer?.delegate = self
         navigationController?.interactivePopGestureRecognizer?.isEnabled = true
     }
@@ -29,7 +29,7 @@ private extension UIViewController {
     
     // MARK: Private Methods
     
-    func headerView(title: String) {
+    func defaultHeaderView(title: String) {
         let label = UISHLabel(
             text: title,
             textColor: .onBackgroundSH,
@@ -39,7 +39,7 @@ private extension UIViewController {
         navigationItem.titleView = label
     }
     
-    func navigationBarAppearance() {
+    func defaultNavigationBarAppearance() {
         let appearance = UINavigationBarAppearance()
         appearance.backgroundColor = .backgroundSH
         appearance.shadowImage = UIImage()

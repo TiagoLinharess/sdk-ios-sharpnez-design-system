@@ -31,7 +31,7 @@ final class UISHSampleViewController: UISHViewController<ViewModel> {
 extension UISHSampleViewController: ViewCode {
     
     func setupView() {
-        setHeader(title: "Example Controller")
+        setDefaultHeader(title: "Example Controller")
     }
 
     func setupHierarchy() {
