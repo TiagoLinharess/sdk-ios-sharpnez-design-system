@@ -41,14 +41,16 @@ private extension UIViewController {
     
     func defaultNavigationBarAppearance() {
         let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = .backgroundSH
         appearance.shadowImage = UIImage()
         appearance.shadowColor = .clear
+        appearance.backgroundColor = .clear
+        appearance.configureWithTransparentBackground()
         
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.compactAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
-        navigationController?.navigationBar.tintColor = .backgroundSH
+        navigationController?.navigationBar.compactScrollEdgeAppearance = appearance
+        navigationController?.navigationBar.tintColor = .clear
         
         let navButton = UIBarButtonItem(
             image: UIImage(systemName: DSConstants.Icons.chevronLeft),
