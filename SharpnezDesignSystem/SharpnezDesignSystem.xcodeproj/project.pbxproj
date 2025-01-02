@@ -76,6 +76,7 @@
 		F13816D02D20AC6600A91018 /* UISHPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13816CE2D20AC6600A91018 /* UISHPasswordField.swift */; };
 		F13816D32D20DC5700A91018 /* UISHPasswordFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13816D22D20DC4700A91018 /* UISHPasswordFieldViewController.swift */; };
 		F13816D52D20EC3D00A91018 /* PrivateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13816D42D20EC3700A91018 /* PrivateTextField.swift */; };
+		F13816D82D26DCB800A91018 /* UISHContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13816D72D26DCB400A91018 /* UISHContainerView.swift */; };
 		F1B8156E2D1AE1B000128643 /* FlavorColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8156D2D1AE18800128643 /* FlavorColorsViewController.swift */; };
 		F1B815702D1AE30600128643 /* UIStackView+DS+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8156F2D1AE2FA00128643 /* UIStackView+DS+extensions.swift */; };
 		F1B815732D1AE80300128643 /* FontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815722D1AE7FA00128643 /* FontsViewController.swift */; };
@@ -214,6 +215,7 @@
 		F13816CE2D20AC6600A91018 /* UISHPasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHPasswordField.swift; sourceTree = "<group>"; };
 		F13816D22D20DC4700A91018 /* UISHPasswordFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHPasswordFieldViewController.swift; sourceTree = "<group>"; };
 		F13816D42D20EC3700A91018 /* PrivateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateTextField.swift; sourceTree = "<group>"; };
+		F13816D72D26DCB400A91018 /* UISHContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHContainerView.swift; sourceTree = "<group>"; };
 		F1B8156D2D1AE18800128643 /* FlavorColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorColorsViewController.swift; sourceTree = "<group>"; };
 		F1B8156F2D1AE2FA00128643 /* UIStackView+DS+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+DS+extensions.swift"; sourceTree = "<group>"; };
 		F1B815722D1AE7FA00128643 /* FontsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsViewController.swift; sourceTree = "<group>"; };
@@ -687,6 +689,7 @@
 		F11009542D1A5174005DFC3F /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				F13816D62D26DCAC00A91018 /* View */,
 				F1B8157F2D1AF80700128643 /* Controller */,
 				F1B815742D1AEB2000128643 /* Components */,
 				F11009932D1AD991005DFC3F /* Extensions */,
@@ -835,6 +838,14 @@
 				F13816D22D20DC4700A91018 /* UISHPasswordFieldViewController.swift */,
 			);
 			path = UISHPasswordField;
+			sourceTree = "<group>";
+		};
+		F13816D62D26DCAC00A91018 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F13816D72D26DCB400A91018 /* UISHContainerView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F1B8156C2D1AE17C00128643 /* FlavorColors */ = {
@@ -1275,6 +1286,7 @@
 				EDD253E82CE51453008C2B23 /* UIFont+DS+extensions.swift in Sources */,
 				ED31028D2CEF752100DEC9C4 /* SHLoadingView.swift in Sources */,
 				EDD253B12CE5138A008C2B23 /* SharpnezDesignSystem.docc in Sources */,
+				F13816D82D26DCB800A91018 /* UISHContainerView.swift in Sources */,
 				F1B815812D1AF83000128643 /* UISHViewController.swift in Sources */,
 				F13816CA2D1F198B00A91018 /* UISHListItem.swift in Sources */,
 			);

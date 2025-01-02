@@ -53,7 +53,7 @@ private extension UIViewController {
         navigationController?.navigationBar.tintColor = .clear
         
         let navButton = UIBarButtonItem(
-            image: UIImage(systemName: DSConstants.Icons.chevronLeft),
+            image: UIImage(systemName: DSConstants.Icons.arrowLeft),
             style: .plain,
             target: self,
             action: #selector(backAction)

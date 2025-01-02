@@ -10,7 +10,7 @@ import SnapKit
 
 class ViewModel { }
 
-final class UISHSampleViewController: UISHViewController<ViewModel> {
+final class CustomView: UISHContainerView {
     
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
@@ -21,17 +21,19 @@ final class UISHSampleViewController: UISHViewController<ViewModel> {
         return stackView
     }()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override init() {
+        super.init()
         setup()
-        setupColors()
     }
+
+    @available(*, unavailable)
+    required init?(coder: NSCoder) { nil }
 }
 
-extension UISHSampleViewController: ViewCode {
+extension CustomView: ViewCode {
     
     func setupView() {
-        setDefaultHeader(title: "Example Controller")
+        setupColors()
     }
 
     func setupHierarchy() {
@@ -44,9 +46,6 @@ extension UISHSampleViewController: ViewCode {
             $0.centerX.equalToSuperview()
         }
     }
-}
-
-extension UISHSampleViewController {
     
     private func setupColors() {
         let labels: [UISHLabel] = [
@@ -77,3 +76,10 @@ extension UISHSampleViewController {
     }
 }
 
+final class UISHSampleViewController: UISHViewController<CustomView, ViewModel> {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setDefaultHeader(title: "Example Controller")
+    }
+}

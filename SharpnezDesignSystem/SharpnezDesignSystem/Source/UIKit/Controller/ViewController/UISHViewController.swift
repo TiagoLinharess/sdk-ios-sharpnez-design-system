@@ -5,31 +5,19 @@
 //  Created by Tiago Linhares on 24/12/24.
 //
 
-import SnapKit
+import UIKit
 
-open class UISHViewController<ViewModel: AnyObject>: UIViewController, UIScrollViewDelegate {
+open class UISHViewController<View: UIView, ViewModel: AnyObject>: UIViewController {
     
     // MARK: Properties
     
-    let viewModel: ViewModel
-    
-    // MARK: UI Elements
-    
-    public lazy var scrollView: UIScrollView = {
-        let scrollView = UIScrollView()
-        scrollView.backgroundColor = .backgroundSH
-        scrollView.showsVerticalScrollIndicator = false
-        scrollView.showsHorizontalScrollIndicator = false
-        scrollView.delegate = self
-        scrollView.clipsToBounds = true
-        scrollView.layer.cornerRadius = .medium
-        scrollView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
-        return scrollView
-    }()
+    public let viewModel: ViewModel
+    public let customView: View
     
     // MARK: Init
     
-    public init(viewModel: ViewModel) {
+    public init(customView: View, viewModel: ViewModel) {
+        self.customView = customView
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -37,41 +25,9 @@ open class UISHViewController<ViewModel: AnyObject>: UIViewController, UIScrollV
     @available(*, unavailable)
     required public init?(coder: NSCoder) { nil }
     
-    // MARK: View Life Cycle
+    // MARK: View Life Cicle
     
-    open override func viewDidLoad() {
-        super.viewDidLoad()
-        setup()
-    }
-    
-    // MARK: View Code
-    
-    private func setup() {
-        setupView()
-        setupHierarchy()
-        setupConstraints()
-    }
-    
-    private func setupView() {
-        view.backgroundColor = .backgroundSH
-    }
-
-    private func setupHierarchy() {
-        view.addSubview(scrollView)
-    }
-
-    private func setupConstraints() {
-        scrollView.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide)
-            $0.horizontalEdges.bottom.equalToSuperview()
-        }
-    }
-    
-    // MARK: UIScrollViewDelegate
-    
-    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.x != .zero {
-            scrollView.contentOffset.x = .zero
-        }
+    open override func loadView() {
+        view = customView
     }
 }

@@ -62,7 +62,7 @@ enum DSConstants {
         static let eyeClosed: String = "eye.slash"
         
         /// chevron.left
-        static let chevronLeft: String = "chevron.left"
+        static let arrowLeft: String = "arrow.left"
     }
     
     // MARK: Commons
