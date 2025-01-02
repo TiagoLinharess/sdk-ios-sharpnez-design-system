@@ -13,6 +13,7 @@ public enum UISHFeedbackType {
     case error
     case info
     
+    /// Icon
     var icon: UIImage? {
         switch self {
         case .success:
@@ -26,6 +27,7 @@ public enum UISHFeedbackType {
         }
     }
     
+    /// Color
     var color: UIColor {
         switch self {
         case .success: .successSH
@@ -37,12 +39,27 @@ public enum UISHFeedbackType {
 }
 
 public protocol UISHFeedbackViewModelProtocol {
+    
+    /// Feedback type
     var type: UISHFeedbackType { get }
+    
+    /// Feedback title
     var title: String { get }
+    
+    /// Feedback description
     var description: String { get }
+    
+    /// Feedback primary button title
     var primaryActionTitle: String { get }
+    
+    /// Feedback secondary button title
+    ///  if is nil will hide button
     var secondaryActionTitle: String? { get }
+    
+    /// Feedback primary action
     var primaryAction: () -> Void { get }
+    
+    /// Feedback secondary action
     var secondaryAction: (() -> Void)? { get }
 }
 
@@ -111,6 +128,7 @@ public final class UISHFeedbackViewController<ViewModel: UISHFeedbackViewModelPr
     
     // MARK: Init
     
+    /// ViewController init
     public init(viewModel: ViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)

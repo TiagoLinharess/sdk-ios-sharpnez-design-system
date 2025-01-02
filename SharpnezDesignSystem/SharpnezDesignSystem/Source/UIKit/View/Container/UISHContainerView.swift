@@ -11,6 +11,7 @@ open class UISHContainerView: UIView {
     
     // MARK: UI Elements
     
+    /// View scroll view
     public lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.backgroundColor = .backgroundSH
@@ -20,6 +21,7 @@ open class UISHContainerView: UIView {
         return scrollView
     }()
     
+    /// Super class init
     public init() {
         super.init(frame: .zero)
         setup()

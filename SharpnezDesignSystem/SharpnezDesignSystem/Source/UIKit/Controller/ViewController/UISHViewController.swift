@@ -11,11 +11,15 @@ open class UISHViewController<View: UIView, ViewModel: AnyObject>: UIViewControl
     
     // MARK: Properties
     
+    /// ViewModel
     public let viewModel: ViewModel
+    
+    /// Custom View
     public let customView: View
     
     // MARK: Init
     
+    /// ViewController init
     public init(customView: View, viewModel: ViewModel) {
         self.customView = customView
         self.viewModel = viewModel

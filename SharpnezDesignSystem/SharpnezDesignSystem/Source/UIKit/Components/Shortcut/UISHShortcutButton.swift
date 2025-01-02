@@ -11,29 +11,33 @@ public final class UISHShortcutButton: UIView {
     
     // MARK: Properteis
     
+    /// Button Image
     public var image: UIImage {
         didSet { configure() }
     }
     
+    /// Button text
     public var text: String {
         didSet { configure() }
     }
     
+    /// Button font
     public var font: DSFontName {
         didSet { configure() }
     }
     
+    /// Button color
     public var color: UIColor {
         didSet { configure() }
     }
     
+    /// Button on color
     public var onColor: UIColor {
         didSet { configure() }
     }
     
-    public var action: (() -> Void)? {
-        didSet { configureAction() }
-    }
+    /// Button action closure
+    public var action: (() -> Void)?
     
     // MARK: UI Elements
     
@@ -57,6 +61,7 @@ public final class UISHShortcutButton: UIView {
     
     // MARK: Init
     
+    /// Button init
     public init(
         image: UIImage,
         text: String,

@@ -10,13 +10,25 @@ import SnapKit
 public protocol UISHLoadingViewModelProtocol: AnyObject {
     associatedtype T
     
+    /// On finish closure
     var onFinish: ((Result<T, Error>) -> Void)? { get }
+    
+    /// First text
     var primaryText: String { get }
+    
+    /// Text after 3 seconds
     var secondaryText: String? { get }
+    
+    /// Background color
     var color: UIColor { get }
+    
+    /// Loading color
     var onColor: UIColor { get }
+    
+    /// View font
     var font: DSFontName { get }
     
+    /// Loading method
     func perform()
 }
 
@@ -50,6 +62,7 @@ public final class UISHLoadingViewController<ViewModel: UISHLoadingViewModelProt
     
     // MARK: Init
     
+    /// ViewController init
     public init(viewModel: ViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)

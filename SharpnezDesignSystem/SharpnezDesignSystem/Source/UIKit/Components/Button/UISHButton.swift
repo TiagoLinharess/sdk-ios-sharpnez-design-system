@@ -16,7 +16,7 @@ public final class UISHButton: UIButton {
         case secondary(UIColor)
         case ghost(UIColor)
         
-        /// Background color.
+        /// Background color
         var backgroundColor: UIColor {
             switch self {
             case let .primary(backgroundColor, _):
@@ -26,7 +26,7 @@ public final class UISHButton: UIButton {
             }
         }
         
-        /// Title color.
+        /// Title color
         var titleColor: UIColor {
             switch self {
             case let .primary(_, foregroundColor):
@@ -36,7 +36,7 @@ public final class UISHButton: UIButton {
             }
         }
         
-        /// Border width.
+        /// Border width
         var borderWidth: CGFloat {
             switch self {
             case .secondary:
@@ -46,7 +46,7 @@ public final class UISHButton: UIButton {
             }
         }
         
-        /// Border color.
+        /// Border color
         var borderColor: UIColor {
             switch self {
             case let .secondary(color):
@@ -96,6 +96,7 @@ public final class UISHButton: UIButton {
     
     // MARK: Init
     
+    /// Button init
     public init(
         style: ButtonStyle,
         title: String,

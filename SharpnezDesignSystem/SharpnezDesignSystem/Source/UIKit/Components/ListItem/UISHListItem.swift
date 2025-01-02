@@ -21,16 +21,17 @@ public final class UISHListItem: UIView {
     
     // MARK: Properties
     
+    /// Items array
     public var items: [UISHListItemViewModel] {
         didSet { configure() }
     }
     
-    
+    /// Items font
     public var font: DSFontName {
         didSet { configure() }
     }
     
-    
+    /// Items default color
     public var defaultColor: UIColor {
         didSet { configure() }
     }
@@ -46,6 +47,7 @@ public final class UISHListItem: UIView {
     
     // MARK: Init
     
+    /// Items init
     public init(
         items: [UISHListItemViewModel],
         font: DSFontName,

@@ -843,9 +843,17 @@
 		F13816D62D26DCAC00A91018 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F13816D72D26DCB400A91018 /* UISHContainerView.swift */,
+				F13816D92D26EE2E00A91018 /* Container */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F13816D92D26EE2E00A91018 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				F13816D72D26DCB400A91018 /* UISHContainerView.swift */,
+			);
+			path = Container;
 			sourceTree = "<group>";
 		};
 		F1B8156C2D1AE17C00128643 /* FlavorColors */ = {

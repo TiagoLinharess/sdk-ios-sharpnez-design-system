@@ -11,30 +11,37 @@ public final class UISHPasswordField: UIView {
     
     // MARK: Properties
     
+    /// Textfield text
     public var text: String? {
         get { textField.text }
         set { textField.text = newValue }
     }
     
+    /// Textfield isSecureTextEntry
     public var isSecureTextEntry: Bool {
         get { textField.textField.isSecureTextEntry }
         set { textField.textField.isSecureTextEntry = newValue }
     }
     
+    /// Textfield title
     public var title: String {
         didSet { textField.title = title }
     }
     
+    /// Textfield font
     public var font: DSFontName {
         didSet { configure() }
     }
     
+    /// Textfield color
     public var color: UIColor {
         didSet { configure() }
     }
     
+    /// Textfield on change closure
     public var onChange: ((UITextField) -> Void)?
     
+    /// Textfield list items
     private var listItems: [UISHListItemViewModel]
     
     // MARK: UI Elements
@@ -68,6 +75,7 @@ public final class UISHPasswordField: UIView {
     
     // MARK: Init
     
+    /// Textfield init
     public init(
         title: String,
         font: DSFontName,
@@ -87,6 +95,7 @@ public final class UISHPasswordField: UIView {
     
     // MARK: Public methods
     
+    /// Textfield update item method
     public func updateListItems(_ items: [UISHListItemViewModel]) {
         listItems = items
         textField.updateListItems(items)

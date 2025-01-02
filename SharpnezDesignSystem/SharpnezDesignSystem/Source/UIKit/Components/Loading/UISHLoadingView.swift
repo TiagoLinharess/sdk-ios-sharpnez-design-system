@@ -32,6 +32,7 @@ public final class UISHLoadingView: UIView {
     
     // MARK: Init
     
+    /// Loading init
     public init(color: UIColor, style: UIActivityIndicatorView.Style) {
         self.color = color
         self.style = style
