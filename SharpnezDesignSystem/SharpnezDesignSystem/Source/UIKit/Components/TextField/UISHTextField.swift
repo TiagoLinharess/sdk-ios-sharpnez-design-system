@@ -71,7 +71,7 @@ public final class UISHTextField: UIView {
         field.leftViewMode = .always
         field.rightViewMode = .always
         field.layer.cornerRadius = .smaller
-        field.layer.borderWidth = .one
+        field.layer.borderWidth = .two
         return field
     }()
     

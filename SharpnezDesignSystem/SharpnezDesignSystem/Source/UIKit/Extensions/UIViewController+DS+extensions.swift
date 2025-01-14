@@ -52,15 +52,13 @@ private extension UIViewController {
         navigationController?.navigationBar.compactScrollEdgeAppearance = appearance
         navigationController?.navigationBar.tintColor = .clear
         
-        let navButton = UIBarButtonItem(
-            image: UIImage(systemName: DSConstants.Icons.arrowLeft),
-            style: .plain,
-            target: self,
-            action: #selector(backAction)
-        )
+        let frame = CGRect(x: .zero, y: .zero, width: .small, height: .small)
+        let navButton = UIButton(frame: frame)
+        navButton.setBackgroundImage(UIImage(systemName: DSConstants.Icons.arrowLeft), for: .normal)
+        navButton.addTarget(self, action: #selector(backAction), for: .touchUpInside)
         navButton.tintColor = .onBackgroundSH
         
-        navigationItem.leftBarButtonItem = navButton
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: navButton)
     }
     
     @objc

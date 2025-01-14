@@ -1,5 +1,5 @@
 Pod::Spec.new do |spec|
-  spec.name         = 'SharpnezDesignSystemUIKit'
+  spec.name         = 'SharpnezDesignSystem'
   spec.version      = '2.3.0'
   spec.license      = { :type => 'MIT' }
   spec.homepage     = 'https://github.com/TiagoLinharess/sdk-ios-sharpnez-design-system.git'
@@ -10,7 +10,6 @@ Pod::Spec.new do |spec|
   spec.swift_version = '5.8.1'
   spec.resources    = 'SharpnezDesignSystem/SharpnezDesignSystem/Resources/Fonts/*.ttf'
   spec.source_files = 'SharpnezDesignSystem/SharpnezDesignSystem/**/*.swift'
-  spec.exclude_files = 'SharpnezDesignSystem/SharpnezDesignSystem/Source/SwiftUI/**/*.swift'
   spec.framework    = 'SystemConfiguration'
   spec.dependency "SnapKit"
 end

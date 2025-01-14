@@ -31,7 +31,6 @@ target 'UIKitSample' do
 
   snap_kit_pod
   keyboard_manager_pod
-
 end
 
 post_install do |installer|

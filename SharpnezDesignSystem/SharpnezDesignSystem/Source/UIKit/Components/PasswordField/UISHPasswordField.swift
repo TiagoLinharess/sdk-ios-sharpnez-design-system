@@ -129,7 +129,9 @@ private extension UISHPasswordField {
     }
     
     func setupAction() {
-        textField.onChange = onChange
+        textField.onChange = { [weak self] textField in
+            self?.onChange?(textField)
+        }
         button.addTarget(self, action: #selector(showHidePassword(_:)), for: .touchUpInside)
     }
     

@@ -7,7 +7,7 @@
 
 import UIKit
 
-open class UISHViewController<View: UIView, ViewModel: AnyObject>: UIViewController {
+open class UISHViewController<View, ViewModel>: UIViewController {
     
     // MARK: Properties
     
@@ -32,6 +32,6 @@ open class UISHViewController<View: UIView, ViewModel: AnyObject>: UIViewControl
     // MARK: View Life Cicle
     
     open override func loadView() {
-        view = customView
+        view = customView as? UIView
     }
 }

@@ -21,6 +21,12 @@ open class UISHContainerView: UIView {
         return scrollView
     }()
     
+    public lazy var contentView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .clear
+        return view
+    }()
+    
     /// Super class init
     public init() {
         super.init(frame: .zero)
@@ -46,12 +52,18 @@ private extension UISHContainerView {
 
     private func setupHierarchy() {
         addSubview(scrollView)
+        scrollView.addSubview(contentView)
     }
 
     private func setupConstraints() {
         scrollView.snp.makeConstraints {
             $0.top.equalTo(safeAreaLayoutGuide)
             $0.horizontalEdges.bottom.equalToSuperview()
+        }
+        
+        contentView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+            $0.width.equalTo(CGFloat.deviceWidth)
         }
     }
 }
