@@ -9,23 +9,7 @@ import SnapKit
 
 open class UISHContainerView: UIView {
     
-    // MARK: UI Elements
-    
-    /// View scroll view
-    public lazy var scrollView: UIScrollView = {
-        let scrollView = UIScrollView()
-        scrollView.backgroundColor = .backgroundSH
-        scrollView.showsVerticalScrollIndicator = false
-        scrollView.showsHorizontalScrollIndicator = false
-        scrollView.delegate = self
-        return scrollView
-    }()
-    
-    public lazy var contentView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .clear
-        return view
-    }()
+    // MARK: Init
     
     /// Super class init
     public init() {
@@ -42,39 +26,9 @@ private extension UISHContainerView {
     
     private func setup() {
         setupView()
-        setupHierarchy()
-        setupConstraints()
     }
     
     private func setupView() {
         backgroundColor = .backgroundSH
-    }
-
-    private func setupHierarchy() {
-        addSubview(scrollView)
-        scrollView.addSubview(contentView)
-    }
-
-    private func setupConstraints() {
-        scrollView.snp.makeConstraints {
-            $0.top.equalTo(safeAreaLayoutGuide)
-            $0.horizontalEdges.bottom.equalToSuperview()
-        }
-        
-        contentView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-            $0.width.equalTo(CGFloat.deviceWidth)
-        }
-    }
-}
-
-extension UISHContainerView: UIScrollViewDelegate {
-    
-    // MARK: UIScrollViewDelegate
-    
-    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.x != .zero {
-            scrollView.contentOffset.x = .zero
-        }
     }
 }
