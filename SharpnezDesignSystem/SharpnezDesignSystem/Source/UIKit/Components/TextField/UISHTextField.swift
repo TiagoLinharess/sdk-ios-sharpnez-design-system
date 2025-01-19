@@ -29,6 +29,12 @@ public final class UISHTextField: UIView {
         set { textField.keyboardType = newValue }
     }
     
+    /// Textfield auto capitalization type
+    public var autocapitalizationType: UITextAutocapitalizationType {
+        get { textField.autocapitalizationType }
+        set { textField.autocapitalizationType = newValue }
+    }
+    
     /// Textfield label title
     public var title: String {
         didSet { titleLabel.text = title }

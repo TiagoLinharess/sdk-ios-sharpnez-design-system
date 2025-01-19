@@ -23,6 +23,12 @@ public final class UISHPasswordField: UIView {
         set { textField.textField.isSecureTextEntry = newValue }
     }
     
+    /// Textfield auto capitalization type
+    public var autocapitalizationType: UITextAutocapitalizationType {
+        get { textField.autocapitalizationType }
+        set { textField.autocapitalizationType = newValue }
+    }
+    
     /// Textfield title
     public var title: String {
         didSet { textField.title = title }
@@ -70,6 +76,7 @@ public final class UISHPasswordField: UIView {
         field.textField.rightView?.addSubview(button)
         field.textField.clearsOnBeginEditing = false
         field.textField.clearsOnInsertion = false
+        field.contentType = .password
         return field
     }()
     
@@ -99,6 +106,10 @@ public final class UISHPasswordField: UIView {
     public func updateListItems(_ items: [UISHListItemViewModel]) {
         listItems = items
         textField.updateListItems(items)
+    }
+    
+    public func getTextField() -> UITextField {
+        textField.textField
     }
 }
 
