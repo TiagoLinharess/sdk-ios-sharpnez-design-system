@@ -53,7 +53,7 @@ public protocol UISHFeedbackViewModelProtocol {
     var primaryActionTitle: String { get }
     
     /// Feedback secondary button title
-    ///  if is nil will hide button
+    /// if is nil will hide button
     var secondaryActionTitle: String? { get }
     
     /// Feedback primary action

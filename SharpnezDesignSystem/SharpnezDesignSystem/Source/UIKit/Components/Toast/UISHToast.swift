@@ -13,6 +13,7 @@ public enum UISHToastType {
     case warning
     case error
     
+    /// Background color
     var backgroundColor: UIColor {
         return switch self {
         case .info:
@@ -26,6 +27,7 @@ public enum UISHToastType {
         }
     }
     
+    /// Color
     var color: UIColor {
         return switch self {
         case .info:
@@ -58,9 +60,16 @@ public final class UISHToast: UIView {
     
     // MARK: Properties
     
+    /// Toast bottom constraint
     public var bottomConstraint: NSLayoutConstraint?
+    
+    /// Toast type
     private let type: UISHToastType
+    
+    /// Toast text
     private let text: String
+    
+    /// Toast font
     private let font: DSFontName
     
     // MARK: UI elements
@@ -134,6 +143,7 @@ public extension UIViewController {
     
     // MARK: ViewController extension
     
+    /// Controller toast extension method
     func showToast(type: UISHToastType, text: String, font: DSFontName) {
         removeCurrentToastIfNeeded()
         let toastView = UISHToast(type: type, text: text, font: font)
