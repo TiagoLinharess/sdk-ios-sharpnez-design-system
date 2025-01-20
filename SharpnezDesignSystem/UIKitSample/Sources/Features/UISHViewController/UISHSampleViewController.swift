@@ -37,7 +37,7 @@ extension CustomView: ViewCode {
     }
 
     func setupHierarchy() {
-        scrollView.addSubview(stackView)
+        addSubview(stackView)
     }
 
     func setupConstraints() {

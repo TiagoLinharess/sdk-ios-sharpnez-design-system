@@ -16,10 +16,7 @@ struct SampleItem: Identifiable {
         .init(controller: FontsViewController(), name: "Custom Fonts"),
         .init(controller: FlavorColorsViewController(), name: "Flavor Colors"),
         .init(controller: UISHButtonViewController(), name: "UISHButton"),
-        .init(
-            controller: UISHSampleViewController(customView: CustomView(), viewModel: ViewModel()),
-            name: "UISHViewController with UISHContainerView"
-        ),
+        .init(controller: UISHSampleViewController(customView: CustomView(), viewModel: ViewModel()),name: "UISHViewController with UISHContainerView"),
         .init(controller: UISHFeedbackSampleMenuViewController(), name: "UISHFeedbackViewController"),
         .init(controller: UISHLabelViewController(), name: "UISHLabel"),
         .init(controller: UISHListItemViewController(), name: "UISHListItem"),
@@ -27,6 +24,7 @@ struct SampleItem: Identifiable {
         .init(controller: UISHLoadingSampleMenuViewController(), name: "UISHLoadingViewController"),
         .init(controller: UISHShortcutButtonViewController(), name: "UISHShortcut"),
         .init(controller: UISHTextFieldViewController(), name: "UISHTextField"),
-        .init(controller: UISHPasswordFieldViewController(), name: "UISHPasswordField")
+        .init(controller: UISHPasswordFieldViewController(), name: "UISHPasswordField"),
+        .init(controller: UISHToastViewController(), name: "UISHToast")
     ]
 }

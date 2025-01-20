@@ -95,6 +95,8 @@
 		F1B8159F2D1D9BAD00128643 /* UISHFeedbackSampleMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8159E2D1D9B9C00128643 /* UISHFeedbackSampleMenuViewController.swift */; };
 		F1B815A12D1DAAC100128643 /* UISHShortcutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815A02D1DAAAB00128643 /* UISHShortcutButton.swift */; };
 		F1B815A42D1DB1E900128643 /* UISHShortcutButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815A32D1DB1DB00128643 /* UISHShortcutButtonViewController.swift */; };
+		F1F9F1BD2D3DA169004EA3B1 /* UISHToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F9F1BC2D3DA161004EA3B1 /* UISHToast.swift */; };
+		F1F9F1C02D3DA2A8004EA3B1 /* UISHToastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F9F1BF2D3DA2A8004EA3B1 /* UISHToastViewController.swift */; };
 		F1FBD4E52D19F1E700DA11C4 /* SHRulesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FBD4E42D19F1E700DA11C4 /* SHRulesListView.swift */; };
 /* End PBXBuildFile section */
 
@@ -234,6 +236,8 @@
 		F1B8159E2D1D9B9C00128643 /* UISHFeedbackSampleMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHFeedbackSampleMenuViewController.swift; sourceTree = "<group>"; };
 		F1B815A02D1DAAAB00128643 /* UISHShortcutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHShortcutButton.swift; sourceTree = "<group>"; };
 		F1B815A32D1DB1DB00128643 /* UISHShortcutButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHShortcutButtonViewController.swift; sourceTree = "<group>"; };
+		F1F9F1BC2D3DA161004EA3B1 /* UISHToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHToast.swift; sourceTree = "<group>"; };
+		F1F9F1BF2D3DA2A8004EA3B1 /* UISHToastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHToastViewController.swift; sourceTree = "<group>"; };
 		F1FBD4E42D19F1E700DA11C4 /* SHRulesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRulesListView.swift; sourceTree = "<group>"; };
 		F287E6077F2DAC1A92E789F2 /* Pods-SwiftUISample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUISample.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUISample/Pods-SwiftUISample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -749,6 +753,7 @@
 				F13816D12D20DBEA00A91018 /* UISHPasswordField */,
 				F1B815A22D1DB1BB00128643 /* UISHShortcutButton */,
 				F13816C52D1EE91E00A91018 /* UISHTextField */,
+				F1F9F1BE2D3DA29E004EA3B1 /* UISHToast */,
 				F1B815822D1AFCA200128643 /* UISHViewController */,
 				F110097A2D1A55A0005DFC3F /* ViewController.swift */,
 			);
@@ -882,6 +887,7 @@
 				F13816CF2D20AC6600A91018 /* PasswordField */,
 				F13816C22D1EE4C300A91018 /* Shortcut */,
 				F13816C12D1ED5CA00A91018 /* TextField */,
+				F1F9F1BB2D3DA14F004EA3B1 /* Toast */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -991,6 +997,22 @@
 				F1B815A32D1DB1DB00128643 /* UISHShortcutButtonViewController.swift */,
 			);
 			path = UISHShortcutButton;
+			sourceTree = "<group>";
+		};
+		F1F9F1BB2D3DA14F004EA3B1 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				F1F9F1BC2D3DA161004EA3B1 /* UISHToast.swift */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		F1F9F1BE2D3DA29E004EA3B1 /* UISHToast */ = {
+			isa = PBXGroup;
+			children = (
+				F1F9F1BF2D3DA2A8004EA3B1 /* UISHToastViewController.swift */,
+			);
+			path = UISHToast;
 			sourceTree = "<group>";
 		};
 		F1FBD4E32D19F19600DA11C4 /* RulesList */ = {
@@ -1295,6 +1317,7 @@
 				ED31028D2CEF752100DEC9C4 /* SHLoadingView.swift in Sources */,
 				EDD253B12CE5138A008C2B23 /* SharpnezDesignSystem.docc in Sources */,
 				F13816D82D26DCB800A91018 /* UISHContainerView.swift in Sources */,
+				F1F9F1BD2D3DA169004EA3B1 /* UISHToast.swift in Sources */,
 				F1B815812D1AF83000128643 /* UISHViewController.swift in Sources */,
 				F13816CA2D1F198B00A91018 /* UISHListItem.swift in Sources */,
 			);
@@ -1331,6 +1354,7 @@
 				F1B8157E2D1AF0B000128643 /* UISHLabelViewController.swift in Sources */,
 				F110097C2D1A55A0005DFC3F /* AppDelegate.swift in Sources */,
 				F1B815A42D1DB1E900128643 /* UISHShortcutButtonViewController.swift in Sources */,
+				F1F9F1C02D3DA2A8004EA3B1 /* UISHToastViewController.swift in Sources */,
 				F1B815732D1AE80300128643 /* FontsViewController.swift in Sources */,
 				F1B8159F2D1D9BAD00128643 /* UISHFeedbackSampleMenuViewController.swift in Sources */,
 				F11009882D1AD380005DFC3F /* Flavor.swift in Sources */,
