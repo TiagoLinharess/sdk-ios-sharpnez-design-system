@@ -97,6 +97,8 @@
 		F1B815A42D1DB1E900128643 /* UISHShortcutButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815A32D1DB1DB00128643 /* UISHShortcutButtonViewController.swift */; };
 		F1F9F1BD2D3DA169004EA3B1 /* UISHToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F9F1BC2D3DA161004EA3B1 /* UISHToast.swift */; };
 		F1F9F1C02D3DA2A8004EA3B1 /* UISHToastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F9F1BF2D3DA2A8004EA3B1 /* UISHToastViewController.swift */; };
+		F1F9F1EC2D4A9C6A004EA3B1 /* UISHBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F9F1EA2D4A9C6A004EA3B1 /* UISHBottomSheetViewController.swift */; };
+		F1F9F1F12D4A9D56004EA3B1 /* UISHBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F9F1F02D4A9D4E004EA3B1 /* UISHBottomSheet.swift */; };
 		F1FBD4E52D19F1E700DA11C4 /* SHRulesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FBD4E42D19F1E700DA11C4 /* SHRulesListView.swift */; };
 /* End PBXBuildFile section */
 
@@ -238,6 +240,8 @@
 		F1B815A32D1DB1DB00128643 /* UISHShortcutButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHShortcutButtonViewController.swift; sourceTree = "<group>"; };
 		F1F9F1BC2D3DA161004EA3B1 /* UISHToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHToast.swift; sourceTree = "<group>"; };
 		F1F9F1BF2D3DA2A8004EA3B1 /* UISHToastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHToastViewController.swift; sourceTree = "<group>"; };
+		F1F9F1EA2D4A9C6A004EA3B1 /* UISHBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHBottomSheetViewController.swift; sourceTree = "<group>"; };
+		F1F9F1F02D4A9D4E004EA3B1 /* UISHBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHBottomSheet.swift; sourceTree = "<group>"; };
 		F1FBD4E42D19F1E700DA11C4 /* SHRulesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRulesListView.swift; sourceTree = "<group>"; };
 		F287E6077F2DAC1A92E789F2 /* Pods-SwiftUISample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUISample.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUISample/Pods-SwiftUISample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -754,6 +758,7 @@
 				F1B815A22D1DB1BB00128643 /* UISHShortcutButton */,
 				F13816C52D1EE91E00A91018 /* UISHTextField */,
 				F1F9F1BE2D3DA29E004EA3B1 /* UISHToast */,
+				F1F9F1EB2D4A9C6A004EA3B1 /* UISHBottomSheet */,
 				F1B815822D1AFCA200128643 /* UISHViewController */,
 				F110097A2D1A55A0005DFC3F /* ViewController.swift */,
 			);
@@ -911,6 +916,7 @@
 		F1B8157F2D1AF80700128643 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F1F9F1ED2D4A9D20004EA3B1 /* BottomSheet */,
 				F1B8159A2D1D915800128643 /* FeedbackController */,
 				F1B815942D1CC37500128643 /* LoadingController */,
 				F1B815932D1CC35100128643 /* ViewController */,
@@ -1013,6 +1019,22 @@
 				F1F9F1BF2D3DA2A8004EA3B1 /* UISHToastViewController.swift */,
 			);
 			path = UISHToast;
+			sourceTree = "<group>";
+		};
+		F1F9F1EB2D4A9C6A004EA3B1 /* UISHBottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				F1F9F1EA2D4A9C6A004EA3B1 /* UISHBottomSheetViewController.swift */,
+			);
+			path = UISHBottomSheet;
+			sourceTree = "<group>";
+		};
+		F1F9F1ED2D4A9D20004EA3B1 /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				F1F9F1F02D4A9D4E004EA3B1 /* UISHBottomSheet.swift */,
+			);
+			path = BottomSheet;
 			sourceTree = "<group>";
 		};
 		F1FBD4E32D19F19600DA11C4 /* RulesList */ = {
@@ -1312,6 +1334,7 @@
 				F1FBD4E52D19F1E700DA11C4 /* SHRulesListView.swift in Sources */,
 				F110099C2D1ADE18005DFC3F /* UIView+DS+extensions.swift in Sources */,
 				F13816D52D20EC3D00A91018 /* PrivateTextField.swift in Sources */,
+				F1F9F1F12D4A9D56004EA3B1 /* UISHBottomSheet.swift in Sources */,
 				EDDDE9712CEFA02F0054C7E2 /* SHFeedbackView.swift in Sources */,
 				EDD253E82CE51453008C2B23 /* UIFont+DS+extensions.swift in Sources */,
 				ED31028D2CEF752100DEC9C4 /* SHLoadingView.swift in Sources */,
@@ -1351,6 +1374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1F9F1EC2D4A9C6A004EA3B1 /* UISHBottomSheetViewController.swift in Sources */,
 				F1B8157E2D1AF0B000128643 /* UISHLabelViewController.swift in Sources */,
 				F110097C2D1A55A0005DFC3F /* AppDelegate.swift in Sources */,
 				F1B815A42D1DB1E900128643 /* UISHShortcutButtonViewController.swift in Sources */,

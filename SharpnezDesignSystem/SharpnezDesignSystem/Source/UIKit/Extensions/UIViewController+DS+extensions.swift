@@ -12,9 +12,9 @@ public extension UIViewController {
     // MARK: Public Methods
     
     /// Set default DS header
-    func setDefaultHeader(title: String) {
+    func setDefaultHeader(title: String, backCompletion: (() -> Void)? = nil) {
         defaultHeaderView(title: title)
-        defaultNavigationBarAppearance()
+        defaultNavigationBarAppearance(backCompletion: backCompletion)
         navigationController?.interactivePopGestureRecognizer?.delegate = self
         navigationController?.interactivePopGestureRecognizer?.isEnabled = true
     }
@@ -39,7 +39,7 @@ private extension UIViewController {
         navigationItem.titleView = label
     }
     
-    func defaultNavigationBarAppearance() {
+    func defaultNavigationBarAppearance(backCompletion: (() -> Void)?) {
         let appearance = UINavigationBarAppearance()
         appearance.shadowImage = UIImage()
         appearance.shadowColor = .clear
@@ -53,17 +53,15 @@ private extension UIViewController {
         navigationController?.navigationBar.tintColor = .clear
         
         let frame = CGRect(x: .zero, y: .zero, width: .small, height: .small)
-        let navButton = UIButton(frame: frame)
+        let action = UIAction { [weak self] _ in
+            self?.navigationController?.popViewController(animated: true)
+            backCompletion?()
+        }
+        let navButton = UIButton(frame: frame, primaryAction: action)
         navButton.setBackgroundImage(UIImage(systemName: DSConstants.Icons.arrowLeft), for: .normal)
-        navButton.addTarget(self, action: #selector(backAction), for: .touchUpInside)
         navButton.tintColor = .onBackgroundSH
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: navButton)
-    }
-    
-    @objc
-    func backAction() {
-        navigationController?.popViewController(animated: true)
     }
 }
 

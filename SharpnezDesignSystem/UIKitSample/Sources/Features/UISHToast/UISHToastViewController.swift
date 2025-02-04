@@ -29,7 +29,7 @@ extension UISHToastViewController: ViewCode {
     
     func setupView() {
         view.backgroundColor = .backgroundSH
-        title = "UISHButton"
+        title = "UISHToast"
     }
 
     func setupHierarchy() {

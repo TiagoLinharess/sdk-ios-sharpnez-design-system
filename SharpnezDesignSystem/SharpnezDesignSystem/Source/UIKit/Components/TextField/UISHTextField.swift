@@ -130,6 +130,7 @@ private extension UISHTextField {
     }
     
     func configure() {
+        accessibilityIdentifier = title
         backgroundColor = .clear
         textField.textColor = color
         textField.font = .body(font, .medium)

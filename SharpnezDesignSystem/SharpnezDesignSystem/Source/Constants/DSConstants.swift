@@ -63,6 +63,9 @@ enum DSConstants {
         
         /// chevron.left
         static let arrowLeft: String = "arrow.left"
+        
+        /// xmark
+        static let close: String = "xmark"
     }
     
     // MARK: Commons

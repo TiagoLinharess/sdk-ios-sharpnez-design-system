@@ -151,6 +151,7 @@ private extension UISHButton {
         
         self.configuration = configuration
         self.alpha = isDisabled ? 0.5 : 1
+        self.accessibilityIdentifier = title
     }
     
     func configureIsLoading() {
