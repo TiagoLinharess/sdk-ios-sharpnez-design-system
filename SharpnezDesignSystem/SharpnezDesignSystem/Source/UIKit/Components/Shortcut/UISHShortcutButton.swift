@@ -102,13 +102,13 @@ private extension UISHShortcutButton {
     func setupConstraints() {
         iconView.snp.makeConstraints {
             $0.top.equalToSuperview().inset(CGFloat.extraSmall)
-            $0.leading.equalToSuperview().inset(CGFloat.smaller)
+            $0.leading.equalToSuperview().inset(CGFloat.extraSmall)
             $0.height.width.equalTo(CGFloat.big)
         }
         
         textLabel.snp.makeConstraints {
             $0.top.greaterThanOrEqualTo(iconView.snp.bottom).offset(CGFloat.medium)
-            $0.leading.equalToSuperview().inset(CGFloat.smaller)
+            $0.leading.equalToSuperview().inset(CGFloat.extraSmall)
             $0.bottom.equalToSuperview().inset(CGFloat.extraSmall)
             $0.trailing.equalToSuperview().inset(CGFloat.medium)
         }
@@ -125,10 +125,8 @@ private extension UISHShortcutButton {
         iconView.tintColor = onColor
         textLabel.text = text
         textLabel.textColor = onColor
-        layer.cornerRadius = .big
+        layer.cornerRadius = .small
         layer.masksToBounds = true
-        layer.borderWidth = .two
-        layer.borderColor = onColor.cgColor
     }
     
     func configureAction() {

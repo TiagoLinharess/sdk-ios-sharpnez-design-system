@@ -77,6 +77,11 @@
 		F13816D32D20DC5700A91018 /* UISHPasswordFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13816D22D20DC4700A91018 /* UISHPasswordFieldViewController.swift */; };
 		F13816D52D20EC3D00A91018 /* PrivateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13816D42D20EC3700A91018 /* PrivateTextField.swift */; };
 		F13816D82D26DCB800A91018 /* UISHContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13816D72D26DCB400A91018 /* UISHContainerView.swift */; };
+		F14BC9BA2D5BFC4A0005BEEB /* UISHIconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14BC9B82D5BFC4A0005BEEB /* UISHIconViewController.swift */; };
+		F14BC9BD2D5C2D780005BEEB /* UISHBulletIconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14BC9BB2D5C2D780005BEEB /* UISHBulletIconViewController.swift */; };
+		F1AAA03F2D57D06100DB56CC /* BulletIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AAA03E2D57D05700DB56CC /* BulletIconView.swift */; };
+		F1AAA0422D5A3CEF00DB56CC /* UISHIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AAA0412D5A3CEB00DB56CC /* UISHIcon.swift */; };
+		F1AAA0442D5A45A400DB56CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1AAA0432D5A45A400DB56CC /* Assets.xcassets */; };
 		F1B8156E2D1AE1B000128643 /* FlavorColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8156D2D1AE18800128643 /* FlavorColorsViewController.swift */; };
 		F1B815702D1AE30600128643 /* UIStackView+DS+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8156F2D1AE2FA00128643 /* UIStackView+DS+extensions.swift */; };
 		F1B815732D1AE80300128643 /* FontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815722D1AE7FA00128643 /* FontsViewController.swift */; };
@@ -220,6 +225,11 @@
 		F13816D22D20DC4700A91018 /* UISHPasswordFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHPasswordFieldViewController.swift; sourceTree = "<group>"; };
 		F13816D42D20EC3700A91018 /* PrivateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateTextField.swift; sourceTree = "<group>"; };
 		F13816D72D26DCB400A91018 /* UISHContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHContainerView.swift; sourceTree = "<group>"; };
+		F14BC9B82D5BFC4A0005BEEB /* UISHIconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHIconViewController.swift; sourceTree = "<group>"; };
+		F14BC9BB2D5C2D780005BEEB /* UISHBulletIconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHBulletIconViewController.swift; sourceTree = "<group>"; };
+		F1AAA03E2D57D05700DB56CC /* BulletIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletIconView.swift; sourceTree = "<group>"; };
+		F1AAA0412D5A3CEB00DB56CC /* UISHIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHIcon.swift; sourceTree = "<group>"; };
+		F1AAA0432D5A45A400DB56CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1B8156D2D1AE18800128643 /* FlavorColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorColorsViewController.swift; sourceTree = "<group>"; };
 		F1B8156F2D1AE2FA00128643 /* UIStackView+DS+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+DS+extensions.swift"; sourceTree = "<group>"; };
 		F1B815722D1AE7FA00128643 /* FontsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsViewController.swift; sourceTree = "<group>"; };
@@ -382,6 +392,7 @@
 				EDD253F02CE5145C008C2B23 /* Fonts */,
 				EDD253AD2CE5138A008C2B23 /* SharpnezDesignSystem.h */,
 				EDD253AE2CE5138A008C2B23 /* SharpnezDesignSystem.docc */,
+				F1AAA0432D5A45A400DB56CC /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -751,6 +762,8 @@
 				F1B815712D1AE7EA00128643 /* Fonts */,
 				F1B8158A2D1B156700128643 /* UISHButton */,
 				F1B8159D2D1D9B6000128643 /* UISHFeedback */,
+				F14BC9B92D5BFC4A0005BEEB /* UISHIconView */,
+				F14BC9BC2D5C2D780005BEEB /* UISHBulletIconView */,
 				F1B8157C2D1AF09600128643 /* UISHLabel */,
 				F13816CB2D20A85400A91018 /* UISHListItem */,
 				F1B815902D1B308900128643 /* UISHLoading */,
@@ -866,6 +879,38 @@
 			path = Container;
 			sourceTree = "<group>";
 		};
+		F14BC9B92D5BFC4A0005BEEB /* UISHIconView */ = {
+			isa = PBXGroup;
+			children = (
+				F14BC9B82D5BFC4A0005BEEB /* UISHIconViewController.swift */,
+			);
+			path = UISHIconView;
+			sourceTree = "<group>";
+		};
+		F14BC9BC2D5C2D780005BEEB /* UISHBulletIconView */ = {
+			isa = PBXGroup;
+			children = (
+				F14BC9BB2D5C2D780005BEEB /* UISHBulletIconViewController.swift */,
+			);
+			path = UISHBulletIconView;
+			sourceTree = "<group>";
+		};
+		F1AAA03D2D57D04C00DB56CC /* BulletIcon */ = {
+			isa = PBXGroup;
+			children = (
+				F1AAA03E2D57D05700DB56CC /* BulletIconView.swift */,
+			);
+			path = BulletIcon;
+			sourceTree = "<group>";
+		};
+		F1AAA0402D5A3CE400DB56CC /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				F1AAA0412D5A3CEB00DB56CC /* UISHIcon.swift */,
+			);
+			path = Icon;
+			sourceTree = "<group>";
+		};
 		F1B8156C2D1AE17C00128643 /* FlavorColors */ = {
 			isa = PBXGroup;
 			children = (
@@ -885,6 +930,8 @@
 		F1B815742D1AEB2000128643 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F1AAA0402D5A3CE400DB56CC /* Icon */,
+				F1AAA03D2D57D04C00DB56CC /* BulletIcon */,
 				F1B815872D1B0F6100128643 /* Button */,
 				F1B8158D2D1B2BDB00128643 /* Loading */,
 				F1B815772D1AEB3B00128643 /* Label */,
@@ -1171,6 +1218,7 @@
 				EDD253F22CE5145C008C2B23 /* Montserrat-Bold.ttf in Resources */,
 				EDD253F32CE5145C008C2B23 /* Montserrat-Medium.ttf in Resources */,
 				EDD253F42CE5145C008C2B23 /* Montserrat-Regular.ttf in Resources */,
+				F1AAA0442D5A45A400DB56CC /* Assets.xcassets in Resources */,
 				EDD253F52CE5145C008C2B23 /* Poppins-Bold.ttf in Resources */,
 				EDD253F62CE5145C008C2B23 /* Poppins-Medium.ttf in Resources */,
 			);
@@ -1306,9 +1354,11 @@
 				EDDDE97A2CF924AD0054C7E2 /* SHTextField.swift in Sources */,
 				F1B8158F2D1B2BF500128643 /* UISHLoadingView.swift in Sources */,
 				EDA01B912CE619CB00740E56 /* SHContainerView.swift in Sources */,
+				F1AAA0422D5A3CEF00DB56CC /* UISHIcon.swift in Sources */,
 				EDD253D62CE51453008C2B23 /* ViewStatus.swift in Sources */,
 				ED3102842CEF651E00DEC9C4 /* SHLoading.swift in Sources */,
 				EDD254392CE52B3C008C2B23 /* FlavorColors.swift in Sources */,
+				F1AAA03F2D57D06100DB56CC /* BulletIconView.swift in Sources */,
 				F1B815A12D1DAAC100128643 /* UISHShortcutButton.swift in Sources */,
 				EDD253DA2CE51453008C2B23 /* DSConstants.swift in Sources */,
 				F13816D02D20AC6600A91018 /* UISHPasswordField.swift in Sources */,
@@ -1374,6 +1424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F14BC9BA2D5BFC4A0005BEEB /* UISHIconViewController.swift in Sources */,
 				F1F9F1EC2D4A9C6A004EA3B1 /* UISHBottomSheetViewController.swift in Sources */,
 				F1B8157E2D1AF0B000128643 /* UISHLabelViewController.swift in Sources */,
 				F110097C2D1A55A0005DFC3F /* AppDelegate.swift in Sources */,
@@ -1391,6 +1442,7 @@
 				F13816CD2D20A90F00A91018 /* UISHListItemViewController.swift in Sources */,
 				F110097E2D1A55A0005DFC3F /* ViewController.swift in Sources */,
 				F13816D32D20DC5700A91018 /* UISHPasswordFieldViewController.swift in Sources */,
+				F14BC9BD2D5C2D780005BEEB /* UISHBulletIconViewController.swift in Sources */,
 				F11009922D1AD7E2005DFC3F /* SampleItem.swift in Sources */,
 				F1B8158C2D1B158E00128643 /* UISHButtonViewController.swift in Sources */,
 			);

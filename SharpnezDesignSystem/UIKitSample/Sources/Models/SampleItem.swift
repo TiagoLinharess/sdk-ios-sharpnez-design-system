@@ -18,6 +18,8 @@ struct SampleItem: Identifiable {
         .init(controller: UISHButtonViewController(), name: "UISHButton"),
         .init(controller: UISHSampleViewController(customView: CustomView(), viewModel: ViewModel()),name: "UISHViewController with UISHContainerView"),
         .init(controller: UISHFeedbackSampleMenuViewController(), name: "UISHFeedbackViewController"),
+        .init(controller: UISHIconViewController(), name: "UISHIconView"),
+        .init(controller: UISHBulletIconViewController(), name: "UISHBulletIconView"),
         .init(controller: UISHLabelViewController(), name: "UISHLabel"),
         .init(controller: UISHListItemViewController(), name: "UISHListItem"),
         .init(controller: UISHLoadingSampleViewController(), name: "UISHLoading"),
