@@ -55,6 +55,16 @@ public final class UISHButton: UIButton {
                 return .clear
             }
         }
+        
+        /// Underline style
+        var underlineStyle: NSUnderlineStyle {
+            switch self {
+            case .ghost:
+                return .single
+            default:
+                return []
+            }
+        }
     }
     
     // MARK: Properties
@@ -144,9 +154,11 @@ private extension UISHButton {
         configuration.image = image
         configuration.attributedTitle = AttributedString(
             title,
-            attributes: AttributeContainer(
-                [NSAttributedString.Key.font: UIFont.body(font, .medium)]
-            )
+            attributes: AttributeContainer([
+                NSAttributedString.Key.font: UIFont.body(font, .medium),
+                NSAttributedString.Key.underlineStyle: style.underlineStyle.rawValue,
+                NSAttributedString.Key.underlineColor: style.titleColor
+            ])
         )
         
         self.configuration = configuration

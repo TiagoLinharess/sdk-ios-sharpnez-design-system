@@ -101,6 +101,12 @@ public final class UISHBottomSheet: UIViewController {
         super.viewWillAppear(animated)
         setupAnimations()
     }
+    
+    // MARK: Public methods
+    
+    public func close(completion: @escaping () -> Void) {
+        closeBottomSheet(completion: completion)
+    }
 }
 
 private extension UISHBottomSheet {
@@ -193,7 +199,7 @@ private extension UISHBottomSheet {
         guard viewModel.closeOnTapOutside else { return }
         let backgroundGesture = UITapGestureRecognizer(
             target: self,
-            action: #selector(closeBottomSheet)
+            action: #selector(finish)
         )
         backgroundView.addGestureRecognizer(backgroundGesture)
     }
@@ -202,14 +208,22 @@ private extension UISHBottomSheet {
         guard viewModel.hasCloseButton else { return }
         let iconGesture = UITapGestureRecognizer(
             target: self,
-            action: #selector(closeBottomSheet)
+            action: #selector(finish)
         )
         iconGesture.numberOfTapsRequired = 1
         closeIcon.addGestureRecognizer(iconGesture)
     }
     
     @objc
-    func closeBottomSheet() {
+    func finish() {
+        closeBottomSheet { [weak self] in
+            self?.dismiss(animated: true) { [weak self] in
+                self?.didCLose?()
+            }
+        }
+    }
+    
+    func closeBottomSheet(completion: @escaping () -> Void) {
         UIView.animate(
             withDuration: 0.2,
             delay: .zero,
@@ -217,9 +231,7 @@ private extension UISHBottomSheet {
         ) { [weak self] in
             self?.backgroundView.alpha = 0
         } completion: { [weak self] _ in
-            self?.dismiss(animated: true) { [weak self] in
-                self?.didCLose?()
-            }
+            self?.dismiss(animated: true) { completion() }
         }
     }
 }

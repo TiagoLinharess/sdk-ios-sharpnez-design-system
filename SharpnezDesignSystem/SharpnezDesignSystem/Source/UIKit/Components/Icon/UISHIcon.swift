@@ -33,7 +33,8 @@ public final class UISHIconView: UIImageView {
     
     /// Change icon method
     func setIcon(_ icon: UISHIcon) {
-        image = UIImage(named: icon.rawValue)
+        let bundle = BundleToken.bundle
+        image = UIImage(named: icon.rawValue, in: bundle, with: .none)
     }
 }
 

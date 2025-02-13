@@ -56,6 +56,16 @@ public final class UISHTextField: UIView {
     /// Textfield list items
     private var listItems: [UISHListItemViewModel]
     
+    /// List items top constraint constant
+    private var listItemsTopConstraintConstant: CGFloat {
+        listItems.isEmpty ? .zero : .extraSmall
+    }
+    
+    /// List items top constraint constant
+    private lazy var listItemsHeightZeroConstraintConstant = listItemView
+        .heightAnchor
+        .constraint(equalToConstant: .zero)
+    
     // MARK: UI Elements
     
     private lazy var titleLabel: UISHLabel = {
@@ -82,11 +92,13 @@ public final class UISHTextField: UIView {
     }()
     
     private lazy var listItemView: UISHListItem = {
-        return UISHListItem(
+        let view = UISHListItem(
             items: listItems,
             font: font,
             defaultColor: color
         )
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
     // MARK: Init
@@ -113,6 +125,11 @@ public final class UISHTextField: UIView {
     
     /// Update items method
     public func updateListItems(_ items: [UISHListItemViewModel]) {
+        updateListItemHeight()
+        listItemView.snp.updateConstraints {
+            $0.top.equalTo(textField.snp.bottom).offset(listItemsTopConstraintConstant)
+        }
+        
         listItems = items
         listItemView.items = listItems
     }
@@ -159,9 +176,14 @@ private extension UISHTextField {
         }
         
         listItemView.snp.makeConstraints {
-            $0.top.equalTo(textField.snp.bottom).offset(CGFloat.extraSmall)
+            $0.top.equalTo(textField.snp.bottom).offset(listItemsTopConstraintConstant)
             $0.horizontalEdges.bottom.equalToSuperview().inset(CGFloat.extraSmall)
         }
+        updateListItemHeight()
+    }
+    
+    func updateListItemHeight() {
+        listItemsHeightZeroConstraintConstant.isActive = listItems.isEmpty
     }
     
     func setupAction() {
