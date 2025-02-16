@@ -5,7 +5,7 @@
 //  Created by Tiago Linhares on 24/12/24.
 //
 
-import SnapKit
+import UIKit
 
 public final class UISHLoadingView: UIView {
     
@@ -50,7 +50,15 @@ private extension UISHLoadingView {
     
     func setup() {
         addSubview(loadingView)
-        loadingView.snp.makeConstraints { $0.edges.equalToSuperview() }
+        enableConstraints()
+        
+        let constraints: [NSLayoutConstraint] = [
+            loadingView.topAnchor.constraint(equalTo: topAnchor),
+            loadingView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            loadingView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            loadingView.bottomAnchor.constraint(equalTo: bottomAnchor),
+        ]
+        NSLayoutConstraint.activate(constraints)
     }
     
     func configure() {

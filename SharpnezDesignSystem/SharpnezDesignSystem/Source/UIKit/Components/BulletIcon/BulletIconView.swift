@@ -5,7 +5,7 @@
 //  Created by Tiago Linhares on 08/02/25.
 //
 
-import SnapKit
+import UIKit
 
 public final class UISHBulletIconView: UIView {
     
@@ -74,9 +74,15 @@ private extension UISHBulletIconView {
     }
     
     func setupConstraints() {
-        imageView.snp.makeConstraints {
-            $0.edges.equalToSuperview().inset(CGFloat.smaller)
-            $0.height.width.equalTo(CGFloat.big)
-        }
+        enableConstraints()
+        let constraints: [NSLayoutConstraint] = [
+            imageView.topAnchor.constraint(equalTo: topAnchor, constant: .smaller),
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: .smaller),
+            imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -.smaller),
+            imageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -.smaller),
+            imageView.heightAnchor.constraint(equalToConstant: .big),
+            imageView.widthAnchor.constraint(equalToConstant: .big),
+        ]
+        NSLayoutConstraint.activate(constraints)
     }
 }

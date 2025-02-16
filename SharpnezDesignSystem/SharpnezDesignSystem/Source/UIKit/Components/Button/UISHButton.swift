@@ -5,7 +5,7 @@
 //  Created by Tiago Linhares on 24/12/24.
 //
 
-import SnapKit
+import UIKit
 
 public final class UISHButton: UIButton {
     
@@ -171,7 +171,8 @@ private extension UISHButton {
     }
     
     func configureHeight() {
-        snp.makeConstraints { $0.height.equalTo(CGFloat.xxLarge) }
+        translatesAutoresizingMaskIntoConstraints = false
+        heightAnchor.constraint(equalToConstant: .xxLarge).isActive = true
     }
     
     func configureAction() {

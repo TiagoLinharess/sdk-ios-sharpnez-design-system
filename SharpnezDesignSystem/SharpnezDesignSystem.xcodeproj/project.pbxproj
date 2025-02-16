@@ -76,7 +76,6 @@
 		F13816D02D20AC6600A91018 /* UISHPasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13816CE2D20AC6600A91018 /* UISHPasswordField.swift */; };
 		F13816D32D20DC5700A91018 /* UISHPasswordFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13816D22D20DC4700A91018 /* UISHPasswordFieldViewController.swift */; };
 		F13816D52D20EC3D00A91018 /* PrivateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13816D42D20EC3700A91018 /* PrivateTextField.swift */; };
-		F13816D82D26DCB800A91018 /* UISHContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13816D72D26DCB400A91018 /* UISHContainerView.swift */; };
 		F14BC9BA2D5BFC4A0005BEEB /* UISHIconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14BC9B82D5BFC4A0005BEEB /* UISHIconViewController.swift */; };
 		F14BC9BD2D5C2D780005BEEB /* UISHBulletIconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14BC9BB2D5C2D780005BEEB /* UISHBulletIconViewController.swift */; };
 		F1AAA03F2D57D06100DB56CC /* BulletIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AAA03E2D57D05700DB56CC /* BulletIconView.swift */; };
@@ -87,8 +86,6 @@
 		F1B815732D1AE80300128643 /* FontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815722D1AE7FA00128643 /* FontsViewController.swift */; };
 		F1B815792D1AEB4B00128643 /* UISHLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815782D1AEB4500128643 /* UISHLabel.swift */; };
 		F1B8157E2D1AF0B000128643 /* UISHLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8157D2D1AF0A300128643 /* UISHLabelViewController.swift */; };
-		F1B815812D1AF83000128643 /* UISHViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815802D1AF82400128643 /* UISHViewController.swift */; };
-		F1B815842D1AFCB800128643 /* UISHSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815832D1AFCB100128643 /* UISHSampleViewController.swift */; };
 		F1B815862D1B020800128643 /* UIViewController+DS+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815852D1B01FE00128643 /* UIViewController+DS+extensions.swift */; };
 		F1B815892D1B0F6E00128643 /* UISHButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815882D1B0F6A00128643 /* UISHButton.swift */; };
 		F1B8158C2D1B158E00128643 /* UISHButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8158B2D1B158600128643 /* UISHButtonViewController.swift */; };
@@ -224,7 +221,6 @@
 		F13816CE2D20AC6600A91018 /* UISHPasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHPasswordField.swift; sourceTree = "<group>"; };
 		F13816D22D20DC4700A91018 /* UISHPasswordFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHPasswordFieldViewController.swift; sourceTree = "<group>"; };
 		F13816D42D20EC3700A91018 /* PrivateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateTextField.swift; sourceTree = "<group>"; };
-		F13816D72D26DCB400A91018 /* UISHContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHContainerView.swift; sourceTree = "<group>"; };
 		F14BC9B82D5BFC4A0005BEEB /* UISHIconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHIconViewController.swift; sourceTree = "<group>"; };
 		F14BC9BB2D5C2D780005BEEB /* UISHBulletIconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHBulletIconViewController.swift; sourceTree = "<group>"; };
 		F1AAA03E2D57D05700DB56CC /* BulletIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletIconView.swift; sourceTree = "<group>"; };
@@ -235,8 +231,6 @@
 		F1B815722D1AE7FA00128643 /* FontsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsViewController.swift; sourceTree = "<group>"; };
 		F1B815782D1AEB4500128643 /* UISHLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHLabel.swift; sourceTree = "<group>"; };
 		F1B8157D2D1AF0A300128643 /* UISHLabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHLabelViewController.swift; sourceTree = "<group>"; };
-		F1B815802D1AF82400128643 /* UISHViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHViewController.swift; sourceTree = "<group>"; };
-		F1B815832D1AFCB100128643 /* UISHSampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHSampleViewController.swift; sourceTree = "<group>"; };
 		F1B815852D1B01FE00128643 /* UIViewController+DS+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+DS+extensions.swift"; sourceTree = "<group>"; };
 		F1B815882D1B0F6A00128643 /* UISHButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHButton.swift; sourceTree = "<group>"; };
 		F1B8158B2D1B158600128643 /* UISHButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHButtonViewController.swift; sourceTree = "<group>"; };
@@ -708,7 +702,6 @@
 		F11009542D1A5174005DFC3F /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				F13816D62D26DCAC00A91018 /* View */,
 				F1B8157F2D1AF80700128643 /* Controller */,
 				F1B815742D1AEB2000128643 /* Components */,
 				F11009932D1AD991005DFC3F /* Extensions */,
@@ -772,7 +765,6 @@
 				F13816C52D1EE91E00A91018 /* UISHTextField */,
 				F1F9F1BE2D3DA29E004EA3B1 /* UISHToast */,
 				F1F9F1EB2D4A9C6A004EA3B1 /* UISHBottomSheet */,
-				F1B815822D1AFCA200128643 /* UISHViewController */,
 				F110097A2D1A55A0005DFC3F /* ViewController.swift */,
 			);
 			path = Features;
@@ -863,22 +855,6 @@
 			path = UISHPasswordField;
 			sourceTree = "<group>";
 		};
-		F13816D62D26DCAC00A91018 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				F13816D92D26EE2E00A91018 /* Container */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		F13816D92D26EE2E00A91018 /* Container */ = {
-			isa = PBXGroup;
-			children = (
-				F13816D72D26DCB400A91018 /* UISHContainerView.swift */,
-			);
-			path = Container;
-			sourceTree = "<group>";
-		};
 		F14BC9B92D5BFC4A0005BEEB /* UISHIconView */ = {
 			isa = PBXGroup;
 			children = (
@@ -966,17 +942,8 @@
 				F1F9F1ED2D4A9D20004EA3B1 /* BottomSheet */,
 				F1B8159A2D1D915800128643 /* FeedbackController */,
 				F1B815942D1CC37500128643 /* LoadingController */,
-				F1B815932D1CC35100128643 /* ViewController */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		F1B815822D1AFCA200128643 /* UISHViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F1B815832D1AFCB100128643 /* UISHSampleViewController.swift */,
-			);
-			path = UISHViewController;
 			sourceTree = "<group>";
 		};
 		F1B815872D1B0F6100128643 /* Button */ = {
@@ -1010,14 +977,6 @@
 				F1B815912D1B30A100128643 /* UISHLoadingSampleViewController.swift */,
 			);
 			path = UISHLoading;
-			sourceTree = "<group>";
-		};
-		F1B815932D1CC35100128643 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F1B815802D1AF82400128643 /* UISHViewController.swift */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		F1B815942D1CC37500128643 /* LoadingController */ = {
@@ -1134,7 +1093,6 @@
 				EDD253F82CE51604008C2B23 /* Frameworks */,
 				EDD253F92CE51604008C2B23 /* Resources */,
 				EDD254182CE51653008C2B23 /* Embed Frameworks */,
-				73B1078748F0C717B8B69113 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1266,23 +1224,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		73B1078748F0C717B8B69113 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftUISample/Pods-SwiftUISample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftUISample/Pods-SwiftUISample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftUISample/Pods-SwiftUISample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8FC85941467CCF48421B929B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1389,9 +1330,7 @@
 				EDD253E82CE51453008C2B23 /* UIFont+DS+extensions.swift in Sources */,
 				ED31028D2CEF752100DEC9C4 /* SHLoadingView.swift in Sources */,
 				EDD253B12CE5138A008C2B23 /* SharpnezDesignSystem.docc in Sources */,
-				F13816D82D26DCB800A91018 /* UISHContainerView.swift in Sources */,
 				F1F9F1BD2D3DA169004EA3B1 /* UISHToast.swift in Sources */,
-				F1B815812D1AF83000128643 /* UISHViewController.swift in Sources */,
 				F13816CA2D1F198B00A91018 /* UISHListItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1433,7 +1372,6 @@
 				F1B815732D1AE80300128643 /* FontsViewController.swift in Sources */,
 				F1B8159F2D1D9BAD00128643 /* UISHFeedbackSampleMenuViewController.swift in Sources */,
 				F11009882D1AD380005DFC3F /* Flavor.swift in Sources */,
-				F1B815842D1AFCB800128643 /* UISHSampleViewController.swift in Sources */,
 				F1B815992D1D781B00128643 /* UISHLoadingSampleMenuViewController.swift in Sources */,
 				F13816C72D1EE94200A91018 /* UISHTextFieldViewController.swift in Sources */,
 				F110097D2D1A55A0005DFC3F /* SceneDelegate.swift in Sources */,

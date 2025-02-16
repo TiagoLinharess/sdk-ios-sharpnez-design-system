@@ -5,7 +5,7 @@
 //  Created by Tiago Linhares on 25/12/24.
 //
 
-import SnapKit
+import UIKit
 
 public protocol UISHLoadingViewModelProtocol: AnyObject {
     associatedtype T
@@ -111,16 +111,28 @@ private extension UISHLoadingViewController {
     }
     
     func setupConstraints() {
-        loadingView.snp.makeConstraints {
-            $0.centerX.centerY.equalToSuperview()
-        }
+        view.enableConstraints()
         
-        [primaryLabel, secondaryLabel].forEach { label in
-            label.snp.makeConstraints {
-                $0.top.equalTo(loadingView.snp.bottom).offset(CGFloat.small)
-                $0.centerX.equalToSuperview().inset(CGFloat.small)
-            }
-        }
+        let loadingViewConstraints: [NSLayoutConstraint] = [
+            loadingView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loadingView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+        ]
+        
+        let primaryLabelConstraints: [NSLayoutConstraint] = [
+            primaryLabel.topAnchor.constraint(equalTo: loadingView.bottomAnchor, constant: .small),
+            primaryLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ]
+        
+        let secondaryLabelConstraints: [NSLayoutConstraint] = [
+            secondaryLabel.topAnchor.constraint(
+                equalTo: loadingView.bottomAnchor,
+                constant: .small
+            ),
+            secondaryLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ]
+        
+        NSLayoutConstraint
+            .activate(loadingViewConstraints + primaryLabelConstraints + secondaryLabelConstraints)
     }
     
     func setupAnimations() {

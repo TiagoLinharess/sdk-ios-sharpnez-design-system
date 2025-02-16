@@ -5,7 +5,7 @@
 //  Created by Tiago Linhares on 26/12/24.
 //
 
-import SnapKit
+import UIKit
 
 public enum UISHFeedbackType {
     case success
@@ -176,25 +176,56 @@ private extension UISHFeedbackViewController {
     }
     
     func setupConstraints() {
-        iconView.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide).inset(CGFloat.superGiant)
-            $0.centerX.equalToSuperview()
-            $0.height.width.equalTo(CGFloat.giant)
-        }
+        view.enableConstraints()
         
-        titleLabel.snp.makeConstraints {
-            $0.top.equalTo(iconView.snp.bottom).offset(CGFloat.small)
-            $0.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(CGFloat.small)
-        }
+        NSLayoutConstraint.activate([
+            iconView.topAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.topAnchor,
+                constant: .superGiant
+            ),
+            iconView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            iconView.heightAnchor.constraint(equalToConstant: .giant),
+            iconView.widthAnchor.constraint(equalToConstant: .giant)
+        ])
         
-        descriptionLabel.snp.makeConstraints {
-            $0.top.equalTo(titleLabel.snp.bottom).offset(CGFloat.small)
-            $0.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(CGFloat.small)
-        }
+        NSLayoutConstraint.activate([
+            titleLabel.topAnchor.constraint(equalTo: iconView.bottomAnchor, constant: .small),
+            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: .small),
+            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -.small)
+        ])
         
-        footerStackView.snp.makeConstraints {
-            $0.top.greaterThanOrEqualTo(descriptionLabel.snp.bottom).offset(CGFloat.small)
-            $0.leading.bottom.trailing.equalTo(view.safeAreaLayoutGuide).inset(CGFloat.small)
-        }
+        NSLayoutConstraint.activate([
+            descriptionLabel.topAnchor.constraint(
+                equalTo: titleLabel.bottomAnchor,
+                constant: .small
+            ),
+            descriptionLabel.leadingAnchor.constraint(
+                equalTo: view.leadingAnchor,
+                constant: .small
+            ),
+            descriptionLabel.trailingAnchor.constraint(
+                equalTo: view.trailingAnchor,
+                constant: -.small
+            )
+        ])
+        
+        NSLayoutConstraint.activate([
+            footerStackView.topAnchor.constraint(
+                greaterThanOrEqualTo: descriptionLabel.bottomAnchor,
+                constant: .small
+            ),
+            footerStackView.leadingAnchor.constraint(
+                equalTo: view.leadingAnchor,
+                constant: .small
+            ),
+            footerStackView.trailingAnchor.constraint(
+                equalTo: view.trailingAnchor,
+                constant: -.small
+            ),
+            footerStackView.bottomAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.bottomAnchor,
+                constant: -.small
+            )
+        ])
     }
 }

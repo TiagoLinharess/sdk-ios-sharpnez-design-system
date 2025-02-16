@@ -5,7 +5,7 @@
 //  Created by Tiago Linhares on 27/12/24.
 //
 
-import SnapKit
+import UIKit
 
 public struct UISHListItemViewModel {
     public let title: String
@@ -100,8 +100,13 @@ private extension UISHListItem {
     }
     
     func setupConstraints() {
-        stackView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
+        enableConstraints()
+        let constraints: [NSLayoutConstraint] = [
+            stackView.topAnchor.constraint(equalTo: topAnchor),
+            stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            stackView.bottomAnchor.constraint(equalTo: bottomAnchor),
+        ]
+        NSLayoutConstraint.activate(constraints)
     }
 }

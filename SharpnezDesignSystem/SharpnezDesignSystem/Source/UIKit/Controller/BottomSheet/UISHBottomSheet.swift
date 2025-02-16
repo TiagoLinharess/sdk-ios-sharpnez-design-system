@@ -5,7 +5,7 @@
 //  Created by Tiago Linhares on 29/01/25.
 //
 
-import SnapKit
+import UIKit
 
 public struct UISHBottomSheetViewModel {
     
@@ -135,43 +135,60 @@ private extension UISHBottomSheet {
     }
     
     func setupConstraints() {
+        backgroundView.translatesAutoresizingMaskIntoConstraints = false
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        headerView.translatesAutoresizingMaskIntoConstraints = false
+        closeIcon.translatesAutoresizingMaskIntoConstraints = false
         let bottomSafeArea = UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? .zero
         
-        backgroundView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
+        NSLayoutConstraint.activate([
+            backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
+            backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        ])
         
-        containerView.snp.makeConstraints {
-            $0.horizontalEdges.bottom.equalToSuperview()
-            $0.top.greaterThanOrEqualTo(view.safeAreaLayoutGuide).inset(CGFloat.small)
-            $0.height.greaterThanOrEqualTo(CGFloat.superGiant)
-        }
+        NSLayoutConstraint.activate([
+            containerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            containerView.topAnchor.constraint(
+                greaterThanOrEqualTo: view.safeAreaLayoutGuide.topAnchor
+            ),
+            containerView.heightAnchor.constraint(greaterThanOrEqualToConstant: .superGiant)
+        ])
         
-        contentView.snp.makeConstraints {
-            $0.horizontalEdges.equalToSuperview()
-            $0.bottom.equalToSuperview().inset(bottomSafeArea)
-        }
+        NSLayoutConstraint.activate([
+            contentView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            contentView.bottomAnchor.constraint(
+                equalTo: containerView.bottomAnchor,
+                constant: -bottomSafeArea
+            )
+        ])
         
         if viewModel.hasCloseButton {
-            headerView.snp.makeConstraints {
-                $0.top.equalToSuperview()
-                $0.horizontalEdges.equalToSuperview()
-            }
+            NSLayoutConstraint.activate([
+                headerView.topAnchor.constraint(equalTo: containerView.topAnchor),
+                headerView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+                headerView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor)
+            ])
             
-            closeIcon.snp.makeConstraints {
-                $0.trailing.top.equalToSuperview().inset(CGFloat.small)
-                $0.leading.greaterThanOrEqualToSuperview().inset(CGFloat.small)
-                $0.bottom.greaterThanOrEqualToSuperview()
-                $0.height.width.equalTo(CGFloat.xBig)
-            }
+            NSLayoutConstraint.activate([
+                closeIcon.topAnchor.constraint(equalTo: headerView.topAnchor, constant: .small),
+                closeIcon.trailingAnchor.constraint(
+                    equalTo: headerView.trailingAnchor,
+                    constant: -.small
+                ),
+                closeIcon.bottomAnchor.constraint(equalTo: headerView.bottomAnchor),
+                closeIcon.heightAnchor.constraint(equalToConstant: .xBig),
+                closeIcon.widthAnchor.constraint(equalToConstant: .xBig),
+            ])
             
-            contentView.snp.makeConstraints {
-                $0.top.equalTo(headerView.snp.bottom)
-            }
+            contentView.topAnchor.constraint(equalTo: headerView.bottomAnchor).isActive = true
         } else {
-            contentView.snp.makeConstraints {
-                $0.top.equalToSuperview()
-            }
+            contentView.topAnchor.constraint(equalTo: containerView.topAnchor).isActive = true
         }
     }
     

@@ -5,7 +5,7 @@
 //  Created by Tiago Linhares on 27/12/24.
 //
 
-import SnapKit
+import UIKit
 
 public final class UISHTextField: UIView {
     
@@ -56,15 +56,15 @@ public final class UISHTextField: UIView {
     /// Textfield list items
     private var listItems: [UISHListItemViewModel]
     
-    /// List items top constraint constant
-    private var listItemsTopConstraintConstant: CGFloat {
-        listItems.isEmpty ? .zero : .extraSmall
-    }
-    
-    /// List items top constraint constant
+    /// List items height constraint constant
     private lazy var listItemsHeightZeroConstraintConstant = listItemView
         .heightAnchor
         .constraint(equalToConstant: .zero)
+    
+    /// List items top constraint constant
+    private lazy var listItemsTopConstraint = listItemView
+        .topAnchor
+        .constraint(equalTo: textField.bottomAnchor)
     
     // MARK: UI Elements
     
@@ -97,7 +97,6 @@ public final class UISHTextField: UIView {
             font: font,
             defaultColor: color
         )
-        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
@@ -125,11 +124,7 @@ public final class UISHTextField: UIView {
     
     /// Update items method
     public func updateListItems(_ items: [UISHListItemViewModel]) {
-        updateListItemHeight()
-        listItemView.snp.updateConstraints {
-            $0.top.equalTo(textField.snp.bottom).offset(listItemsTopConstraintConstant)
-        }
-        
+        updateListItemConstants()
         listItems = items
         listItemView.items = listItems
     }
@@ -161,28 +156,39 @@ private extension UISHTextField {
     }
     
     func setupConstraints() {
-        titleLabel.snp.makeConstraints {
-            $0.top.equalToSuperview()
-            $0.leading.equalToSuperview().inset(CGFloat.small)
-        }
+        enableConstraints()
         
-        textField.snp.makeConstraints {
-            $0.top.equalTo(titleLabel.snp.bottom).offset(CGFloat.extraSmall)
-            $0.horizontalEdges.equalToSuperview()
-            $0.height.equalTo(CGFloat.xLarge)
-            $0.width.greaterThanOrEqualTo(
-                titleLabel.intrinsicContentSize.width + CGFloat.xxxLarge
+        NSLayoutConstraint.activate([
+            titleLabel.topAnchor.constraint(equalTo: topAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: .small),
+            titleLabel.trailingAnchor.constraint(
+                lessThanOrEqualTo: trailingAnchor,
+                constant: -.small
             )
-        }
+        ])
         
-        listItemView.snp.makeConstraints {
-            $0.top.equalTo(textField.snp.bottom).offset(listItemsTopConstraintConstant)
-            $0.horizontalEdges.bottom.equalToSuperview().inset(CGFloat.extraSmall)
-        }
-        updateListItemHeight()
+        NSLayoutConstraint.activate([
+            textField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: .extraSmall),
+            textField.leadingAnchor.constraint(equalTo: leadingAnchor),
+            textField.trailingAnchor.constraint(equalTo: trailingAnchor),
+            textField.heightAnchor.constraint(equalToConstant: .xLarge),
+            textField.widthAnchor.constraint(
+                greaterThanOrEqualToConstant: titleLabel.intrinsicContentSize.width + .xxxLarge
+            )
+        ])
+        
+        NSLayoutConstraint.activate([
+            listItemsTopConstraint,
+            listItemView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: .extraSmall),
+            listItemView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -.extraSmall),
+            listItemView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
+    
+        updateListItemConstants()
     }
     
-    func updateListItemHeight() {
+    func updateListItemConstants() {
+        listItemsTopConstraint.constant = listItems.isEmpty ? .zero : .extraSmall
         listItemsHeightZeroConstraintConstant.isActive = listItems.isEmpty
     }
     

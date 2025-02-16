@@ -5,7 +5,7 @@
 //  Created by Tiago Linhares on 27/12/24.
 //
 
-import SnapKit
+import UIKit
 
 public final class UISHPasswordField: UIView {
     
@@ -134,9 +134,13 @@ private extension UISHPasswordField {
     }
     
     func setupConstraints() {
-        textField.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
+        enableConstraints()
+        NSLayoutConstraint.activate([
+            textField.topAnchor.constraint(equalTo: topAnchor),
+            textField.leadingAnchor.constraint(equalTo: leadingAnchor),
+            textField.trailingAnchor.constraint(equalTo: trailingAnchor),
+            textField.bottomAnchor.constraint(equalTo: bottomAnchor),
+        ])
     }
     
     func setupAction() {

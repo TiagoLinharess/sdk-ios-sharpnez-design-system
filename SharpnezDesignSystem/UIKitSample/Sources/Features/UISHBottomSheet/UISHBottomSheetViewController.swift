@@ -6,7 +6,7 @@
 //
 
 import SharpnezDesignSystem
-import SnapKit
+import UIKit
 
 final class UISHBottomSheetViewController: UIViewController {
     private lazy var stackView: UIStackView = {
@@ -37,10 +37,12 @@ extension UISHBottomSheetViewController: ViewCode {
     }
 
     func setupConstraints() {
-        stackView.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            $0.horizontalEdges.equalTo(view.safeAreaLayoutGuide)
-        }
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+        ])
     }
 }
 
@@ -105,9 +107,13 @@ final class BottomSheetExampleView: UIView {
             font: .body(.montserrat, .regular)
         )
         addSubview(label)
-        label.snp.makeConstraints {
-            $0.edges.equalToSuperview().inset(CGFloat.small)
-        }
+        label.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            label.topAnchor.constraint(equalTo: topAnchor, constant: .small),
+            label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: .small),
+            label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -.small),
+            label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -.small)
+        ])
     }
 
     required init?(coder: NSCoder) { nil }

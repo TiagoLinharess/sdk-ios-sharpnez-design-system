@@ -5,7 +5,7 @@
 //  Created by Tiago Linhares on 26/12/24.
 //
 
-import SnapKit
+import UIKit
 
 public final class UISHShortcutButton: UIView {
     
@@ -100,22 +100,33 @@ private extension UISHShortcutButton {
     }
     
     func setupConstraints() {
-        iconView.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(CGFloat.extraSmall)
-            $0.leading.equalToSuperview().inset(CGFloat.extraSmall)
-            $0.height.width.equalTo(CGFloat.big)
-        }
+        enableConstraints()
         
-        textLabel.snp.makeConstraints {
-            $0.top.greaterThanOrEqualTo(iconView.snp.bottom).offset(CGFloat.medium)
-            $0.leading.equalToSuperview().inset(CGFloat.extraSmall)
-            $0.bottom.equalToSuperview().inset(CGFloat.extraSmall)
-            $0.trailing.equalToSuperview().inset(CGFloat.medium)
-        }
+        NSLayoutConstraint.activate([
+            iconView.topAnchor.constraint(equalTo: topAnchor, constant: .extraSmall),
+            iconView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: .extraSmall),
+            iconView.trailingAnchor.constraint(
+                lessThanOrEqualTo: trailingAnchor,
+                constant: -.extraSmall
+            ),
+            iconView.heightAnchor.constraint(equalToConstant: .big),
+            iconView.widthAnchor.constraint(equalToConstant: .big),
+        ])
         
-        snp.makeConstraints {
-            $0.height.width.equalTo(CGFloat.superGiant)
-        }
+        NSLayoutConstraint.activate([
+            textLabel.topAnchor.constraint(
+                greaterThanOrEqualTo: iconView.bottomAnchor,
+                constant: .medium
+            ),
+            textLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: .extraSmall),
+            textLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -.medium),
+            textLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -.extraSmall),
+        ])
+        
+        NSLayoutConstraint.activate([
+            self.heightAnchor.constraint(equalToConstant: .superGiant),
+            self.widthAnchor.constraint(equalToConstant: .superGiant),
+        ])
     }
     
     func configure() {
