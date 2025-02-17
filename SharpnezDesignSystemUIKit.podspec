@@ -12,5 +12,4 @@ Pod::Spec.new do |spec|
   spec.source_files = 'SharpnezDesignSystem/SharpnezDesignSystem/**/*.swift'
   spec.exclude_files = 'SharpnezDesignSystem/SharpnezDesignSystem/Source/SwiftUI/**/*.swift'
   spec.framework    = 'SystemConfiguration'
-  spec.dependency "SnapKit"
 end
