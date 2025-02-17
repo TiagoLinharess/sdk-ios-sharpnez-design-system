@@ -11,5 +11,4 @@ Pod::Spec.new do |spec|
   spec.resources    = 'SharpnezDesignSystem/SharpnezDesignSystem/Resources/Fonts/*.ttf'
   spec.source_files = 'SharpnezDesignSystem/SharpnezDesignSystem/**/*.swift'
   spec.framework    = 'SystemConfiguration'
-  spec.dependency "SnapKit"
 end
