@@ -20,6 +20,7 @@ struct SampleItem: Identifiable {
         .init(view: SHContainerSampleView(), name: "SHContainer"),
         .init(view: SHFeedbackViewSampleView(), name: "SHFeedbackView"),
         .init(view: SHLabelSampleView(), name: "SHLabel"),
+        .init(view: SHListItemSampleView(), name: "SHListItem"),
         .init(view: SHLoadingSampleView(), name: "SHLoading"),
         .init(view: SHLoadingViewSampleView(), name: "SHLoadingView"),
         .init(view: SHShortcutSampleView(), name: "SHShortcut"),

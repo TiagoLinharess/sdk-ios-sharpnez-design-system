@@ -23,7 +23,7 @@ public struct SHTextField: View {
     private let titleFont: Font
     
     /// TextField rules
-    private let rules: [SHRulesListViewModel]
+    private let rules: [SHListItemViewModel]
     
     /// TextField content type
     private let contentType: UITextContentType?
@@ -43,7 +43,7 @@ public struct SHTextField: View {
         font: Font,
         titleFont: Font,
         text: Binding<String>,
-        rules: [SHRulesListViewModel] = [],
+        rules: [SHListItemViewModel] = [],
         contentType: UITextContentType? = nil,
         keyboardType: UIKeyboardType? = nil
     ) {
@@ -79,7 +79,7 @@ public struct SHTextField: View {
                         .stroke(color, lineWidth: .two)
                 }
             if !rules.isEmpty {
-                SHRulesListView(
+                SHListItemView(
                     items: rules,
                     font: .caption(.montserrat, .regular),
                     defaultColor: color

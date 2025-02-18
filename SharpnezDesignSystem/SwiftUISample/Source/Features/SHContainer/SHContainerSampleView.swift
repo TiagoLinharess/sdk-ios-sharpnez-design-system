@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SHContainerSampleView: View {
     var body: some View {
-        SHContainerView(title: "Title", font: .poppins) {
+        SHContainerView(title: "Title") {
             Text("Hello SHContainer")
         }
     }

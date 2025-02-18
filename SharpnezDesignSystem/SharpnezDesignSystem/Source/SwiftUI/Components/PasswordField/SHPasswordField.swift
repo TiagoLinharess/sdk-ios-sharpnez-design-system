@@ -42,7 +42,7 @@ public struct SHPasswordField: View {
     private let titleFont: Font
     
     /// TextField rules
-    private let rules: [SHRulesListViewModel]
+    private let rules: [SHListItemViewModel]
 
     /// The show / hide state of the text.
     @State private var isSecured: Bool = true
@@ -65,7 +65,7 @@ public struct SHPasswordField: View {
         font: Font,
         titleFont: Font,
         text: Binding<String>,
-        rules: [SHRulesListViewModel] = []
+        rules: [SHListItemViewModel] = []
     ) {
         self.title = title
         self.color = color
@@ -110,7 +110,7 @@ public struct SHPasswordField: View {
                     .stroke(color, lineWidth: .two)
             }
             if !rules.isEmpty {
-                SHRulesListView(
+                SHListItemView(
                     items: rules,
                     font: .caption(.montserrat, .regular),
                     defaultColor: color
