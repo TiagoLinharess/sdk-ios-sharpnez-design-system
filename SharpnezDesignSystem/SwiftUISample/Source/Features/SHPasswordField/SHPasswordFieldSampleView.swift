@@ -16,8 +16,7 @@ struct SHPasswordFieldSampleView: View {
         SHPasswordField(
             title: "Senha",
             color: .primarySH,
-            font: .body(.montserrat, .medium),
-            titleFont: .subtitle(.montserrat, .medium),
+            font: .montserrat,
             text: $text
         )
     }

@@ -17,10 +17,7 @@ public struct SHTextField: View {
     private let color: Color
     
     /// TextField font
-    private let font: Font
-    
-    /// TextField title font
-    private let titleFont: Font
+    private let font: DSFontName
     
     /// TextField rules
     private let rules: [SHListItemViewModel]
@@ -40,8 +37,7 @@ public struct SHTextField: View {
     public init(
         title: String,
         color: Color,
-        font: Font,
-        titleFont: Font,
+        font: DSFontName,
         text: Binding<String>,
         rules: [SHListItemViewModel] = [],
         contentType: UITextContentType? = nil,
@@ -50,7 +46,6 @@ public struct SHTextField: View {
         self.title = title
         self.color = color
         self.font = font
-        self.titleFont = titleFont
         self.rules = rules
         self.contentType = contentType
         self.keyboardType = keyboardType
@@ -63,19 +58,18 @@ public struct SHTextField: View {
     public var body: some View {
         VStack(alignment: .leading, spacing: .extraSmall) {
             Text(title)
-                .configureWithSH(color: color, font: titleFont)
+                .configureWithSH(color: color, font: .body(font, .medium))
                 .padding(.leading, .small)
             TextField(String(), text: $text)
                 .textInputAutocapitalization(.never)
                 .autocorrectionDisabled()
                 .textContentType(contentType)
                 .keyboardType(keyboardType ?? .default)
-                .font(font)
+                .font(.body(font, .medium))
                 .foregroundStyle(color)
                 .padding(.smaller)
-                .clipShape(.capsule)
                 .overlay {
-                    Capsule()
+                    RoundedRectangle(cornerRadius: .extraSmall)
                         .stroke(color, lineWidth: .two)
                 }
             if !rules.isEmpty {

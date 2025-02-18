@@ -9,13 +9,13 @@ import SwiftUI
 
 public struct SHPasswordField: View {
     // MARK: Enum
-
+    
     /// Options for opacity of the fields.
     enum Opacity: Double {
-
+        
         case hide = 0.0
         case show = 1.0
-
+        
         /// Toggle the field opacity.
         mutating func toggle() {
             switch self {
@@ -36,23 +36,20 @@ public struct SHPasswordField: View {
     private let color: Color
     
     /// TextField font
-    private let font: Font
-    
-    /// TextField title font
-    private let titleFont: Font
+    private let font: DSFontName
     
     /// TextField rules
     private let rules: [SHListItemViewModel]
-
+    
     /// The show / hide state of the text.
     @State private var isSecured: Bool = true
-
+    
     /// The opacity of the SecureField.
     @State private var hidePasswordFieldOpacity = Opacity.show
-
+    
     /// The opacity of the TextField.
     @State private var showPasswordFieldOpacity = Opacity.hide
-
+    
     /// TextField text
     @Binding var text: String
     
@@ -62,34 +59,34 @@ public struct SHPasswordField: View {
     public init(
         title: String,
         color: Color,
-        font: Font,
-        titleFont: Font,
+        font: DSFontName,
         text: Binding<String>,
         rules: [SHListItemViewModel] = []
     ) {
         self.title = title
         self.color = color
         self.font = font
-        self.titleFont = titleFont
         self._text = text
         self.rules = rules
     }
-
+    
     // MARK: Body
     
     public var body: some View {
         VStack(alignment: .leading, spacing: .extraSmall) {
             Text(title)
-                .configureWithSH(color: color, font: titleFont)
+                .configureWithSH(color: color, font: .body(font, .medium))
                 .padding(.leading, .small)
-            ZStack(alignment: .trailing) {
-                securedTextField
-                    .textInputAutocapitalization(.never)
-                    .keyboardType(.asciiCapable)
-                    .autocorrectionDisabled()
-                    .font(font)
-                    .foregroundStyle(color)
-
+            HStack {
+                ZStack(alignment: .trailing) {
+                    securedTextField
+                        .textInputAutocapitalization(.never)
+                        .keyboardType(.asciiCapable)
+                        .autocorrectionDisabled()
+                        .font(.body(font, .medium))
+                        .foregroundStyle(color)
+                }
+                Spacer().frame(width: .nano)
                 Button(action: {
                     performToggle()
                 }, label: {
@@ -99,14 +96,12 @@ public struct SHPasswordField: View {
                         : DSConstants.Icons.eyeOpen
                     )
                     .accentColor(color)
-                    .padding(.trailing, .extraSmall)
-                    .font(font)
+                    .font(.body(font, .medium))
                 })
             }
             .padding(.smaller)
-            .clipShape(.capsule)
             .overlay {
-                Capsule()
+                RoundedRectangle(cornerRadius: .extraSmall)
                     .stroke(color, lineWidth: .two)
             }
             if !rules.isEmpty {
@@ -119,13 +114,13 @@ public struct SHPasswordField: View {
             }
         }
     }
-
+    
     /// Secured field with the show / hide capability.
     var securedTextField: some View {
         Group {
             SecureField(String(), text: $text)
                 .opacity(hidePasswordFieldOpacity.rawValue)
-
+            
             TextField(String(), text: $text)
                 .opacity(showPasswordFieldOpacity.rawValue)
         }
