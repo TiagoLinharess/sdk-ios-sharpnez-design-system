@@ -16,41 +16,41 @@ struct SHButtonSampleView: View {
         SHButton(
             title: "isLoading",
             style: .ghost(.primarySH),
-            font: .body(.montserrat, .medium),
+            font: .montserrat,
             action: actionLoading
         )
         SHButton(
             title: "isDisabled",
             style: .ghost(.primarySH),
-            font: .body(.montserrat, .medium),
+            font: .montserrat,
             action: actionDisabled
         )
         Spacer()
         SHButton(
             title: "Hello SHButton",
-            image: Image(systemName: "house"),
+            icon: .card,
             style: .primary(.primarySH, .onPrimarySH),
-            font: .body(.montserrat, .medium),
-            isLoading: $isLoading,
-            isDisabled: $isDisabled
+            font: .montserrat,
+            isLoading: isLoading,
+            isDisabled: isDisabled
         ) {
             print("Button 1 tapped")
         }
         SHButton(
             title: "Hello SHButton",
             style: .secondary(.primarySH),
-            font: .body(.montserrat, .medium),
-            isLoading: $isLoading,
-            isDisabled: $isDisabled
+            font: .montserrat,
+            isLoading: isLoading,
+            isDisabled: isDisabled
         ) {
             print("Button 2 tapped")
         }
         SHButton(
             title: "Hello SHButton",
             style: .ghost(.primarySH),
-            font: .body(.montserrat, .medium),
-            isLoading: $isLoading,
-            isDisabled: $isDisabled
+            font: .montserrat,
+            isLoading: isLoading,
+            isDisabled: isDisabled
         ) {
             print("Button 3 tapped")
         }

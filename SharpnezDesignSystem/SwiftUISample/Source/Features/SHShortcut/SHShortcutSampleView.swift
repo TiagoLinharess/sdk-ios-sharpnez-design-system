@@ -11,23 +11,29 @@ import SwiftUI
 struct SHShortcutSampleView: View {
     var body: some View {
         SHShortcutButton(
-            image: "dollarsign",
-            label: "Budgets",
-            font: .montserrat
+            icon: .coin,
+            label: "Add payment",
+            font: .montserrat,
+            color: .surfaceSH,
+            onColor: .onSurfaceSH
         ) {
             print("button")
         }
         SHShortcutButton(
-            image: "creditcard",
-            label: "Budgets",
-            font: .montserrat
+            icon: .card,
+            label: "Credit card",
+            font: .montserrat,
+            color: .surfaceSH,
+            onColor: .onSurfaceSH
         ) {
             print("button")
         }
         SHShortcutButton(
-            image: "calendar.day.timeline.left",
+            icon: .budget,
             label: "Budgets",
-            font: .montserrat
+            font: .montserrat,
+            color: .surfaceSH,
+            onColor: .onSurfaceSH
         ) {
             print("button")
         }

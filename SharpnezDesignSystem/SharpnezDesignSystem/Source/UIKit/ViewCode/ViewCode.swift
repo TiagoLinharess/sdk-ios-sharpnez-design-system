@@ -25,6 +25,8 @@ public extension ViewCode {
         setupActions()
     }
     
+    func setupView() { /* not mandatory */ }
+    
     func setupBinding() { /* not mandatory */ }
     
     func setupAnimations() { /* not mandatory */ }

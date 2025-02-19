@@ -17,15 +17,13 @@ struct SHTextfieldSampleView: View {
         SHTextField(
             title: "Sem mascara",
             color: .primarySH,
-            font: .body(.montserrat, .medium),
-            titleFont: .subtitle(.montserrat, .medium),
+            font: .montserrat,
             text: $text
         )
         SHTextField(
             title: "Email",
             color: .secondarySH,
-            font: .body(.montserrat, .medium),
-            titleFont: .subtitle(.montserrat, .medium),
+            font: .montserrat,
             text: $text1,
             contentType: .emailAddress,
             keyboardType: .emailAddress

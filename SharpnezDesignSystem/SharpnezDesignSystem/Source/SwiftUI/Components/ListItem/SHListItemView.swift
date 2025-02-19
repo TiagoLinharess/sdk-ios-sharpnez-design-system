@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct SHRulesListViewModel: Identifiable {
+public struct SHListItemViewModel: Identifiable {
     public let id: String
     public let title: String
     public var isComplete: Bool? = nil
@@ -19,27 +19,27 @@ public struct SHRulesListViewModel: Identifiable {
     }
 }
 
-public struct SHRulesListView: View {
-    // MARK: Properties -
+public struct SHListItemView: View {
+    // MARK: Properties
     
-    private let items: [SHRulesListViewModel]
+    private let items: [SHListItemViewModel]
     private let font: Font
     private let defaultColor: Color
     
-    // MARK: Init -
+    // MARK: Init
     
-    public init(items: [SHRulesListViewModel], font: Font, defaultColor: Color) {
+    public init(items: [SHListItemViewModel], font: Font, defaultColor: Color) {
         self.items = items
         self.font = font
         self.defaultColor = defaultColor
     }
     
-    // MARK: Body -
+    // MARK: Body
     
     public var body: some View {
         ForEach(items) { item in
             HStack {
-                Text(item.title)
+                Text(DSConstants.Commons.dot + DSConstants.Commons.space + item.title)
                     .configureWithSH(
                         color: isCompleteColor(isComplete: item.isComplete),
                         font: font
@@ -49,7 +49,7 @@ public struct SHRulesListView: View {
         }
     }
     
-    // MARK: Private Methods -
+    // MARK: Private Methods
     
     private func isCompleteColor(isComplete: Bool?) -> Color {
         guard let isComplete else { return defaultColor }

@@ -60,6 +60,24 @@ enum DSConstants {
         
         /// eye.slash
         static let eyeClosed: String = "eye.slash"
+        
+        /// chevron.left
+        static let arrowLeft: String = "arrow.left"
+        
+        /// xmark
+        static let close: String = "xmark"
+    }
+    
+    // MARK: Commons
+    
+    /// Commons Contants.
+    enum Commons {
+        
+        /// •
+        static let dot: String = "•"
+        
+        /// Space
+        static let space: String = " "
     }
     
     // MARK: UIKit

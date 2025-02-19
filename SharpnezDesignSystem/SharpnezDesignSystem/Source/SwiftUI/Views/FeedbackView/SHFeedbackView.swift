@@ -77,28 +77,29 @@ public struct SHFeedbackView: View {
     // MARK: Body
     
     public var body: some View {
-        VStack(alignment: .leading, spacing: .small) {
+        VStack(alignment: .center, spacing: .small) {
+            Spacer().frame(height: .superGiant)
             type.icon
                 .font(.system(size: .superLarge))
                 .foregroundStyle(type.color)
             Text(title)
-                .configureWithSH(color: .onBackgroundSH, font: .title2(.poppins, .regular))
+                .configureWithSH(color: .onBackgroundSH, font: .title2(.poppins, .medium))
                 .lineLimit(2)
             Text(description)
-                .configureWithSH(color: .onBackgroundSH, font: .body(.montserrat, .regular))
+                .configureWithSH(color: .onBackgroundSH, font: .subtitle(.montserrat, .regular))
                 .lineLimit(2)
             Spacer()
             SHButton(
                 title: primaryButtonTitle,
                 style: .primary(.primarySH, .onPrimarySH),
-                font: .body(.montserrat, .regular),
+                font: .montserrat,
                 action: primaryAction
             )
             if hasSecondaryAction {
                 SHButton(
                     title: secondaryButtonTitle,
                     style: .secondary(.primarySH),
-                    font: .body(.montserrat, .regular)
+                    font: .montserrat
                 ) {
                     secondaryAction?()
                 }
