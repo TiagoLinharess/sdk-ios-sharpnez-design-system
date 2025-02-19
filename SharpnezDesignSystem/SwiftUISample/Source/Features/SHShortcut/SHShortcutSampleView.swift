@@ -13,21 +13,27 @@ struct SHShortcutSampleView: View {
         SHShortcutButton(
             image: "dollarsign",
             label: "Budgets",
-            font: .montserrat
+            font: .montserrat,
+            color: .surfaceSH,
+            onColor: .onSurfaceSH
         ) {
             print("button")
         }
         SHShortcutButton(
             image: "creditcard",
             label: "Budgets",
-            font: .montserrat
+            font: .montserrat,
+            color: .surfaceSH,
+            onColor: .onSurfaceSH
         ) {
             print("button")
         }
         SHShortcutButton(
             image: "calendar.day.timeline.left",
             label: "Budgets",
-            font: .montserrat
+            font: .montserrat,
+            color: .surfaceSH,
+            onColor: .onSurfaceSH
         ) {
             print("button")
         }

@@ -19,16 +19,31 @@ public struct SHShortcutButton: View {
     /// Button Font
     private let font: DSFontName
     
+    /// Button Color
+    private let color: Color
+    
+    /// Button on color
+    private let onColor: Color
+    
     /// Button Action
     private let action: () -> Void
     
     // MARK: Init
     
     /// Init
-    public init(image: String, label: String, font: DSFontName, action: @escaping () -> Void) {
+    public init(
+        image: String,
+        label: String,
+        font: DSFontName,
+        color: Color,
+        onColor: Color,
+        action: @escaping () -> Void
+    ) {
         self.image = image
         self.label = label
         self.font = font
+        self.color = color
+        self.onColor = onColor
         self.action = action
     }
     
@@ -39,18 +54,18 @@ public struct SHShortcutButton: View {
             VStack(alignment: .leading, spacing: .zero) {
                 Image(systemName: image)
                     .renderingMode(.template)
-                    .foregroundStyle(Color.onSuccessSH)
+                    .foregroundStyle(onColor)
                     .padding([.leading, .top], .smaller)
                 Spacer()
                 Text(label)
-                    .configureWithSH(color: .onSurfaceSH, font: .caption(font, .medium))
+                    .configureWithSH(color: onColor, font: .caption(font, .medium))
                     .lineLimit(2)
                     .padding([.leading, .bottom], .smaller)
             }
             Spacer()
         }
-        .frame(width: 100, height: 100)
-        .background(Color.surfaceSH)
+        .frame(width: .superGiant, height: .superGiant)
+        .background(color)
         .clipShape(.buttonBorder)
         .onTapGesture(perform: action)
     }
