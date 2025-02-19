@@ -28,7 +28,7 @@ struct SHButtonSampleView: View {
         Spacer()
         SHButton(
             title: "Hello SHButton",
-            image: Image(systemName: "house"),
+            icon: .card,
             style: .primary(.primarySH, .onPrimarySH),
             font: .montserrat,
             isLoading: isLoading,

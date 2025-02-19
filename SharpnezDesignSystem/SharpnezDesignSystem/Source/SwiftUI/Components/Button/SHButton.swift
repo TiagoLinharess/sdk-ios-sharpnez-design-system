@@ -75,7 +75,7 @@ public struct SHButton: View {
     private let title: String
     
     /// Button image
-    private let image: Image?
+    private let icon: SHIconType?
     
     /// Button style
     private let style: SHButtonStyle
@@ -97,7 +97,7 @@ public struct SHButton: View {
     /// Init
     public init(
         title: String,
-        image: Image? = nil,
+        icon: SHIconType? = nil,
         style: SHButtonStyle,
         font: DSFontName,
         isLoading: Bool = false,
@@ -105,7 +105,7 @@ public struct SHButton: View {
         action: @escaping () -> Void
     ) {
         self.title = title
-        self.image = image
+        self.icon = icon
         self.style = style
         self.font = font
         self.action = action
@@ -158,11 +158,15 @@ public struct SHButton: View {
     
     private var buttonLabel: some View {
         HStack(spacing: .extraSmall) {
-            if let image {
+            if let icon {
                 Label {
                     Text(title)
                 } icon: {
-                    image
+                    SHIcon(icon: icon)
+                        .resizable()
+                        .renderingMode(.template)
+                        .foregroundStyle(style.titleColor)
+                        .frame(width: .small, height: .small)
                 }
                 .underline(style.hasUnderline, color: style.titleColor)
             } else {

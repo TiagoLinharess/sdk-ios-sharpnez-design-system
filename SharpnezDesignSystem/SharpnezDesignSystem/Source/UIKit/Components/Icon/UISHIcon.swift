@@ -37,13 +37,3 @@ public final class UISHIconView: UIImageView {
         image = UIImage(named: icon.rawValue, in: bundle, with: .none)
     }
 }
-
-private final class BundleToken {
-  static let bundle: Bundle = {
-    #if SWIFT_PACKAGE
-    return Bundle.module
-    #else
-    return Bundle(for: BundleToken.self)
-    #endif
-  }()
-}

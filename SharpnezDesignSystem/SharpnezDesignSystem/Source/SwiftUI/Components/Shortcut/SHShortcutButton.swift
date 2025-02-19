@@ -10,8 +10,8 @@ import SwiftUI
 public struct SHShortcutButton: View {
     // MARK: Properties
     
-    /// Image text
-    private let image: String
+    /// Button icon
+    private let icon: SHIconType
     
     /// Button text
     private let label: String
@@ -32,14 +32,14 @@ public struct SHShortcutButton: View {
     
     /// Init
     public init(
-        image: String,
+        icon: SHIconType,
         label: String,
         font: DSFontName,
         color: Color,
         onColor: Color,
         action: @escaping () -> Void
     ) {
-        self.image = image
+        self.icon = icon
         self.label = label
         self.font = font
         self.color = color
@@ -52,9 +52,11 @@ public struct SHShortcutButton: View {
     public var body: some View {
         HStack(spacing: .zero) {
             VStack(alignment: .leading, spacing: .zero) {
-                Image(systemName: image)
+                SHIcon(icon: icon)
+                    .resizable()
                     .renderingMode(.template)
                     .foregroundStyle(onColor)
+                    .frame(width: .small, height: .small)
                     .padding([.leading, .top], .smaller)
                 Spacer()
                 Text(label)

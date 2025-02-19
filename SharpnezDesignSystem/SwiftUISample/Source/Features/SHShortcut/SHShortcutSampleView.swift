@@ -11,8 +11,8 @@ import SwiftUI
 struct SHShortcutSampleView: View {
     var body: some View {
         SHShortcutButton(
-            image: "dollarsign",
-            label: "Budgets",
+            icon: .coin,
+            label: "Add payment",
             font: .montserrat,
             color: .surfaceSH,
             onColor: .onSurfaceSH
@@ -20,8 +20,8 @@ struct SHShortcutSampleView: View {
             print("button")
         }
         SHShortcutButton(
-            image: "creditcard",
-            label: "Budgets",
+            icon: .card,
+            label: "Credit card",
             font: .montserrat,
             color: .surfaceSH,
             onColor: .onSurfaceSH
@@ -29,7 +29,7 @@ struct SHShortcutSampleView: View {
             print("button")
         }
         SHShortcutButton(
-            image: "calendar.day.timeline.left",
+            icon: .budget,
             label: "Budgets",
             font: .montserrat,
             color: .surfaceSH,

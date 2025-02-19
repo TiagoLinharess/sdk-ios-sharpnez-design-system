@@ -79,6 +79,11 @@
 		F14BC9BD2D5C2D780005BEEB /* UISHBulletIconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14BC9BB2D5C2D780005BEEB /* UISHBulletIconViewController.swift */; };
 		F14EB6292D652FBC008727A9 /* SHListItemSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14EB6282D652FB0008727A9 /* SHListItemSampleView.swift */; };
 		F19E36D62D6534A900DB5D9F /* SHContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E36D42D6534A900DB5D9F /* SHContainerView.swift */; };
+		F19E36D92D65F37E00DB5D9F /* SHIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E36D82D65F37A00DB5D9F /* SHIcon.swift */; };
+		F19E36DB2D65F3E800DB5D9F /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E36DA2D65F3E400DB5D9F /* Bundle.swift */; };
+		F19E36DE2D65F51B00DB5D9F /* SHIconSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E36DD2D65F51400DB5D9F /* SHIconSampleView.swift */; };
+		F19E36E12D65F61600DB5D9F /* SHBulletIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E36E02D65F60F00DB5D9F /* SHBulletIcon.swift */; };
+		F19E36E42D65F79800DB5D9F /* SHBulletIconSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E36E32D65F78D00DB5D9F /* SHBulletIconSampleView.swift */; };
 		F1AAA03F2D57D06100DB56CC /* BulletIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AAA03E2D57D05700DB56CC /* BulletIconView.swift */; };
 		F1AAA0422D5A3CEF00DB56CC /* UISHIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AAA0412D5A3CEB00DB56CC /* UISHIcon.swift */; };
 		F1AAA0442D5A45A400DB56CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1AAA0432D5A45A400DB56CC /* Assets.xcassets */; };
@@ -226,6 +231,11 @@
 		F14BC9BB2D5C2D780005BEEB /* UISHBulletIconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHBulletIconViewController.swift; sourceTree = "<group>"; };
 		F14EB6282D652FB0008727A9 /* SHListItemSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHListItemSampleView.swift; sourceTree = "<group>"; };
 		F19E36D42D6534A900DB5D9F /* SHContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHContainerView.swift; sourceTree = "<group>"; };
+		F19E36D82D65F37A00DB5D9F /* SHIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHIcon.swift; sourceTree = "<group>"; };
+		F19E36DA2D65F3E400DB5D9F /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		F19E36DD2D65F51400DB5D9F /* SHIconSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHIconSampleView.swift; sourceTree = "<group>"; };
+		F19E36E02D65F60F00DB5D9F /* SHBulletIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHBulletIcon.swift; sourceTree = "<group>"; };
+		F19E36E32D65F78D00DB5D9F /* SHBulletIconSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHBulletIconSampleView.swift; sourceTree = "<group>"; };
 		F1AAA03E2D57D05700DB56CC /* BulletIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletIconView.swift; sourceTree = "<group>"; };
 		F1AAA0412D5A3CEB00DB56CC /* UISHIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHIcon.swift; sourceTree = "<group>"; };
 		F1AAA0432D5A45A400DB56CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -398,6 +408,7 @@
 		EDD253B62CE51453008C2B23 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				F19E36DA2D65F3E400DB5D9F /* Bundle.swift */,
 				EDD253B52CE51453008C2B23 /* DesignSystemConfiguration.swift */,
 			);
 			path = Core;
@@ -534,6 +545,8 @@
 		EDD2541C2CE51EEC008C2B23 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				F19E36E22D65F78000DB5D9F /* SHBulletIcon */,
+				F19E36DC2D65F50D00DB5D9F /* SHIcon */,
 				EDA01B922CE61B8700740E56 /* SHContainer */,
 				F14EB6272D652FA7008727A9 /* SHListItem */,
 				EDA01B8C2CE5987600740E56 /* SHShortcut */,
@@ -635,9 +648,11 @@
 		EDDDE96E2CEF9FF90054C7E2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				F19E36D52D6534A900DB5D9F /* Container */,
-				F1FBD4E32D19F19600DA11C4 /* ListItem */,
+				F19E36DF2D65F5B800DB5D9F /* BulletIcon */,
 				EDD253BC2CE51453008C2B23 /* Button */,
+				F19E36D52D6534A900DB5D9F /* Container */,
+				F19E36D72D65F37200DB5D9F /* Icon */,
+				F1FBD4E32D19F19600DA11C4 /* ListItem */,
 				EDD253BE2CE51453008C2B23 /* Label */,
 				ED3102822CEF64F600DEC9C4 /* Loading */,
 				EDDDE9812CFA6F100054C7E2 /* PasswordField */,
@@ -890,6 +905,38 @@
 				F19E36D42D6534A900DB5D9F /* SHContainerView.swift */,
 			);
 			path = Container;
+			sourceTree = "<group>";
+		};
+		F19E36D72D65F37200DB5D9F /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				F19E36D82D65F37A00DB5D9F /* SHIcon.swift */,
+			);
+			path = Icon;
+			sourceTree = "<group>";
+		};
+		F19E36DC2D65F50D00DB5D9F /* SHIcon */ = {
+			isa = PBXGroup;
+			children = (
+				F19E36DD2D65F51400DB5D9F /* SHIconSampleView.swift */,
+			);
+			path = SHIcon;
+			sourceTree = "<group>";
+		};
+		F19E36DF2D65F5B800DB5D9F /* BulletIcon */ = {
+			isa = PBXGroup;
+			children = (
+				F19E36E02D65F60F00DB5D9F /* SHBulletIcon.swift */,
+			);
+			path = BulletIcon;
+			sourceTree = "<group>";
+		};
+		F19E36E22D65F78000DB5D9F /* SHBulletIcon */ = {
+			isa = PBXGroup;
+			children = (
+				F19E36E32D65F78D00DB5D9F /* SHBulletIconSampleView.swift */,
+			);
+			path = SHBulletIcon;
 			sourceTree = "<group>";
 		};
 		F1AAA03D2D57D04C00DB56CC /* BulletIcon */ = {
@@ -1314,6 +1361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDDDE97A2CF924AD0054C7E2 /* SHTextField.swift in Sources */,
+				F19E36DB2D65F3E800DB5D9F /* Bundle.swift in Sources */,
 				F1B8158F2D1B2BF500128643 /* UISHLoadingView.swift in Sources */,
 				F1AAA0422D5A3CEF00DB56CC /* UISHIcon.swift in Sources */,
 				EDD253D62CE51453008C2B23 /* ViewStatus.swift in Sources */,
@@ -1330,6 +1378,7 @@
 				F11009582D1A5398005DFC3F /* UIColor+DS+extensions.swift in Sources */,
 				F1B815892D1B0F6E00128643 /* UISHButton.swift in Sources */,
 				F19E36D62D6534A900DB5D9F /* SHContainerView.swift in Sources */,
+				F19E36E12D65F61600DB5D9F /* SHBulletIcon.swift in Sources */,
 				F11009952D1AD9C8005DFC3F /* UITableView+DS+extensions.swift in Sources */,
 				F11009562D1A5326005DFC3F /* Font+DS+extensions.swift in Sources */,
 				EDD253DF2CE51453008C2B23 /* DesignSystemConfiguration.swift in Sources */,
@@ -1345,6 +1394,7 @@
 				F11009972D1ADA1D005DFC3F /* UITableViewCell+DS+extensions.swift in Sources */,
 				F1FBD4E52D19F1E700DA11C4 /* SHListItemView.swift in Sources */,
 				F110099C2D1ADE18005DFC3F /* UIView+DS+extensions.swift in Sources */,
+				F19E36D92D65F37E00DB5D9F /* SHIcon.swift in Sources */,
 				F13816D52D20EC3D00A91018 /* PrivateTextField.swift in Sources */,
 				F1F9F1F12D4A9D56004EA3B1 /* UISHBottomSheet.swift in Sources */,
 				EDDDE9712CEFA02F0054C7E2 /* SHFeedbackView.swift in Sources */,
@@ -1375,6 +1425,8 @@
 				EDD2540F2CE51612008C2B23 /* HomeView.swift in Sources */,
 				EDD254282CE52034008C2B23 /* FlavorColorsView.swift in Sources */,
 				EDD254332CE5279A008C2B23 /* Flavor.swift in Sources */,
+				F19E36DE2D65F51B00DB5D9F /* SHIconSampleView.swift in Sources */,
+				F19E36E42D65F79800DB5D9F /* SHBulletIconSampleView.swift in Sources */,
 				EDDDE9742CEFA4400054C7E2 /* SHFeedbackViewSampleView.swift in Sources */,
 				EDD254102CE51612008C2B23 /* SwiftUISampleApp.swift in Sources */,
 				EDD254312CE52045008C2B23 /* SHButtonSampleView.swift in Sources */,
