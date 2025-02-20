@@ -9,14 +9,36 @@ import SharpnezDesignSystem
 import SwiftUI
 
 struct SHBulletIconSampleView: View {
+    
+    struct Icon: Identifiable {
+        var id: UUID = UUID()
+        let value: SHIconType
+    }
+    
+    let icons: [Icon] = [
+        .init(value: .addProfile),
+        .init(value: .profile),
+        .init(value: .product),
+        .init(value: .bills),
+        .init(value: .budget),
+        .init(value: .card),
+        .init(value: .coin),
+        .init(value: .success),
+        .init(value: .warning),
+        .init(value: .info),
+        .init(value: .error),
+    ]
+    
     var body: some View {
-        VStack(alignment: .center) {
-            SHBulletIcon(icon: .addProfile, color: .backgroundSH, backgroundColor: .onBackgroundSH)
-            SHBulletIcon(icon: .profile, color: .backgroundSH, backgroundColor: .onBackgroundSH)
-            SHBulletIcon(icon: .bills, color: .backgroundSH, backgroundColor: .onBackgroundSH)
-            SHBulletIcon(icon: .budget, color: .backgroundSH, backgroundColor: .onBackgroundSH)
-            SHBulletIcon(icon: .card, color: .backgroundSH, backgroundColor: .onBackgroundSH)
-            SHBulletIcon(icon: .coin, color: .backgroundSH, backgroundColor: .onBackgroundSH)
+        List(icons) { icon in
+            HStack(spacing: .small) {
+                SHBulletIcon(
+                    icon: icon.value,
+                    color: .backgroundSH,
+                    backgroundColor: .onBackgroundSH
+                )
+                Text(icon.value.rawValue)
+            }
         }
     }
 }

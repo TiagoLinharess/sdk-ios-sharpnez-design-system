@@ -29,16 +29,14 @@ public struct SHContainerView<Content: View>: View {
     
     public var body: some View {
         content
-            .toolbarRole(.editor)
-            .background(Color.backgroundSH)
-            .ignoresSafeArea()
+            .background(Color.backgroundSH.ignoresSafeArea())
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     VStack {
                         Text(title)
                             .foregroundStyle(Color.onBackgroundSH)
-                            .font(.title3(.poppins, .medium))
+                            .font(.subtitle(.poppins, .medium))
                     }
                 }
             }

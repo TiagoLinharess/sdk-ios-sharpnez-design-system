@@ -103,6 +103,8 @@
 		F1B8159F2D1D9BAD00128643 /* UISHFeedbackSampleMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8159E2D1D9B9C00128643 /* UISHFeedbackSampleMenuViewController.swift */; };
 		F1B815A12D1DAAC100128643 /* UISHShortcutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815A02D1DAAAB00128643 /* UISHShortcutButton.swift */; };
 		F1B815A42D1DB1E900128643 /* UISHShortcutButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B815A32D1DB1DB00128643 /* UISHShortcutButtonViewController.swift */; };
+		F1F1F1292D67556200D82776 /* SHToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1F1282D67555A00D82776 /* SHToast.swift */; };
+		F1F1F12C2D675DA700D82776 /* SHToastSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1F12B2D675D9C00D82776 /* SHToastSampleView.swift */; };
 		F1F9F1BD2D3DA169004EA3B1 /* UISHToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F9F1BC2D3DA161004EA3B1 /* UISHToast.swift */; };
 		F1F9F1C02D3DA2A8004EA3B1 /* UISHToastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F9F1BF2D3DA2A8004EA3B1 /* UISHToastViewController.swift */; };
 		F1F9F1EC2D4A9C6A004EA3B1 /* UISHBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F9F1EA2D4A9C6A004EA3B1 /* UISHBottomSheetViewController.swift */; };
@@ -255,6 +257,8 @@
 		F1B8159E2D1D9B9C00128643 /* UISHFeedbackSampleMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHFeedbackSampleMenuViewController.swift; sourceTree = "<group>"; };
 		F1B815A02D1DAAAB00128643 /* UISHShortcutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHShortcutButton.swift; sourceTree = "<group>"; };
 		F1B815A32D1DB1DB00128643 /* UISHShortcutButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHShortcutButtonViewController.swift; sourceTree = "<group>"; };
+		F1F1F1282D67555A00D82776 /* SHToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHToast.swift; sourceTree = "<group>"; };
+		F1F1F12B2D675D9C00D82776 /* SHToastSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHToastSampleView.swift; sourceTree = "<group>"; };
 		F1F9F1BC2D3DA161004EA3B1 /* UISHToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHToast.swift; sourceTree = "<group>"; };
 		F1F9F1BF2D3DA2A8004EA3B1 /* UISHToastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHToastViewController.swift; sourceTree = "<group>"; };
 		F1F9F1EA2D4A9C6A004EA3B1 /* UISHBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISHBottomSheetViewController.swift; sourceTree = "<group>"; };
@@ -545,6 +549,7 @@
 		EDD2541C2CE51EEC008C2B23 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				F1F1F12A2D675D8D00D82776 /* SHToast */,
 				F19E36E22D65F78000DB5D9F /* SHBulletIcon */,
 				F19E36DC2D65F50D00DB5D9F /* SHIcon */,
 				EDA01B922CE61B8700740E56 /* SHContainer */,
@@ -658,6 +663,7 @@
 				EDDDE9812CFA6F100054C7E2 /* PasswordField */,
 				EDA01B882CE5962500740E56 /* Shortcut */,
 				EDDDE9782CF924960054C7E2 /* Textfield */,
+				F1F1F1272D67550F00D82776 /* Toast */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1079,6 +1085,22 @@
 			path = UISHShortcutButton;
 			sourceTree = "<group>";
 		};
+		F1F1F1272D67550F00D82776 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				F1F1F1282D67555A00D82776 /* SHToast.swift */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		F1F1F12A2D675D8D00D82776 /* SHToast */ = {
+			isa = PBXGroup;
+			children = (
+				F1F1F12B2D675D9C00D82776 /* SHToastSampleView.swift */,
+			);
+			path = SHToast;
+			sourceTree = "<group>";
+		};
 		F1F9F1BB2D3DA14F004EA3B1 /* Toast */ = {
 			isa = PBXGroup;
 			children = (
@@ -1374,6 +1396,7 @@
 				F110099A2D1ADCEC005DFC3F /* ViewCode.swift in Sources */,
 				EDD253DB2CE51453008C2B23 /* Color+DS+extensions.swift in Sources */,
 				F1B815962D1CC3B100128643 /* UISHLoadingViewController.swift in Sources */,
+				F1F1F1292D67556200D82776 /* SHToast.swift in Sources */,
 				EDD253DD2CE51453008C2B23 /* CGFloat+DS+extensions.swift in Sources */,
 				F11009582D1A5398005DFC3F /* UIColor+DS+extensions.swift in Sources */,
 				F1B815892D1B0F6E00128643 /* UISHButton.swift in Sources */,
@@ -1429,6 +1452,7 @@
 				F19E36E42D65F79800DB5D9F /* SHBulletIconSampleView.swift in Sources */,
 				EDDDE9742CEFA4400054C7E2 /* SHFeedbackViewSampleView.swift in Sources */,
 				EDD254102CE51612008C2B23 /* SwiftUISampleApp.swift in Sources */,
+				F1F1F12C2D675DA700D82776 /* SHToastSampleView.swift in Sources */,
 				EDD254312CE52045008C2B23 /* SHButtonSampleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

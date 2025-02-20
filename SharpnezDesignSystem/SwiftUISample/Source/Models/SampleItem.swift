@@ -25,8 +25,9 @@ struct SampleItem: Identifiable {
         .init(view: SHListItemSampleView(), name: "SHListItem"),
         .init(view: SHLoadingSampleView(), name: "SHLoading"),
         .init(view: SHLoadingViewSampleView(), name: "SHLoadingView"),
+        .init(view: SHPasswordFieldSampleView(), name: "SHPasswordField"),
         .init(view: SHShortcutSampleView(), name: "SHShortcut"),
         .init(view: SHTextfieldSampleView(), name: "SHTextField"),
-        .init(view: SHPasswordFieldSampleView(), name: "SHPasswordField")
+        .init(view: SHToastSampleView(), name: "SHToast")
     ]
 }

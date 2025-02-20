@@ -18,6 +18,10 @@ public enum SHIconType: String {
     case card
     case coin
     case product
+    case success
+    case error
+    case warning
+    case info
 }
 
 public struct SHIcon: View {
