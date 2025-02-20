@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => 'https://github.com/TiagoLinharess/sdk-ios-sharpnez-design-system.git', :tag => '3.0.0' }
   spec.platforms    = { :ios => "18.0", :macOS => "15.0", :visionOS => "2.0" }
   spec.swift_version = '5.8.1'
-  spec.resources    = 'SharpnezDesignSystem/SharpnezDesignSystem/Resources/Fonts/*.ttf'
+  spec.resources    = 'SharpnezDesignSystem/SharpnezDesignSystem/Resources/Fonts/*.ttf', 'SharpnezDesignSystem/SharpnezDesignSystem/Resources/*.xcassets'
   spec.source_files = 'SharpnezDesignSystem/SharpnezDesignSystem/**/*.swift'
   spec.exclude_files = 'SharpnezDesignSystem/SharpnezDesignSystem/Source/UIKit/**/*.swift'
   spec.framework    = 'SystemConfiguration'
