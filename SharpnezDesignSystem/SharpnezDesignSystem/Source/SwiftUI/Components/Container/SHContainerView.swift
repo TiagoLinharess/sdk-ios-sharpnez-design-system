@@ -33,11 +33,9 @@ public struct SHContainerView<Content: View>: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .principal) {
-                    VStack {
-                        Text(title)
-                            .foregroundStyle(Color.onBackgroundSH)
-                            .font(.subtitle(.poppins, .medium))
-                    }
+                    Text(title)
+                        .foregroundStyle(Color.onBackgroundSH)
+                        .font(.subtitle(.poppins, .medium))
                 }
             }
     }

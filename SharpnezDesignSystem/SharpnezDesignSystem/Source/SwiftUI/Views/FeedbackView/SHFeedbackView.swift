@@ -88,7 +88,6 @@ public struct SHFeedbackView: View {
                 .lineLimit(2)
             Text(description)
                 .configureWithSH(color: .onBackgroundSH, font: .subtitle(.montserrat, .regular))
-                .lineLimit(2)
             Spacer()
             SHButton(
                 title: primaryButtonTitle,

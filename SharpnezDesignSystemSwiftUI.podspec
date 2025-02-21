@@ -12,4 +12,5 @@ Pod::Spec.new do |spec|
   spec.source_files = 'SharpnezDesignSystem/SharpnezDesignSystem/**/*.swift'
   spec.exclude_files = 'SharpnezDesignSystem/SharpnezDesignSystem/Source/UIKit/**/*.swift'
   spec.framework    = 'SystemConfiguration'
+  spec.dependency 'CurrencyText'
 end
