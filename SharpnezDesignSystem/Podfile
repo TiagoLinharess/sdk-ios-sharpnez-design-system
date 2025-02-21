@@ -1,6 +1,10 @@
 # Uncomment the next line to define a global platform for your project
  platform :ios, '18.0'
 
+def currency_pod
+  pod 'CurrencyText', :git => 'https://github.com/TiagoLinharess/CurrencyText.git'
+end
+
 def snap_kit_pod
   pod 'SnapKit', '~> 5.7.1'
 end
@@ -12,6 +16,7 @@ end
 target 'SharpnezDesignSystem' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
+  currency_pod
 end
 
 target 'SwiftUISample' do

@@ -66,8 +66,8 @@ struct SHFeedbackViewSampleView: View {
             NavigationLink {
                 SHFeedbackView(
                     type: .custom(
-                        image: Image(systemName: "bookmark"),
-                        imageColor: .primarySH
+                        icon: .card,
+                        iconColor: .primarySH
                     ),
                     title: "Custom",
                     description: "Custom description",

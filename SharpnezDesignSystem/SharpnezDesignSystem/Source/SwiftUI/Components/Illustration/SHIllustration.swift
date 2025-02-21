@@ -1,5 +1,5 @@
 //
-//  SHIcon.swift
+//  SHIllustration.swift
 //  SharpnezDesignSystem
 //
 //  Created by Tiago Linhares on 19/02/25.
@@ -7,35 +7,28 @@
 
 import SwiftUI
 
-public enum SHIconType: String {
+public enum SHIllustrationType: String {
     
     // MARK: UISHIcon
     
-    case profile
-    case addProfile
-    case bills
-    case budget
-    case card
-    case coin
-    case product
-    case success
-    case error
-    case warning
-    case info
+    case biometry
+    case pin
+    case recover
+    case security
 }
 
-public struct SHIcon: View {
+public struct SHIllustration: View {
     
     // MARK: Properties
     
     /// Icon
-    private let icon: SHIconType
+    private let illustration: SHIllustrationType
     
     // MARK: Init
     
     /// Init
-    public init(icon: SHIconType) {
-        self.icon = icon
+    public init(illustration: SHIllustrationType) {
+        self.illustration = illustration
     }
     
     // MARK: Body
@@ -53,6 +46,6 @@ public struct SHIcon: View {
     
     @ViewBuilder
     func image() -> Image {
-        Image(icon.rawValue, bundle: BundleToken.bundle)
+        Image(illustration.rawValue, bundle: BundleToken.bundle)
     }
 }

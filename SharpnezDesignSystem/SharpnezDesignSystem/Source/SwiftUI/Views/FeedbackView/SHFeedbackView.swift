@@ -79,15 +79,15 @@ public struct SHFeedbackView: View {
     public var body: some View {
         VStack(alignment: .center, spacing: .small) {
             Spacer().frame(height: .superGiant)
-            type.icon
-                .font(.system(size: .superLarge))
+            SHIcon(icon: type.icon)
+                .resizable()
+                .frame(width: .superLarge, height: .superLarge)
                 .foregroundStyle(type.color)
             Text(title)
                 .configureWithSH(color: .onBackgroundSH, font: .title2(.poppins, .medium))
                 .lineLimit(2)
             Text(description)
                 .configureWithSH(color: .onBackgroundSH, font: .subtitle(.montserrat, .regular))
-                .lineLimit(2)
             Spacer()
             SHButton(
                 title: primaryButtonTitle,
@@ -106,6 +106,7 @@ public struct SHFeedbackView: View {
             }
         }
         .padding(.small)
+        .background(Color.backgroundSH.ignoresSafeArea())
     }
 }
 
@@ -116,20 +117,20 @@ public enum SHFeedbackType {
     case warning
     case error
     case info
-    case custom(image: Image, imageColor: Color)
+    case custom(icon: SHIconType, iconColor: Color)
     
-    var icon: Image {
-        switch self {
+    var icon: SHIconType {
+        return switch self {
         case .success:
-            Image(systemName: DSConstants.Icons.checkmarkCircleFill)
+            .success
         case .warning:
-            Image(systemName: DSConstants.Icons.exclamationmarkTriangleFill)
+            .warning
         case .error:
-            Image(systemName: DSConstants.Icons.exclamationmarkOctagonFill)
+            .error
         case .info:
-            Image(systemName: DSConstants.Icons.infoCircleFill)
-        case .custom(let image, _):
-            image
+            .info
+        case .custom(let icon, _):
+            icon
         }
     }
     
