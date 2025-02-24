@@ -15,6 +15,8 @@ struct SHIllustrationSampleView: View {
         let value: SHIllustrationType
     }
     
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
+    
     let illustrations: [Illustration] = [
         .init(value: .biometry),
         .init(value: .pin),
@@ -26,7 +28,7 @@ struct SHIllustrationSampleView: View {
         List(illustrations) { illustration in
             HStack(spacing: .small) {
                 SHIllustration(illustration: illustration.value)
-                    .foregroundStyle(Color.primarySH)
+                    .foregroundStyle(Color.onPrimary(colorScheme: colorScheme))
                 Text(illustration.value.rawValue)
             }
         }

@@ -12,10 +12,12 @@ struct SHPasswordFieldSampleView: View {
     
     @State var text: String = ""
     
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
+    
     var body: some View {
         SHPasswordField(
             title: "Senha",
-            color: .primarySH,
+            color: .primary(colorScheme: colorScheme),
             font: .montserrat,
             text: $text
         )

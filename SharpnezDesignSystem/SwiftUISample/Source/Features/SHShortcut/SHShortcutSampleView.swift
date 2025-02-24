@@ -9,13 +9,16 @@ import SharpnezDesignSystem
 import SwiftUI
 
 struct SHShortcutSampleView: View {
+    
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
+    
     var body: some View {
         SHShortcutButton(
             icon: .coin,
             label: "Add payment",
             font: .montserrat,
-            color: .surfaceSH,
-            onColor: .onSurfaceSH
+            color: .surface(colorScheme: colorScheme),
+            onColor: .onSurface(colorScheme: colorScheme)
         ) {
             print("button")
         }
@@ -23,8 +26,8 @@ struct SHShortcutSampleView: View {
             icon: .card,
             label: "Credit card",
             font: .montserrat,
-            color: .surfaceSH,
-            onColor: .onSurfaceSH
+            color: .surface(colorScheme: colorScheme),
+            onColor: .onSurface(colorScheme: colorScheme)
         ) {
             print("button")
         }
@@ -32,8 +35,8 @@ struct SHShortcutSampleView: View {
             icon: .budget,
             label: "Budgets",
             font: .montserrat,
-            color: .surfaceSH,
-            onColor: .onSurfaceSH
+            color: .surface(colorScheme: colorScheme),
+            onColor: .onSurface(colorScheme: colorScheme)
         ) {
             print("button")
         }

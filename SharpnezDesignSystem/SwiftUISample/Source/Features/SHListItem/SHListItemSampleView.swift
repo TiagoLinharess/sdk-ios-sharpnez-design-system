@@ -9,6 +9,9 @@ import SharpnezDesignSystem
 import SwiftUI
 
 struct SHListItemSampleView: View {
+    
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
+    
     var body: some View {
         SHListItemView(
             items: [
@@ -17,7 +20,7 @@ struct SHListItemSampleView: View {
                 .init(title: "Item 3", isComplete: false)
             ],
             font: .body(.poppins, .regular),
-            defaultColor: .onBackgroundSH
+            defaultColor: .onBackground(colorScheme: colorScheme)
         )
     }
 }

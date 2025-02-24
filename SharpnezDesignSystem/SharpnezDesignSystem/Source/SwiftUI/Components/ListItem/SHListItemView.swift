@@ -53,6 +53,6 @@ public struct SHListItemView: View {
     
     private func isCompleteColor(isComplete: Bool?) -> Color {
         guard let isComplete else { return defaultColor }
-        return isComplete ? .successSH : .errorSH
+        return isComplete ? .success() : .error()
     }
 }

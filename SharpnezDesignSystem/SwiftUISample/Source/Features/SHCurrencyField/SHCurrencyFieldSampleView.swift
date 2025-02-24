@@ -10,8 +10,14 @@ import SwiftUI
 
 struct SHCurrencyFieldSampleView: View {
     @State var value = ""
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
     
     var body: some View {
-        SHCurrencyField(title: "value", text: $value, color: .primarySH, font: .montserrat)
+        SHCurrencyField(
+            title: "value",
+            text: $value,
+            color: .primary(colorScheme: colorScheme),
+            font: .montserrat
+        )
     }
 }

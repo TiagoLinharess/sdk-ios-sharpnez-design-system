@@ -12,17 +12,18 @@ struct SHTextfieldSampleView: View {
     
     @State var text: String = ""
     @State var text1: String = ""
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
     
     var body: some View {
         SHTextField(
             title: "Sem mascara",
-            color: .primarySH,
+            color: .primary(colorScheme: colorScheme),
             font: .montserrat,
             text: $text
         )
         SHTextField(
             title: "Email",
-            color: .secondarySH,
+            color: .secondary(colorScheme: colorScheme),
             font: .montserrat,
             text: $text1,
             contentType: .emailAddress,

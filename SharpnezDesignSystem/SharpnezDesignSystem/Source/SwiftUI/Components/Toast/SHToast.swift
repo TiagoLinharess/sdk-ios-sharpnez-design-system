@@ -43,13 +43,13 @@ public enum SHToastType {
     var backgroundColor: Color {
         return switch self {
         case .info:
-            .primarySH
+            .primary()
         case .success:
-            .successSH
+            .success()
         case .warning:
-            .warningSH
+            .warning()
         case .error:
-            .errorSH
+            .error()
         }
     }
     
@@ -57,13 +57,13 @@ public enum SHToastType {
     var color: Color {
         return switch self {
         case .info:
-            .onPrimarySH
+            .onPrimary()
         case .success:
-            .onSuccessSH
+            .onSuccess()
         case .warning:
-            .onWarningSH
+            .onWarning()
         case .error:
-            .onErrorSH
+            .onError()
         }
     }
     

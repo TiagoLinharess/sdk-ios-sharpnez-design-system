@@ -9,6 +9,9 @@ import SharpnezDesignSystem
 import SwiftUI
 
 struct SHFeedbackViewSampleView: View {
+    
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
+    
     var body: some View {
         List {
             NavigationLink {
@@ -53,7 +56,7 @@ struct SHFeedbackViewSampleView: View {
             }
             NavigationLink {
                 SHFeedbackView(
-                    type: .info,
+                    type: .info(colorScheme),
                     title: "Info",
                     description: "Something",
                     primaryButtonTitle: "Dismiss"
@@ -67,7 +70,7 @@ struct SHFeedbackViewSampleView: View {
                 SHFeedbackView(
                     type: .custom(
                         icon: .card,
-                        iconColor: .primarySH
+                        iconColor: .primary(colorScheme: colorScheme)
                     ),
                     title: "Custom",
                     description: "Custom description",

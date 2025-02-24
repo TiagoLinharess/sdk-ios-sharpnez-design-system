@@ -15,6 +15,8 @@ struct SHBulletIconSampleView: View {
         let value: SHIconType
     }
     
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
+    
     let icons: [Icon] = [
         .init(value: .addProfile),
         .init(value: .profile),
@@ -34,8 +36,8 @@ struct SHBulletIconSampleView: View {
             HStack(spacing: .small) {
                 SHBulletIcon(
                     icon: icon.value,
-                    color: .backgroundSH,
-                    backgroundColor: .onBackgroundSH
+                    color: .background(colorScheme: colorScheme),
+                    backgroundColor: .onBackground(colorScheme: colorScheme)
                 )
                 Text(icon.value.rawValue)
             }
