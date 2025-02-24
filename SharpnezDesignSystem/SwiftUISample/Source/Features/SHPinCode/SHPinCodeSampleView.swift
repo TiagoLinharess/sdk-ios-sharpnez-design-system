@@ -9,8 +9,12 @@ import SharpnezDesignSystem
 import SwiftUI
 
 struct SHPinCodeSampleView: View {
+    
+    /// Phone theme
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
+    
     var body: some View {
-        SHPinCode(color: .primarySH) { value in
+        SHPinCode(color: .primary(colorScheme: colorScheme)) { value in
             print(value)
         }
     }

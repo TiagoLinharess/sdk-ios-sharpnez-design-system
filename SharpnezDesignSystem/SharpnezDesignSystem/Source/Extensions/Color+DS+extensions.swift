@@ -11,102 +11,141 @@ public extension Color {
     
     // MARK: Colors
     
-    /// primarySH
-    static var primarySH: Color {
-        guard let color = DesignSystemConfiguration.shared?.flavorColors?.primary
-        else { return .white }
+    /// primary color with theme
+    static func primary(colorScheme: ColorScheme? = nil) -> Color {
+        return getColorWithTheme(
+            lightColorHex: DesignSystemConfiguration.shared?.flavorColors?.primary,
+            darkColorHex: DesignSystemConfiguration.shared?.flavorColors?.onPrimary,
+            colorScheme: colorScheme
+        )
+    }
+    
+    /// on primary color with theme
+    static func onPrimary(colorScheme: ColorScheme? = nil) -> Color {
+        return getColorWithTheme(
+            lightColorHex: DesignSystemConfiguration.shared?.flavorColors?.onPrimary,
+            darkColorHex: DesignSystemConfiguration.shared?.flavorColors?.primary,
+            colorScheme: colorScheme
+        )
+    }
+    
+    /// secondary color with theme
+    static func secondary(colorScheme: ColorScheme? = nil) -> Color {
+        return getColorWithTheme(
+            lightColorHex: DesignSystemConfiguration.shared?.flavorColors?.secondary,
+            darkColorHex: DesignSystemConfiguration.shared?.flavorColors?.onSecondary,
+            colorScheme: colorScheme
+        )
+    }
+    
+    /// on secondary color with theme
+    static func onSecondary(colorScheme: ColorScheme? = nil) -> Color {
+        return getColorWithTheme(
+            lightColorHex: DesignSystemConfiguration.shared?.flavorColors?.onSecondary,
+            darkColorHex: DesignSystemConfiguration.shared?.flavorColors?.secondary,
+            colorScheme: colorScheme
+        )
+    }
+    
+    /// surface color with theme
+    static func surface(colorScheme: ColorScheme? = nil) -> Color {
+        return getColorWithTheme(
+            lightColorHex: DesignSystemConfiguration.shared?.flavorColors?.surface,
+            darkColorHex: DesignSystemConfiguration.shared?.flavorColors?.onSurface,
+            colorScheme: colorScheme
+        )
+    }
+    
+    /// on surface color with theme
+    static func onSurface(colorScheme: ColorScheme? = nil) -> Color {
+        return getColorWithTheme(
+            lightColorHex: DesignSystemConfiguration.shared?.flavorColors?.onSurface,
+            darkColorHex: DesignSystemConfiguration.shared?.flavorColors?.surface,
+            colorScheme: colorScheme
+        )
+    }
+    
+    /// background color with theme
+    static func background(colorScheme: ColorScheme? = nil) -> Color {
+        return getColorWithTheme(
+            lightColorHex: DesignSystemConfiguration.shared?.flavorColors?.background,
+            darkColorHex: DesignSystemConfiguration.shared?.flavorColors?.onBackground,
+            colorScheme: colorScheme
+        )
+    }
+    
+    /// on background color with theme
+    static func onBackground(colorScheme: ColorScheme? = nil) -> Color {
+        return getColorWithTheme(
+            lightColorHex: DesignSystemConfiguration.shared?.flavorColors?.onBackground,
+            darkColorHex: DesignSystemConfiguration.shared?.flavorColors?.background,
+            colorScheme: colorScheme
+        )
+    }
+    
+    /// success color
+    static func success() -> Color {
+        return getColorWithoutTheme(
+            colorHex: DesignSystemConfiguration.shared?.flavorColors?.success
+        )
+    }
+    
+    /// on success color
+    static func onSuccess() -> Color {
+        return getColorWithoutTheme(
+            colorHex: DesignSystemConfiguration.shared?.flavorColors?.onSuccess
+        )
+    }
+    
+    /// warning color
+    static func warning() -> Color {
+        return getColorWithoutTheme(
+            colorHex: DesignSystemConfiguration.shared?.flavorColors?.warning
+        )
+    }
+    
+    /// on warning color
+    static func onWarning() -> Color {
+        return getColorWithoutTheme(
+            colorHex: DesignSystemConfiguration.shared?.flavorColors?.onWarning
+        )
+    }
+    
+    /// error color
+    static func error() -> Color {
+        return getColorWithoutTheme(
+            colorHex: DesignSystemConfiguration.shared?.flavorColors?.error
+        )
+    }
+    
+    /// on error color
+    static func onError() -> Color {
+        return getColorWithoutTheme(
+            colorHex: DesignSystemConfiguration.shared?.flavorColors?.onError
+        )
+    }
+    
+    // MARK: Private methods
+    
+    private static func getColorWithTheme(
+        lightColorHex: String?,
+        darkColorHex: String?,
+        colorScheme: ColorScheme?
+    ) -> Color {
+        guard let lightColorHex, let darkColorHex else { return .white }
+        
+        var color = lightColorHex
+        
+        if let colorScheme, colorScheme == .dark {
+            color = darkColorHex
+        }
+        
         return Color(hex: color)
     }
     
-    /// onPrimarySH
-    static var onPrimarySH: Color {
-        guard let color = DesignSystemConfiguration.shared?.flavorColors?.onPrimary
-        else { return .white }
-        return Color(hex: color)
-    }
-    
-    /// secondarySH
-    static var secondarySH: Color {
-        guard let color = DesignSystemConfiguration.shared?.flavorColors?.secondary
-        else { return .white }
-        return Color(hex: color)
-    }
-    
-    /// onSecondarySH
-    static var onSecondarySH: Color {
-        guard let color = DesignSystemConfiguration.shared?.flavorColors?.onSecondary
-        else { return .white }
-        return Color(hex: color)
-    }
-    
-    /// surfaceSH
-    static var surfaceSH: Color {
-        guard let color = DesignSystemConfiguration.shared?.flavorColors?.surface
-        else { return .white }
-        return Color(hex: color)
-    }
-    
-    /// onSurfaceSH
-    static var onSurfaceSH: Color {
-        guard let color = DesignSystemConfiguration.shared?.flavorColors?.onSurface
-        else { return .white }
-        return Color(hex: color)
-    }
-    
-    /// backgroundSH
-    static var backgroundSH: Color {
-        guard let color = DesignSystemConfiguration.shared?.flavorColors?.background
-        else { return .white }
-        return Color(hex: color)
-    }
-    
-    /// onBackgroundSH
-    static var onBackgroundSH: Color {
-        guard let color = DesignSystemConfiguration.shared?.flavorColors?.onBackground
-        else { return .white }
-        return Color(hex: color)
-    }
-    
-    /// successSH
-    static var successSH: Color {
-        guard let color = DesignSystemConfiguration.shared?.flavorColors?.success
-        else { return .white }
-        return Color(hex: color)
-    }
-    
-    /// onSuccessSH
-    static var onSuccessSH: Color {
-        guard let color = DesignSystemConfiguration.shared?.flavorColors?.onSuccess
-        else { return .white }
-        return Color(hex: color)
-    }
-    
-    /// warningSH
-    static var warningSH: Color {
-        guard let color = DesignSystemConfiguration.shared?.flavorColors?.warning
-        else { return .white }
-        return Color(hex: color)
-    }
-    
-    /// onWarningSH
-    static var onWarningSH: Color {
-        guard let color = DesignSystemConfiguration.shared?.flavorColors?.onWarning
-        else { return .white }
-        return Color(hex: color)
-    }
-    
-    /// errorSH
-    static var errorSH: Color {
-        guard let color = DesignSystemConfiguration.shared?.flavorColors?.error
-        else { return .white }
-        return Color(hex: color)
-    }
-    
-    /// onErrorSH
-    static var onErrorSH: Color {
-        guard let color = DesignSystemConfiguration.shared?.flavorColors?.onError
-        else { return .white }
-        return Color(hex: color)
+    private static func getColorWithoutTheme(colorHex: String?) -> Color {
+        guard let colorHex else { return .white }
+        return Color(hex: colorHex)
     }
 }
 

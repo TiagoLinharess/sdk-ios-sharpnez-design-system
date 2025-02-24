@@ -10,6 +10,9 @@ import SwiftUI
 public struct SHFeedbackView: View {
     // MARK: Properties
     
+    /// Phone theme
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
+    
     /// Secondary action logic
     private var hasSecondaryAction: Bool {
         secondaryAction != nil && !secondaryButtonTitle.isEmpty
@@ -84,21 +87,30 @@ public struct SHFeedbackView: View {
                 .frame(width: .superLarge, height: .superLarge)
                 .foregroundStyle(type.color)
             Text(title)
-                .configureWithSH(color: .onBackgroundSH, font: .title2(.poppins, .medium))
+                .configureWithSH(
+                    color: .onBackground(colorScheme: colorScheme),
+                    font: .title2(.poppins, .medium)
+                )
                 .lineLimit(2)
             Text(description)
-                .configureWithSH(color: .onBackgroundSH, font: .subtitle(.montserrat, .regular))
+                .configureWithSH(
+                    color: .onBackground(colorScheme: colorScheme),
+                    font: .subtitle(.montserrat, .regular)
+                )
             Spacer()
             SHButton(
                 title: primaryButtonTitle,
-                style: .primary(.primarySH, .onPrimarySH),
+                style: .primary(
+                            .primary(colorScheme: colorScheme),
+                            .onPrimary(colorScheme: colorScheme)
+                        ),
                 font: .montserrat,
                 action: primaryAction
             )
             if hasSecondaryAction {
                 SHButton(
                     title: secondaryButtonTitle,
-                    style: .secondary(.primarySH),
+                    style: .secondary(.primary(colorScheme: colorScheme)),
                     font: .montserrat
                 ) {
                     secondaryAction?()
@@ -106,7 +118,7 @@ public struct SHFeedbackView: View {
             }
         }
         .padding(.small)
-        .background(Color.backgroundSH.ignoresSafeArea())
+        .background(Color.background(colorScheme: colorScheme).ignoresSafeArea())
     }
 }
 
@@ -116,7 +128,7 @@ public enum SHFeedbackType {
     case success
     case warning
     case error
-    case info
+    case info(ColorScheme?)
     case custom(icon: SHIconType, iconColor: Color)
     
     var icon: SHIconType {
@@ -136,10 +148,10 @@ public enum SHFeedbackType {
     
     var color: Color {
         switch self {
-        case .success: .successSH
-        case .warning: .warningSH
-        case .error: .errorSH
-        case .info: .onBackgroundSH
+        case .success: .success()
+        case .warning: .warning()
+        case .error: .error()
+        case .info(let colorScheme): .onBackground(colorScheme: colorScheme)
         case .custom(_, let color): color
         }
     }

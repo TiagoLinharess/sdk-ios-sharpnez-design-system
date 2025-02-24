@@ -10,10 +10,12 @@ import SwiftUI
 
 struct SHLoadingSampleView: View {
     
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
+    
     var body: some View {
-        SHLoading(style: .large, color: .primarySH)
-        SHLoading(style: .medium, color: .primarySH)
-        SHLoading(style: .small, color: .primarySH)
-        SHLoading(style: .nano, color: .primarySH)
+        SHLoading(style: .large, color: .primary(colorScheme: colorScheme))
+        SHLoading(style: .medium, color: .primary(colorScheme: colorScheme))
+        SHLoading(style: .small, color: .primary(colorScheme: colorScheme))
+        SHLoading(style: .nano, color: .primary(colorScheme: colorScheme))
     }
 }

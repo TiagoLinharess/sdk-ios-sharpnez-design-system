@@ -15,6 +15,8 @@ struct SHIconSampleView: View {
         let value: SHIconType
     }
     
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
+    
     let icons: [Icon] = [
         .init(value: .addProfile),
         .init(value: .profile),
@@ -33,7 +35,7 @@ struct SHIconSampleView: View {
         List(icons) { icon in
             HStack(spacing: .small) {
                 SHIcon(icon: icon.value)
-                    .foregroundStyle(Color.primarySH)
+                    .foregroundStyle(Color.primary(colorScheme: colorScheme))
                 Text(icon.value.rawValue)
             }
         }

@@ -9,12 +9,13 @@ import SharpnezDesignSystem
 import SwiftUI
 
 struct SHLoadingViewSampleView: View {
+    
     var body: some View {
         List {
             NavigationLink {
                 SHLoadingView(
-                    color: .primarySH,
-                    onColor: .onPrimarySH,
+                    color: .primary(),
+                    onColor: .onPrimary(),
                     firstText: "Loading",
                     font: .title3(.montserrat, .medium)
                 )
@@ -23,8 +24,8 @@ struct SHLoadingViewSampleView: View {
             }
             NavigationLink {
                 SHLoadingView(
-                    color: .secondarySH,
-                    onColor: .onSecondarySH,
+                    color: .secondary(),
+                    onColor: .onSecondary(),
                     firstText: "Loading",
                     secondText: "Finishing",
                     font: .title3(.montserrat, .medium)
@@ -33,17 +34,17 @@ struct SHLoadingViewSampleView: View {
                 Text("Secondary with two texts")
             }
             NavigationLink {
-                SHLoadingView(color: .surfaceSH, onColor: .onSurfaceSH)
+                SHLoadingView(color: .surface(), onColor: .onSurface())
             } label: {
                 Text("Surface")
             }
             NavigationLink {
-                SHLoadingView(color: .backgroundSH, onColor: .onBackgroundSH)
+                SHLoadingView(color: .background(), onColor: .onBackground())
             } label: {
                 Text("Background")
             }
             NavigationLink {
-                SHLoadingView(color: .backgroundSH, onColor: .primarySH)
+                SHLoadingView(color: .background(), onColor: .primary())
             } label: {
                 Text("Background with primary")
             }

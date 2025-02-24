@@ -11,17 +11,18 @@ import SwiftUI
 struct SHButtonSampleView: View {
     @State var isLoading: Bool = false
     @State var isDisabled: Bool = false
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
     
     var body: some View {
         SHButton(
             title: "isLoading",
-            style: .ghost(.primarySH),
+            style: .ghost(.primary(colorScheme: colorScheme)),
             font: .montserrat,
             action: actionLoading
         )
         SHButton(
             title: "isDisabled",
-            style: .ghost(.primarySH),
+            style: .ghost(.primary(colorScheme: colorScheme)),
             font: .montserrat,
             action: actionDisabled
         )
@@ -29,7 +30,7 @@ struct SHButtonSampleView: View {
         SHButton(
             title: "Hello SHButton",
             icon: .card,
-            style: .primary(.primarySH, .onPrimarySH),
+            style: .primary(.primary(colorScheme: colorScheme), .onPrimary(colorScheme: colorScheme)),
             font: .montserrat,
             isLoading: isLoading,
             isDisabled: isDisabled
@@ -38,7 +39,7 @@ struct SHButtonSampleView: View {
         }
         SHButton(
             title: "Hello SHButton",
-            style: .secondary(.primarySH),
+            style: .secondary(.primary(colorScheme: colorScheme)),
             font: .montserrat,
             isLoading: isLoading,
             isDisabled: isDisabled
@@ -47,7 +48,7 @@ struct SHButtonSampleView: View {
         }
         SHButton(
             title: "Hello SHButton",
-            style: .ghost(.primarySH),
+            style: .ghost(.primary(colorScheme: colorScheme)),
             font: .montserrat,
             isLoading: isLoading,
             isDisabled: isDisabled
