@@ -54,8 +54,10 @@ public struct SHContainerView<Content: View>: View {
                 }
                 ToolbarItem(placement: .topBarLeading) {
                     Button(action: backButtonAction) {
-                        Image(systemName: "arrow.left")
+                        Image(systemName: DSConstants.Icons.arrowLeft)
+                            .resizable()
                             .foregroundStyle(Color.onBackground(colorScheme: colorScheme))
+                            .font(.system(size: .smaller))
                     }
                 }
             }
