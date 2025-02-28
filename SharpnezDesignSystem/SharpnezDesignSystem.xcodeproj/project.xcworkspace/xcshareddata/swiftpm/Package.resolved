@@ -1,0 +1,15 @@
+{
+  "originHash" : "3f9dcc72b968e0a2f434b63ead778b4cb17968d62b58e329fd836df47cacf7b8",
+  "pins" : [
+    {
+      "identity" : "currencytext",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/TiagoLinharess/CurrencyText.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "03d08a028a32547e26f50751660c7c0b3cfa3279"
+      }
+    }
+  ],
+  "version" : 3
+}

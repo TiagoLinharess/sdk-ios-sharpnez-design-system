@@ -5,7 +5,9 @@
 //  Created by Tiago Linhares on 21/02/25.
 //
 
-import CurrencyText
+import CurrencyFormatter
+import CurrencyUITextFieldDelegate
+import CurrencyTextField
 import SwiftUI
 
 public struct SHCurrencyField: View {
