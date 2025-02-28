@@ -25,7 +25,13 @@ let package = Package(
             path: "SharpnezDesignSystem/SharpnezDesignSystem",
             sources: ["Source"],
             resources: [
-                .process("Resources")
+                .process("Resources"),
+                .copy("Resources/Fonts/Montserrat-Bold.ttf"),
+                .copy("Resources/Fonts/Montserrat-Medium.ttf"),
+                .copy("Resources/Fonts/Montserrat-Regular.ttf"),
+                .copy("Resources/Fonts/Poppins-Bold.ttf"),
+                .copy("Resources/Fonts/Poppins-Medium.ttf"),
+                .copy("Resources/Fonts/Poppins-Regular.ttf")
             ],
             swiftSettings: [
                 .define("ENABLE_LIBRARY_EVOLUTION", .when(configuration: .release)),
