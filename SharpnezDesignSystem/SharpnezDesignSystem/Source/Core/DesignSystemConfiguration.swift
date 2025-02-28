@@ -13,12 +13,14 @@ import UIKit
 public final class DesignSystemConfiguration: NSObject {
     // MARK: Proeprties
     
+    @MainActor
     public static var shared: DesignSystemConfiguration?
     var flavorColors: FlavorColorsProtocol?
     
     // MARK: Start
     
     /// Start Singleton Method
+    @MainActor
     public class func start(flavorColors: FlavorColorsProtocol) {
         shared = DesignSystemConfiguration()
         shared?.loadFonts()

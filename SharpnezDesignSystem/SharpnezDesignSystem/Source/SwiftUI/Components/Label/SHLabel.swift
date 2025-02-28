@@ -39,6 +39,7 @@ extension Label {
     // MARK: Label Modifier Implementation
     
     /// Function for Color and Font parameters.
+    @MainActor
     public func configureWithSH(color: Color, font: Font) -> some View {
         modifier(SHLabelModifier(color: color, font: font))
     }
@@ -48,6 +49,7 @@ extension Text {
     // MARK: Text Modifier Implementation
     
     /// Function for Color and Font parameters.
+    @MainActor
     public func configureWithSH(color: Color, font: Font) -> some View {
         modifier(SHLabelModifier(color: color, font: font))
     }

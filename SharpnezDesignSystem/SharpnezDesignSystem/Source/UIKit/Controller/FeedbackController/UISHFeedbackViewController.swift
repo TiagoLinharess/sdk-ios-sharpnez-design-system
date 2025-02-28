@@ -28,6 +28,7 @@ public enum UISHFeedbackType {
     }
     
     /// Color
+    @MainActor
     var color: UIColor {
         switch self {
         case .success: .successSH

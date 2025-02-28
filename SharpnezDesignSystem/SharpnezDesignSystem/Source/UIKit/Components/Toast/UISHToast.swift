@@ -14,6 +14,7 @@ public enum UISHToastType {
     case error
     
     /// Background color
+    @MainActor
     var backgroundColor: UIColor {
         return switch self {
         case .info:
@@ -28,6 +29,7 @@ public enum UISHToastType {
     }
     
     /// Color
+    @MainActor
     var color: UIColor {
         return switch self {
         case .info:

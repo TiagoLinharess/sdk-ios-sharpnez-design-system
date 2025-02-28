@@ -5,9 +5,8 @@
 //  Created by Tiago Linhares on 21/02/25.
 //
 
-import CurrencyFormatter
-import CurrencyUITextFieldDelegate
 import CurrencyTextField
+import CurrencyFormatter
 import SwiftUI
 
 public struct SHCurrencyField: View {
@@ -55,7 +54,7 @@ public struct SHCurrencyField: View {
             CurrencyTextField(configuration: .init(
                 placeholder: String(),
                 text: $text,
-                formatter: $currencyFormatter,
+                formatter: currencyFormatter,
                 textFieldConfiguration: { uiTextField in
                     uiTextField.font = .body(font, .medium)
                     uiTextField.textColor = UIColor(color)

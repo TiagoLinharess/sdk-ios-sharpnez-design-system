@@ -1,0 +1,15 @@
+{
+  "originHash" : "96fe72888d281770631aaf476a99593066995136d9fb5cf2b2bc636a441294ab",
+  "pins" : [
+    {
+      "identity" : "currencytext",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/marinofelipe/CurrencyText.git",
+      "state" : {
+        "revision" : "f2302ee2958cd76dc2b80678d2a6eb5bf6d71807",
+        "version" : "2.3.1"
+      }
+    }
+  ],
+  "version" : 3
+}

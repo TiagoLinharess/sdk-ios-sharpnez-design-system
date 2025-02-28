@@ -148,6 +148,7 @@ public enum SHFeedbackType {
         }
     }
     
+    @MainActor
     var color: Color {
         switch self {
         case .success: .success()

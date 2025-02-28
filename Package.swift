@@ -4,21 +4,33 @@
 import PackageDescription
 
 let package = Package(
-    name: "sdk-ios-sharpnez-design-system",
+    name: "SharpnezDesignSystem",
+    platforms: [.iOS(.v18)],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "sdk-ios-sharpnez-design-system",
-            targets: ["sdk-ios-sharpnez-design-system"]),
+            name: "SharpnezDesignSystem",
+            targets: ["SharpnezDesignSystem"]),
+    ],
+    dependencies: [
+        .package(
+            url: "https://github.com/marinofelipe/CurrencyText.git", from: .init(2, 3, 1)
+        )
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "sdk-ios-sharpnez-design-system"),
-        .testTarget(
-            name: "sdk-ios-sharpnez-design-systemTests",
-            dependencies: ["sdk-ios-sharpnez-design-system"]
-        ),
+            name: "SharpnezDesignSystem",
+            dependencies: [
+                .product(name: "CurrencyTextSwiftUI", package: "CurrencyText")
+            ],
+            path: "SharpnezDesignSystem/SharpnezDesignSystem",
+            sources: ["Source"],
+            resources: [
+                .process("Resources")
+            ],
+            swiftSettings: [
+                .define("ENABLE_LIBRARY_EVOLUTION", .when(configuration: .release)),
+                .unsafeFlags(["-enable-library-evolution", "-emit-module-interface"])
+            ]
+        )
     ]
 )

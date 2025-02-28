@@ -40,6 +40,7 @@ public enum SHToastType {
     case info
     
     /// Background color
+    @MainActor
     var backgroundColor: Color {
         return switch self {
         case .info:
@@ -54,6 +55,7 @@ public enum SHToastType {
     }
     
     /// Color
+    @MainActor
     var color: Color {
         return switch self {
         case .info:

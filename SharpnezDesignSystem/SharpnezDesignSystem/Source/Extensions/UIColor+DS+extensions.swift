@@ -12,6 +12,7 @@ public extension UIColor {
     // MARK: Colors
     
     /// primarySH
+    @MainActor
     static var primarySH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.primary
         else { return .white }
@@ -19,6 +20,7 @@ public extension UIColor {
     }
     
     /// onPrimarySH
+    @MainActor
     static var onPrimarySH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.onPrimary
         else { return .white }
@@ -26,6 +28,7 @@ public extension UIColor {
     }
     
     /// secondarySH
+    @MainActor
     static var secondarySH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.secondary
         else { return .white }
@@ -33,6 +36,7 @@ public extension UIColor {
     }
     
     /// onSecondarySH
+    @MainActor
     static var onSecondarySH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.onSecondary
         else { return .white }
@@ -40,6 +44,7 @@ public extension UIColor {
     }
     
     /// surfaceSH
+    @MainActor
     static var surfaceSH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.surface
         else { return .white }
@@ -47,6 +52,7 @@ public extension UIColor {
     }
     
     /// onSurfaceSH
+    @MainActor
     static var onSurfaceSH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.onSurface
         else { return .white }
@@ -54,6 +60,7 @@ public extension UIColor {
     }
     
     /// backgroundSH
+    @MainActor
     static var backgroundSH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.background
         else { return .white }
@@ -61,6 +68,7 @@ public extension UIColor {
     }
     
     /// onBackgroundSH
+    @MainActor
     static var onBackgroundSH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.onBackground
         else { return .white }
@@ -68,6 +76,7 @@ public extension UIColor {
     }
     
     /// successSH
+    @MainActor
     static var successSH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.success
         else { return .white }
@@ -75,6 +84,7 @@ public extension UIColor {
     }
     
     /// onSuccessSH
+    @MainActor
     static var onSuccessSH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.onSuccess
         else { return .white }
@@ -82,6 +92,7 @@ public extension UIColor {
     }
     
     /// warningSH
+    @MainActor
     static var warningSH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.warning
         else { return .white }
@@ -89,6 +100,7 @@ public extension UIColor {
     }
     
     /// onWarningSH
+    @MainActor
     static var onWarningSH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.onWarning
         else { return .white }
@@ -96,6 +108,7 @@ public extension UIColor {
     }
     
     /// errorSH
+    @MainActor
     static var errorSH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.error
         else { return .white }
@@ -103,6 +116,7 @@ public extension UIColor {
     }
     
     /// onErrorSH
+    @MainActor
     static var onErrorSH: UIColor {
         guard let color = DesignSystemConfiguration.shared?.flavorColors?.onError
         else { return .white }

@@ -105,8 +105,10 @@ extension CGFloat {
     public static var superGiant: Self { 80.00 }
     
     /// A computed property representing the width of the device's screen.
+    @MainActor
     public static var deviceWidth: Self { UIScreen.main.bounds.width }
     
     /// A computed property representing the half width of the device's screen.
+    @MainActor
     public static var deviceHalfWidth: Self { UIScreen.main.bounds.width / 2 }
 }

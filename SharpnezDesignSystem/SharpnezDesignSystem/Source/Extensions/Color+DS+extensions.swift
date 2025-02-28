@@ -12,15 +12,17 @@ public extension Color {
     // MARK: Colors
     
     /// primary color with theme
+    @MainActor
     static func primary(colorScheme: ColorScheme? = nil) -> Color {
         return getColorWithTheme(
-            lightColorHex: DesignSystemConfiguration.shared?.flavorColors?.primary,
+            lightColorHex:  DesignSystemConfiguration.shared?.flavorColors?.primary,
             darkColorHex: DesignSystemConfiguration.shared?.flavorColors?.primaryDark,
             colorScheme: colorScheme
         )
     }
     
     /// on primary color with theme
+    @MainActor
     static func onPrimary(colorScheme: ColorScheme? = nil) -> Color {
         return getColorWithTheme(
             lightColorHex: DesignSystemConfiguration.shared?.flavorColors?.onPrimary,
@@ -30,6 +32,7 @@ public extension Color {
     }
     
     /// secondary color with theme
+    @MainActor
     static func secondary(colorScheme: ColorScheme? = nil) -> Color {
         return getColorWithTheme(
             lightColorHex: DesignSystemConfiguration.shared?.flavorColors?.secondary,
@@ -39,6 +42,7 @@ public extension Color {
     }
     
     /// on secondary color with theme
+    @MainActor
     static func onSecondary(colorScheme: ColorScheme? = nil) -> Color {
         return getColorWithTheme(
             lightColorHex: DesignSystemConfiguration.shared?.flavorColors?.onSecondary,
@@ -48,6 +52,7 @@ public extension Color {
     }
     
     /// surface color with theme
+    @MainActor
     static func surface(colorScheme: ColorScheme? = nil) -> Color {
         return getColorWithTheme(
             lightColorHex: DesignSystemConfiguration.shared?.flavorColors?.surface,
@@ -57,6 +62,7 @@ public extension Color {
     }
     
     /// on surface color with theme
+    @MainActor
     static func onSurface(colorScheme: ColorScheme? = nil) -> Color {
         return getColorWithTheme(
             lightColorHex: DesignSystemConfiguration.shared?.flavorColors?.onSurface,
@@ -66,6 +72,7 @@ public extension Color {
     }
     
     /// background color with theme
+    @MainActor
     static func background(colorScheme: ColorScheme? = nil) -> Color {
         return getColorWithTheme(
             lightColorHex: DesignSystemConfiguration.shared?.flavorColors?.background,
@@ -75,6 +82,7 @@ public extension Color {
     }
     
     /// on background color with theme
+    @MainActor
     static func onBackground(colorScheme: ColorScheme? = nil) -> Color {
         return getColorWithTheme(
             lightColorHex: DesignSystemConfiguration.shared?.flavorColors?.onBackground,
@@ -84,6 +92,7 @@ public extension Color {
     }
     
     /// success color with theme
+    @MainActor
     static func success(colorScheme: ColorScheme? = nil) -> Color {
         return getColorWithTheme(
             lightColorHex: DesignSystemConfiguration.shared?.flavorColors?.success,
@@ -93,6 +102,7 @@ public extension Color {
     }
     
     /// on success color with theme
+    @MainActor
     static func onSuccess(colorScheme: ColorScheme? = nil) -> Color {
         return getColorWithTheme(
             lightColorHex: DesignSystemConfiguration.shared?.flavorColors?.onSuccess,
@@ -102,6 +112,7 @@ public extension Color {
     }
     
     /// warning color with theme
+    @MainActor
     static func warning(colorScheme: ColorScheme? = nil) -> Color {
         return getColorWithTheme(
             lightColorHex: DesignSystemConfiguration.shared?.flavorColors?.warning,
@@ -111,6 +122,7 @@ public extension Color {
     }
     
     /// on warning color with theme
+    @MainActor
     static func onWarning(colorScheme: ColorScheme? = nil) -> Color {
         return getColorWithTheme(
             lightColorHex: DesignSystemConfiguration.shared?.flavorColors?.onWarning,
@@ -120,6 +132,7 @@ public extension Color {
     }
     
     /// error color with theme
+    @MainActor
     static func error(colorScheme: ColorScheme? = nil) -> Color {
         return getColorWithTheme(
             lightColorHex: DesignSystemConfiguration.shared?.flavorColors?.error,
@@ -129,6 +142,7 @@ public extension Color {
     }
     
     /// on error color with theme
+    @MainActor
     static func onError(colorScheme: ColorScheme? = nil) -> Color {
         return getColorWithTheme(
             lightColorHex: DesignSystemConfiguration.shared?.flavorColors?.onError,
