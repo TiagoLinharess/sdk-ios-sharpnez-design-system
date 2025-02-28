@@ -6,7 +6,7 @@
 //
 
 import SharpnezDesignSystem
-import SnapKit
+import UIKit
 
 final class UISHLabelViewController: UIViewController {
     
@@ -38,11 +38,14 @@ extension UISHLabelViewController: ViewCode {
     }
 
     func setupConstraints() {
-        stackView.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            $0.horizontalEdges.equalTo(view.safeAreaLayoutGuide)
-            $0.bottom.lessThanOrEqualTo(view.safeAreaLayoutGuide.snp.bottom)
-        }
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            stackView.bottomAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
     }
 }
 

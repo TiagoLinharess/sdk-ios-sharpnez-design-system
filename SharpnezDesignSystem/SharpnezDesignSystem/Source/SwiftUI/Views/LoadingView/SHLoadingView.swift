@@ -86,6 +86,7 @@ public struct SHLoadingView: View {
                     .configureWithSH(color: onColor, font: font)
                     .onAppear(perform: handleText)
                     .lineLimit(2)
+                    .multilineTextAlignment(.center)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

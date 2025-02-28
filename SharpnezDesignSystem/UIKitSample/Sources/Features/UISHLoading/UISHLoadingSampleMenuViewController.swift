@@ -6,7 +6,7 @@
 //
 
 import SharpnezDesignSystem
-import SnapKit
+import UIKit
 
 class UISHLoadingViewModel: UISHLoadingViewModelProtocol {
     struct Example {}
@@ -110,9 +110,14 @@ extension UISHLoadingSampleMenuViewController: ViewCode {
     }
 
     func setupConstraints() {
-        tableView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
 }
 

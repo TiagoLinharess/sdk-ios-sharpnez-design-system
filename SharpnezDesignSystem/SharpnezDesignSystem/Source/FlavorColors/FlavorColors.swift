@@ -20,4 +20,19 @@ public protocol FlavorColorsProtocol {
     var onWarning: String { get }
     var error: String { get }
     var onError: String { get }
+    
+    var primaryDark: String { get }
+    var onPrimaryDark: String { get }
+    var secondaryDark: String { get }
+    var onSecondaryDark: String { get }
+    var surfaceDark: String { get }
+    var onSurfaceDark: String { get }
+    var backgroundDark: String { get }
+    var onBackgroundDark: String { get }
+    var successDark: String { get }
+    var onSuccessDark: String { get }
+    var warningDark: String { get }
+    var onWarningDark: String { get }
+    var errorDark: String { get }
+    var onErrorDark: String { get }
 }

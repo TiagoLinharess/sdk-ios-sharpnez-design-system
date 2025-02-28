@@ -6,7 +6,7 @@
 //
 
 import SharpnezDesignSystem
-import SnapKit
+import UIKit
 
 final class UISHPasswordFieldViewController: UIViewController {
     
@@ -52,16 +52,21 @@ extension UISHPasswordFieldViewController: ViewCode {
     }
 
     func setupConstraints() {
-        stackView.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            $0.horizontalEdges.equalTo(view.safeAreaLayoutGuide)
-        }
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        textField.translatesAutoresizingMaskIntoConstraints = false
         
-        textField.snp.makeConstraints {
-            $0.top.greaterThanOrEqualTo(stackView.snp.bottom).offset(CGFloat.small)
-            $0.horizontalEdges.equalTo(view.safeAreaLayoutGuide).inset(CGFloat.small)
-            $0.bottom.equalTo(view.safeAreaLayoutGuide)
-        }
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            textField.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: .small),
+            textField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: .small),
+            textField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -.small),
+            textField.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -.small),
+        ])
     }
 }
 

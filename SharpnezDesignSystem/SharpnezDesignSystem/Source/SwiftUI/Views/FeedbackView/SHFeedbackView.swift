@@ -92,11 +92,13 @@ public struct SHFeedbackView: View {
                     font: .title2(.poppins, .medium)
                 )
                 .lineLimit(2)
+                .multilineTextAlignment(.center)
             Text(description)
                 .configureWithSH(
                     color: .onBackground(colorScheme: colorScheme),
                     font: .subtitle(.montserrat, .regular)
                 )
+                .multilineTextAlignment(.center)
             Spacer()
             SHButton(
                 title: primaryButtonTitle,

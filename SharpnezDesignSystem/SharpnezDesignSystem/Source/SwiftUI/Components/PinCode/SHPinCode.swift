@@ -75,36 +75,54 @@ public struct SHPinCode: View {
     }
     
     private func didChangeStep1Text(_ newValue: String) {
+        if newValue.count > 1 {
+            step1Text.removeFirst()
+            focusState = .step2
+            return
+        }
+        
         if newValue.count == 1 {
             focusState = .step2
         }
     }
     
     private func didChangeStep2Text(_ newValue: String) {
-        if newValue.count == 1 {
-            focusState = .step3
-            return
+        if newValue.count > 1 {
+            step2Text.removeFirst()
         }
         
-        focusState = .step1
-    }
-    
-    private func didChangeStep3Text(_ newValue: String) {
-        if newValue.count == 1 {
-            focusState = .step4
-            return
-        }
-        
-        focusState = .step2
-    }
-    
-    private func didChangeStep4Text(_ newValue: String) {
-        if newValue.count == 1 {
-            focusState = nil
-            onFinish(step1Text + step2Text + step3Text + step4Text)
+        if newValue.count < 1 {
+            focusState = .step1
             return
         }
         
         focusState = .step3
+    }
+    
+    private func didChangeStep3Text(_ newValue: String) {
+        if newValue.count > 1 {
+            step3Text.removeFirst()
+        }
+        
+        if newValue.count < 1 {
+            focusState = .step2
+            return
+        }
+        
+        focusState = .step4
+    }
+    
+    private func didChangeStep4Text(_ newValue: String) {
+        if newValue.count > 1 {
+            step4Text.removeFirst()
+        }
+        
+        if newValue.count < 1 {
+            focusState = .step3
+            return
+        }
+        
+        focusState = nil
+        onFinish(step1Text + step2Text + step3Text + step4Text)
     }
 }

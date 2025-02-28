@@ -6,7 +6,7 @@
 //
 
 import SharpnezDesignSystem
-import SnapKit
+import UIKit
 
 final class UISHIconViewController: UIViewController, UIScrollViewDelegate {
     private lazy var scrollView: UIScrollView = {
@@ -51,13 +51,22 @@ extension UISHIconViewController: ViewCode {
     }
 
     func setupConstraints() {
-        scrollView.snp.makeConstraints {
-            $0.edges.equalToSuperview().inset(CGFloat.small)
-        }
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         
-        stackView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
+        NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
 }
 
