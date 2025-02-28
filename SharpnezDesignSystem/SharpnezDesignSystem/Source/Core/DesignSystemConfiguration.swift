@@ -31,7 +31,7 @@ public final class DesignSystemConfiguration: NSObject {
     
     /// Load DesignSystem fonts
     func loadFonts() {
-        let bundle = Bundle.init(for: DesignSystemConfiguration.self)
+        let bundle = BundleToken.bundle
         
         /// List the fonts by name and extension, relative to the bundle.
         let fonts = [
