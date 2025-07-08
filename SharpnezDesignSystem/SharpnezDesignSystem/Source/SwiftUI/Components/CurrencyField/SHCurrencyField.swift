@@ -54,7 +54,7 @@ public struct SHCurrencyField: View {
             CurrencyTextField(configuration: .init(
                 placeholder: String(),
                 text: $text,
-                formatter: currencyFormatter,
+                formatter: $currencyFormatter,
                 textFieldConfiguration: { uiTextField in
                     uiTextField.font = .body(font, .medium)
                     uiTextField.textColor = UIColor(color)
